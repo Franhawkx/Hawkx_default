@@ -19,7 +19,7 @@
               {%- if child_link.links != blank -%}
                 <ul>
                 {%- for grand_child_link in child_link.links -%}
-                  <li class="{%- if grand_child_link.child_active -%}child_active{% endif %}{% if grand_child_link.current %} current{% endif %}">
+                  <li class="{% if grand_child_link.current %}current{% endif %}">
                     <a href="{{ grand_child_link.url | escape }}" aria-label="{{ grand_child_link.title | escape }}" target="_self">{{ grand_child_link.title | escape }}</a>
                   </li>
                 {%- endfor -%}
