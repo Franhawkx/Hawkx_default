@@ -16,13 +16,13 @@
           {%- for child_link in link.links -%}
             <li class="{%- if child_link.child_active -%}child_active{% endif %}{% if child_link.current %} current{% endif %}">
               <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
-              
-              {%- if link.links != blank -%}
+
+              {%- if child_link.links != blank -%}
                 <span>h</span>
                 <ul>
-                {%- for child_link in link.links -%}
-                  <li class="{%- if child_link.child_active -%}child_active{% endif %}{% if child_link.current %} current{% endif %}">
-                    <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
+                {%- for grand_child_link in link.child_link -%}
+                  <li class="{%- if grand_child_link.child_active -%}child_active{% endif %}{% if grand_child_link.current %} current{% endif %}">
+                    <a href="{{ grand_child_link.url | escape }}" aria-label="{{ grand_child_link.title | escape }}" target="_self">{{ grand_child_link.title | escape }}</a>
                   </li>
                 {%- endfor -%}
                 </ul>
