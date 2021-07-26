@@ -1,0 +1,39 @@
+//Función para simplificar las variables de css
+@function v($var) {
+	@return var(--#{$var});
+}
+
+//Función para añadir estilos para eliminar capa azul al presionar un boton/enlace
+@mixin tap-highlight-none() {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+//Arreglo cambio color autocompletar chrome
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus,
+ input:-webkit-autofill:active {
+ 	-webkit-text-fill-color: inherit !important;
+	-webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+ 	-webkit-transition-delay: 9999s;
+ }
+
+//Función para añadir media query
+
+@mixin media-max($media) {
+    @media (max-width: $media) { @content; }
+}
+
+@mixin media-min($media) {
+    @media (min-width: $media) { @content; }
+}
+
+@mixin media-min-max($media-min,$media-max) {
+    @media (min-width: $media-min) and (max-width: $media-max) { @content; }
+}

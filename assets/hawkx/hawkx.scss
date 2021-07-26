@@ -1,0 +1,19 @@
+/*
+Hoja de estilos en sucio para trabajar el CSS del tema
+    *Se debe copilar y minificar
+========================================================*/
+
+/*Global
+=======================================*/
+
+// Añadir  funciones SCSS y variables
+@import 'variables.scss';
+@import 'funciones.scss';
+
+body {
+	@include media-max(797px) {
+		overflow: v(body-overflow);
+		overflow-x: hidden;
+		@include tap-highlight-none();
+	}
+}
