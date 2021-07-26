@@ -1,3 +1,10 @@
+{%if section.settings.title == blank %}
+    <h1>No has puesto ningun titulo aun</h1>
+{% elsif section.settings.title != blank %}
+    <h1>section.settings.title</h1>
+{% endif %}
+
+
 {% schema %}
 {
 	"name": "Titulo interno seccion",
