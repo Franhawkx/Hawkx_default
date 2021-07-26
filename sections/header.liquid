@@ -6,11 +6,12 @@
 <header>
 
 <nav class="nav_header">
+
   {%- for link in section.settings.menu.links -%}
+
   <div>
-    <a src="{{ link.url }}">{{ link.title | escape }}</a>
+    <a href"{{ link.url }}" target="_self">{{ link.title | escape }}</a>
   </div>
-   
 
   {%- endfor -%}
 </nav>
