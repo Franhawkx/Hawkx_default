@@ -7,11 +7,11 @@
 
 <nav class="nav_header">
   {%- for link in section.settings.menu.links -%}
-   {{ link.title | escape }}
-    {%- if link.links != blank -%}
-     
-     
-    {%- endif -%}
+  <div>
+    <a src="{{ link.url }}">{{ link.title | escape }}</a>
+  </div>
+   
+
   {%- endfor -%}
 </nav>
 
