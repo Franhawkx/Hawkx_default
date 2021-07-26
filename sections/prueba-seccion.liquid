@@ -23,14 +23,16 @@
     ],
     "blocks": [
     {
-        "type": "summary",
-        "name": "Resumen custom",
-        "limit": 1
-    },
-    {
-        "type": "link",
-        "name": "Enlace custom",
-        "limit": 1
+        "type": "heading",
+        "name": "Bloque texto",
+        "limit": 1,
+        "settings": [
+            {
+            "type": "text",
+            "id": "heading",
+            "label": "Titulo del texto del bloque heading"
+            }
+        ]
     }
     ],
     "presets": [
@@ -38,12 +40,9 @@
             "name": "Titulo Agregar Seccion",
             "category": "Subcategoria Seccion",
             "blocks": [
-                {
-                    "type": "summary"
-                },
-                {
-                    "type": "link"
-                }
+            {
+                "type": "heading"
+            }
             ]
         }
     ]      
