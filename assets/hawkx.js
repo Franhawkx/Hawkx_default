@@ -9,7 +9,7 @@ Hoja javascipt en sucio para trabajar el JS del tema
 
 function subirProduct(){
     const url= '/cart/add.js';
-    let formData = {
+    let productos = {
         'items': [
         {
             'id': 40607206015127,
@@ -23,7 +23,7 @@ function subirProduct(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(productos)
     };
 
     fetch(url,request)
