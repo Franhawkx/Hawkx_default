@@ -5,50 +5,61 @@
 
 <header id="container__header">
 
-<div class="logo__header">
+  <div class="logo__header">
 
-  <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
-    {%- if section.settings.logo != blank -%}
-      {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-        <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" src="{{ section.settings.logo | img_url: image_size }}" loading="lazy" class="logo_img__header" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
-    {%- else -%}
-      <span class="h2">{{ shop.name }}</span>
-    {%- endif -%}
-  </a>
+    <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+      {%- if section.settings.logo != blank -%}
+        {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+          <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x" src="{{ section.settings.logo | img_url: image_size }}" loading="lazy" class="logo_img__header" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" alt="{{ section.settings.logo.alt | default: shop.name | escape }}">
+      {%- else -%}
+        <span class="h2">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
 
-</div>
+  </div>
+  
+  <div class="nav__header">
 
-  <nav class="nav__header">
-    {%- for link in section.settings.menu.links -%}
+    <button class="button_movil_nav__header">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
 
-        <div class="{%- if link.child_active -%}has_children{% endif %}{% if link.child_current %} child_active{% endif %}{% if link.active %} active{% endif %}">
-          <a href="{{ link.url | escape }}" aria-label="{{ link.title | escape }}" target="_self">{{ link.title | escape }}</a>
-
-          {%- if link.links != blank -%}
-            <ul>
-              {%- for child_link in link.links -%}
-                <li class=" {%- if child_link.links != blank -%}has_children{% endif %}{% if child_link.child_current %} child_active{% endif %}{% if child_link.active %} active{% endif %}">
-                  <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
-
-                  {%- if child_link.links != blank -%}
-                    <ul>
-                      {%- for third_child_link in child_link.links -%}
-                        <li class="{% if third_child_link.active %} active{% endif %}">
-                          <a href="{{ third_child_link.url | escape }}" aria-label="{{ third_child_link.title | escape }}" target="_self">{{ third_child_link.title | escape }}</a>
-                        </li>
-                      {%- endfor -%}
-                    </ul>
-                  {%- endif -%}
-
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-
-        </div>
+    <nav>
     
-    {%- endfor -%}
-  </nav>
+      {%- for link in section.settings.menu.links -%}
+
+          <div class="{%- if link.child_active -%}has_children{% endif %}{% if link.child_current %} child_active{% endif %}{% if link.active %} active{% endif %}">
+            <a href="{{ link.url | escape }}" aria-label="{{ link.title | escape }}" target="_self">{{ link.title | escape }}</a>
+
+            {%- if link.links != blank -%}
+              <ul>
+                {%- for child_link in link.links -%}
+                  <li class=" {%- if child_link.links != blank -%}has_children{% endif %}{% if child_link.child_current %} child_active{% endif %}{% if child_link.active %} active{% endif %}">
+                    <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
+
+                    {%- if child_link.links != blank -%}
+                      <ul>
+                        {%- for third_child_link in child_link.links -%}
+                          <li class="{% if third_child_link.active %} active{% endif %}">
+                            <a href="{{ third_child_link.url | escape }}" aria-label="{{ third_child_link.title | escape }}" target="_self">{{ third_child_link.title | escape }}</a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
+
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+
+          </div>
+      
+      {%- endfor -%}
+    </nav>
+
+  </div>
 
   <div class="search__header" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
 
@@ -65,38 +76,46 @@
 
   </div>
 
+  <div class="container_icon__header">
 
-{%- if shop.customer_accounts_enabled -%}
-  <div class="account__header">
-    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="account_link__header">
-      <span class="visually-hidden">
-        {%- liquid
-          if customer
-            echo 'customer.account_fallback' | t
-          else
-            echo 'customer.log_in' | t
-          endif
-        -%}
-      </span>
-    </a>
-  </div>
-{%- endif -%}
+    {%- if shop.customer_accounts_enabled -%}
+      <div class="account__header">
+        <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="account_link__header">
+        {%- comment -%}
+          <span class="visually-hidden">
+            {%- liquid
+              if customer
+                echo 'customer.account_fallback' | t
+              else
+                echo 'customer.log_in' | t
+              endif
+            -%}
+          </span>
+          {%- endcomment -%}
 
-<div class="cart__header">
-  <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
-
-    <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-    {%- if cart != empty -%}
-      <div class="cart-count-bubble">
-        {%- if cart.item_count < 100 -%}
-          <span aria-hidden="true">{{ cart.item_count }}</span>
-        {%- endif -%}
-        <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+        </a>
       </div>
     {%- endif -%}
-    
-  </a>
-</div>
+
+    <div class="cart__header">
+      <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
+
+        {%- comment -%}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+        {%- endcomment -%}
+        
+      </a>
+    </div>
+
+  </div>
 
 </header>
 
