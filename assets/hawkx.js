@@ -8,19 +8,22 @@ Hoja javascipt en sucio para trabajar el JS del tema
 /*Petición de añadir el producto al carrito*/
 
 function subirProduct(){
-    const url= '/cart.js';
-    const payload= {
-        items: [
-            {
-                id: 40607206015127,
-                quantity: 2
-            }
+    const url= '/cart/add.js';
+    let formData = {
+        'items': [
+        {
+            'id': 40607206015127,
+            'quantity': 2
+        }
         ]
     };
 
     const request = {
         method: 'POST', 
-        body: JSON.stringify(payload)
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
     };
 
     fetch(url,request)
