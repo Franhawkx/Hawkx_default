@@ -57,22 +57,28 @@ body {
 				padding: 15px 20px;
 				margin:0px;
 
-				& > ul {
-					position: absolute;
-					left: 100%;
-					opacity: 0;
-					pointer-events: none;
-					background-color: white;
-					padding: 15px 20px;
-					margin:0px;
-				}
-
-				&:hover {
+				li {
+					position: relative;
+					
 					& > ul {
-						opacity: 1;
-						pointer-events: all;
+						position: absolute;
+						left: 100%;
+						opacity: 0;
+						pointer-events: none;
+						background-color: white;
+						padding: 15px 20px;
+						margin:0px;
+					}
+	
+					&:hover {
+						& > ul {
+							opacity: 1;
+							pointer-events: all;
+						}
 					}
 				}
+
+				
 
 			}
 
