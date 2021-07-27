@@ -7,7 +7,7 @@
 
   <nav class="nav_header">
     {%- for link in section.settings.menu.links -%}
-        <div class="{%- if link.child_active -%}child_active{% endif %}{% if link.current %} active{% endif %}">
+        <div class="{%- if link.child_active -%}child_active{% endif %}{% if link.active %} active{% endif %}{% if link.current %} current{% endif %}">
           <a href="{{ link.url | escape }}" aria-label="{{ link.title | escape }}" target="_self">{{ link.title | escape }}</a>
 
           {%- if link.links != blank -%}
