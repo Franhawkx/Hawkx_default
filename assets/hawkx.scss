@@ -13,6 +13,7 @@ Hoja de estilos en sucio para trabajar el CSS del tema
 
 html {
     box-sizing: border-box;
+	margin: 0px;
 
 	body {
 		@include media-max(797px) {
@@ -23,11 +24,13 @@ html {
 	
 		font-family: Poppins;
 		font-size: 14px;
+		margin: 0px;
 
 		header,
 		div,
 		footer {
 			box-sizing: border-box;
+			margin: 0px;
 		}
 	}
 }
