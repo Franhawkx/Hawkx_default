@@ -1,5 +1,5 @@
 /*
-Error: wrong number of arguments (1 for 3) for `rgb'
+Error: wrong number of arguments (4 for 3) for `rgb'
         on line 57 of /Users/Fran/AF Dropbox/Francisco Herrera Seara/HAWKX/Tema base/Hawkx_default/assets/hawkx.scss
 
 52:     align-items: center;
@@ -7,9 +7,9 @@ Error: wrong number of arguments (1 for 3) for `rgb'
 54:     background-color: white;
 55: 	padding: 25px 10%;
 56: 
-57: 	-webkit-box-shadow: 0 10px 35px -30px rgb(0 0 0 / 75%);
+57: 	-webkit-box-shadow: 0 10px 35px -30px rgb(0,0,0,.75);
 58:     -moz-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
-59:     box-shadow: 0 10px 35px -30px rgb(0 0 0 / 75%);
+59:     box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
 60:     transition: .2s ease-out;
 61: 
 62: 	& > div,
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: wrong number of arguments (1 for 3) for `rgb'\A         on line 57 of /Users/Fran/AF Dropbox/Francisco Herrera Seara/HAWKX/Tema base/Hawkx_default/assets/hawkx.scss\A \A 52:     align-items: center;\A 53:     width: 100%;\A 54:     background-color: white;\A 55: 	padding: 25px 10%;\A 56: \A 57: 	-webkit-box-shadow: 0 10px 35px -30px rgb(0 0 0 / 75%);\A 58:     -moz-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);\A 59:     box-shadow: 0 10px 35px -30px rgb(0 0 0 / 75%);\A 60:     transition: .2s ease-out;\A 61: \A 62: 	& > div,"; }
+  content: "Error: wrong number of arguments (4 for 3) for `rgb'\A         on line 57 of /Users/Fran/AF Dropbox/Francisco Herrera Seara/HAWKX/Tema base/Hawkx_default/assets/hawkx.scss\A \A 52:     align-items: center;\A 53:     width: 100%;\A 54:     background-color: white;\A 55: 	padding: 25px 10%;\A 56: \A 57: 	-webkit-box-shadow: 0 10px 35px -30px rgb(0,0,0,.75);\A 58:     -moz-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);\A 59:     box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);\A 60:     transition: .2s ease-out;\A 61: \A 62: 	& > div,"; }
