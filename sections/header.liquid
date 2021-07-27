@@ -13,13 +13,13 @@
           {%- if link.links != blank -%}
             <ul>
               {%- for child_link in link.links -%}
-                <li class=" {%- if child_link.links != blank -%}child_active{% endif %}{% if child_link.current %} active{% endif %}">
+                <li class=" {%- if child_link.links != blank -%}child_active{% endif %}{% if child_link.active %} active{% endif %}{% if child_link.current %} current{% endif %}">
                   <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
 
                   {%- if child_link.links != blank -%}
                     <ul>
                       {%- for third_child_link in child_link.links -%}
-                        <li class="{% if third_child_link.current %}active{% endif %}">
+                        <li class="{% if third_child_link.active %}active{% endif %}{% if third_child_link.current %} current{% endif %}">
                           <a href="{{ third_child_link.url | escape }}" aria-label="{{ third_child_link.title | escape }}" target="_self">{{ third_child_link.title | escape }}</a>
                         </li>
                       {%- endfor -%}
