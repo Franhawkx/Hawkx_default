@@ -44,9 +44,6 @@ function subirProduct(){
 
 /*Petición para ver los productos del carrito*/
 
-
-alert('Script cargado');
-
 function recuperarItemsCarrito(){
     fetch('/cart.js')
     .then(function(response) {
