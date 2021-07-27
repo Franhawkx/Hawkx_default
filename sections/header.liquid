@@ -48,7 +48,7 @@
   </nav>
 
   <div class="search__header" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
-      <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search_form__header">
         <div class="field">
           <input class="search_input__header" id="Search_header" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.search' | t }}">
           <label class="search_label__header" for="Search_header">{{ 'general.search.search' | t }}</label>
@@ -57,7 +57,7 @@
         </div>
       </form>
 
-    <button type="button" class="modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}"></button>
+    <button type="button" class="search_close__header" aria-label="{{ 'accessibility.close' | t }}"></button>
   </div>
 
 </header>
