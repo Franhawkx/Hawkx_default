@@ -74,6 +74,23 @@ body {
 		}
 	}
 
+	.cart__header {
+		@extend .account__header;
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color:inherit;
+
+			&:after {
+				content: " C";
+			}
+		}
+	}
+
 	.search__header {
 		@extend .account__header;
 		margin-left: auto;
@@ -92,23 +109,6 @@ body {
 
 		.search_close__header {
 			display: none;
-		}
-	}
-
-	.cart__header {
-		@extend .account__header;
-
-		a {
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color:inherit;
-
-			&:after {
-				content: " C";
-			}
 		}
 	}
 
