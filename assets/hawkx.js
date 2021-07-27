@@ -13,8 +13,6 @@ Hoja javascipt en sucio para trabajar el JS del tema
 alert('Script cargado');
 
 function recuperarItemsCarrito(){
-
-
     fetch('/cart.js')
     .then(function(response) {
     if (!response.ok) {
@@ -24,7 +22,7 @@ function recuperarItemsCarrito(){
     })
     .then(function(responseAsObject) {
         for (let i = 0; i < responseAsObject.items.length; i++) {
-            console.log('Titulo: ' + responseAsObject.items[i].title + ', precio: ' + responseAsObject.items[i].price + ', enlace a su imagen: ' + responseAsObject.items[i].image);    
+            console.log('Titulo: ' + responseAsObject.items[i].title + ', precio: ' + responseAsObject.items[i].price + ', cantidad: ' + responseAsObject.items[i].quantity + ', enlace a su imagen: ' + responseAsObject.items[i].image);    
         }
     })
     .catch(function(error) {
