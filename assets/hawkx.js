@@ -2,7 +2,8 @@
 Hoja javascipt en sucio para trabajar el JS del tema
 ========================================================*/
 
-
+/* Inicio onload
+========================================================*/
 window.onload = function() {
 
     // Función para añadir la clase sticky al header cuando se hace scroll Fran
@@ -20,8 +21,8 @@ window.onload = function() {
       }
 
 }
-/* End onload
-========================================================*/
+// Fin onload
+
 
 //Función para añadir la clase sticky al header cuando se hace scroll Fran
 function sticky_menu($container, $element, $number) {
