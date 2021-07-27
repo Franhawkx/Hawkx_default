@@ -53,11 +53,23 @@ body {
 		width: 30px;
 		height: 30px;
 		background-color: red;
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
 	}
 
 	.cart__header {
 		@extend .account__header;
 		margin-left: 20px;
+
+		a {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
 
 	}
 
