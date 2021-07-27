@@ -7,6 +7,38 @@ Hoja javascipt en sucio para trabajar el JS del tema
 
 /*Petición de añadir el producto al carrito*/
 
+function subirProduct(){
+    const url= '/cart.js';
+    const payload= {
+        items: [
+            {
+                id: 40607206015127,
+                quantity: 2
+            }
+        ]
+    };
+
+    const request = {
+        method: 'POST', 
+        body: JSON.stringify(payload)
+    };
+
+    fetch(url,request)
+    .then(function(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+        return response.json();
+    })
+    .then(function(responseAsObject) {
+        console.log(responseAsObject);
+    })
+    .catch(function(error) {
+        console.log('Ha habido un problema: ', error);
+    });
+}
+
+
 /*Petición para ver los productos del carrito*/
 
 
