@@ -10,6 +10,8 @@ Hoja javascipt en sucio para trabajar el JS del tema
 /*Petición para ver los productos del carrito*/
 
 
+alert('Script cargado');
+
 function recuperarItemsCarrito(){
 
 
