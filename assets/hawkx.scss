@@ -51,11 +51,13 @@ body {
 			width: max-content;
 			position: absolute;
 			background-color: white;
-			padding: 15px 20px;
+			padding: 15px 0px;
 			margin:0px;
 			opacity: 0;
 			pointer-events: none;
+
 			li {
+				padding: 0px 20px;
 				list-style: none;
 			}
 		}
