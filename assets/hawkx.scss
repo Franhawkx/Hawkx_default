@@ -45,202 +45,211 @@ html {
 /*Header
 =======================================*/
 
-#container__header {
-	display: flex;
-    flex-direction: row;
-	justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: white;
-	padding: 25px 10%;
+#shopify-section-header{
+	
+	#container__header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		width: 100%;
+		background-color: white;
+		padding: 25px 10%;
 
-	-webkit-box-shadow: 0 10px 35px -30px rgb(0,0,0,.75);
-    -moz-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
-    box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
-    transition: .2s ease-out;
+		-webkit-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
+		-moz-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
+		box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
+		transition: .2s ease-out;
 
-	& > div,
-	& > nav {
-		width: max-content;
-	}
-
-	.logo__header {
-		width: 130px;
-		filter: invert(1);
-
-		a {
-			display: flex;
-
-			img {
-				width: 100%;
-				height: auto;
-			}
+		& > div,
+		& > nav {
+			width: max-content;
 		}
-	}
 
-	.nav__header {
-		margin-left: auto;
+		.logo__header {
+			width: 130px;
+			filter: invert(1);
 
-		.button_movil_nav__header {
-			display: none;
-			flex-direction: column;
-			justify-content: space-between;
-			width: 30px;
-			height: 30px;
-			margin: 0px;
-			padding: 0px;
-			border: 0px;
-
-			@include media-max(1024px) {
+			a {
 				display: flex;
-			}
 
-			div {
-				width: 100%;
-				height: 5px;
-				background-color: black;
+				img {
+					width: 100%;
+					height: auto;
+				}
 			}
 		}
 
-		nav {
-			display: flex;
-			justify-content: center;
+		.nav__header {
 			margin-left: auto;
-			font-size: 1.3em;
-			font-weight: 600;
-			text-transform: capitalize;
 
-			& > div {
-				position:relative;
-				padding: 10px 0px;
-				
-				&:not(:last-child) {
-					margin-right: 25px;
+			.button_movil_nav__header {
+				display: none;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 30px;
+				height: 30px;
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+
+				@include media-max(1024px) {
+					display: flex;
 				}
 
-				ul {
-					width: max-content;
-					position: absolute;
-					background-color: white;
-					border: 1px solid black;
-					padding: 0px;
-					padding-bottom: 10px;
-					margin:0px;
-					opacity: 0;
-					pointer-events: none;
+				div {
+					width: 100%;
+					height: 5px;
+					background-color: black;
+				}
+			}
 
-					li {
-						padding: 15px 20px 5px;
-						list-style: none;
-						font-size: 1rem;
-						font-weight: 500;
+			nav {
+				display: flex;
+				justify-content: center;
+				margin-left: auto;
+				font-size: 1.3em;
+				font-weight: 600;
+				text-transform: capitalize;
+
+				& > div {
+					position:relative;
+					padding: 10px 0px;
+					
+					&:not(:last-child) {
+						margin-right: 25px;
 					}
-				}
 
-				& > ul {
-					top: 100%;
-					@extend ul;
+					ul {
+						width: max-content;
+						position: absolute;
+						background-color: white;
+						border: 1px solid black;
+						padding: 0px;
+						padding-bottom: 10px;
+						margin:0px;
+						opacity: 0;
+						pointer-events: none;
 
-					li {
-						position: relative;
-
-						& > ul {
-							top: -1px;
-							left: 100%;
-							@extend ul;
+						li {
+							padding: 15px 20px 5px;
+							list-style: none;
+							font-size: 1rem;
+							font-weight: 500;
 						}
-		
-						&:hover {
+					}
+
+					& > ul {
+						top: 100%;
+						@extend ul;
+
+						li {
+							position: relative;
+
 							& > ul {
-								opacity: 1;
-								pointer-events: all;
+								top: -1px;
+								left: 100%;
+								@extend ul;
+							}
+			
+							&:hover {
+								& > ul {
+									opacity: 1;
+									pointer-events: all;
+								}
 							}
 						}
 					}
-				}
 
-				&:hover {
-					& > ul {
-						opacity:1;
-						pointer-events: all;
-		
+					&:hover {
+						& > ul {
+							opacity:1;
+							pointer-events: all;
+			
+						}
 					}
 				}
 			}
 		}
+
+
+		.container_icon__header{
+			display:flex;
+			margin-left: 20px;
+
+			div:not(:last-child) {
+				margin-right: 20px,
+			}
+
+			.account__header {
+				min-width: 40px;
+				width: 40px;
+				height: 40px;
+				background-color: black;
+				color:white;
+
+				a {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color:inherit;
+
+					&:after {
+						content: "A";
+					}
+				}
+			}
+
+			.cart__header {
+				@extend .account__header;
+
+				a {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color:inherit;
+
+					&:after {
+						content: "C";
+					}
+				}
+			}
 	}
-
-
-	.container_icon__header{
-		display:flex;
-		margin-left: 20px;
-
-		div:not(:last-child) {
-			margin-right: 20px,
-		}
-
-		.account__header {
+		.search__header {
 			min-width: 40px;
 			width: 40px;
 			height: 40px;
 			background-color: black;
 			color:white;
+			margin-left: auto;
 
-			a {
-				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color:inherit;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-				&:after {
-					content: "A";
-				}
+			&:after {
+				content: "S";
+			}
+
+			form {
+				display: none;
+			}
+
+			.search_close__header {
+				display: none;
 			}
 		}
 
-		.cart__header {
-			@extend .account__header;
+	}
 
-			a {
-				width: 100%;
-				height: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				color:inherit;
-
-				&:after {
-					content: "C";
-				}
-			}
-		}
-}
-	.search__header {
-		min-width: 40px;
-		width: 40px;
-		height: 40px;
-		background-color: black;
-		color:white;
-		margin-left: auto;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		&:after {
-			content: "S";
-		}
-
-		form {
-			display: none;
-		}
-
-		.search_close__header {
-			display: none;
+	&.sticky {
+		#container__header {
+			
 		}
 	}
 
 }
-
