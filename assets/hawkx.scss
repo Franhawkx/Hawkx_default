@@ -57,7 +57,7 @@ body {
 		display:flex;
 		margin-left: 20px;
 
-		&:not(:last-child) {
+		div:not(:last-child) {
 			margin-right: 20px,
 		}
 
