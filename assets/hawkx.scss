@@ -74,6 +74,7 @@ body {
 
 	.search__header {
 		@extend .account__header;
+		margin-left: auto;
 
 		display: flex;
 		justify-content: center;
