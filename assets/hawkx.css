@@ -1,2 +1,31 @@
-input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus,input:-webkit-autofill:active{-webkit-text-fill-color:inherit !important;-webkit-transition:"color 9999s ease-out, background-color 9999s ease-out";-webkit-transition-delay:9999s}html{box-sizing:border-box;margin:0px}html body{font-family:Poppins;font-size:14px;margin:0px}@media (max-width: 797px){html body{overflow:var(--body-overflow);overflow-x:hidden;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}}html body header,html body div,html body footer{box-sizing:border-box;margin:0px}html body a{text-decoration:none;color:black}#container__header{display:flex;flex-direction:row;justify-content:space-around;align-items:center;width:100%;background-color:#1b1b1b1b;padding:25px 10%}#container__header>div,#container__header>nav{width:max-content}#container__header .logo__header{width:130px;filter:invert(1)}#container__header .logo__header a{display:flex}#container__header .logo__header a img{width:100%;height:auto}#container__header .nav__header{display:flex;justify-content:center;margin-left:auto;font-size:1.3em;font-weight:600;text-transform:capitalize}#container__header .nav__header nav>div{position:relative;padding:10px 0px}#container__header .nav__header nav>div:not(:last-child){margin-right:25px}#container__header .nav__header nav>div ul,#container__header .nav__header nav>div>ul li>ul{width:max-content;position:absolute;background-color:white;border:1px solid black;padding:0px;padding-bottom:10px;margin:0px;opacity:0;pointer-events:none}#container__header .nav__header nav>div ul li,#container__header .nav__header nav>div>ul li>ul li{padding:15px 20px 5px;list-style:none;font-size:1rem;font-weight:500}#container__header .nav__header nav>div>ul{top:100%}#container__header .nav__header nav>div>ul li{position:relative}#container__header .nav__header nav>div>ul li>ul{top:-1px;left:100%}#container__header .nav__header nav>div>ul li:hover>ul{opacity:1;pointer-events:all}#container__header .nav__header nav>div:hover>ul{opacity:1;pointer-events:all}#container__header .container_icon__header{display:flex;margin-left:20px}#container__header .container_icon__header div:not(:last-child){margin-right:20px}#container__header .container_icon__header .account__header,#container__header .container_icon__header .cart__header{min-width:40px;width:40px;height:40px;background-color:black;color:white}#container__header .container_icon__header .account__header a,#container__header .container_icon__header .cart__header a{width:100%;height:100%;display:flex;justify-content:center;align-items:center;color:inherit}#container__header .container_icon__header .account__header a:after,#container__header .container_icon__header .cart__header a:after{content:"A"}#container__header .container_icon__header .cart__header a{width:100%;height:100%;display:flex;justify-content:center;align-items:center;color:inherit}#container__header .container_icon__header .cart__header a:after{content:"C"}#container__header .search__header{min-width:40px;width:40px;height:40px;background-color:black;color:white;margin-left:auto;display:flex;justify-content:center;align-items:center}#container__header .search__header:after{content:"S"}#container__header .search__header form{display:none}#container__header .search__header .search_close__header{display:none}
-/*# sourceMappingURL=hawkx.css.map */
+/*
+Error: Invalid CSS after "	}": expected selector or at-rule, was "}"
+        on line 219 of /Users/Fran/AF Dropbox/Francisco Herrera Seara/HAWKX/Tema base/Hawkx_default/assets/hawkx.scss
+
+214: 		.search_close__header {
+215: 			display: none;
+216: 		}
+217: 	}
+218: 
+219: }
+
+Backtrace:
+/Users/Fran/AF Dropbox/Francisco Herrera Seara/HAWKX/Tema base/Hawkx_default/assets/hawkx.scss:219
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:42:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `load'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"	}\": expected selector or at-rule, was \"}\"\A         on line 219 of /Users/Fran/AF Dropbox/Francisco Herrera Seara/HAWKX/Tema base/Hawkx_default/assets/hawkx.scss\A \A 214: 		.search_close__header {\A 215: 			display: none;\A 216: 		}\A 217: 	}\A 218: \A 219: }"; }
