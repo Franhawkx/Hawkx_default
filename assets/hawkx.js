@@ -7,7 +7,7 @@ window.onload = function() {
     //Función para añadir la clase sticky al header cuando se hace scroll Fran
     const divHeader = document.getElementById("shopify-section-header");
     const header = document.querySelectorAll("#shopify-section-header header")[0];
-    divHeader.style.height = header.offsetHeight + "px";
+    //divHeader.style.height = header.offsetHeight + "px";
 
     const Nsticky = document.querySelectorAll("#shopify-section-announcement-bar")[0].offsetHeight;
     window.addEventListener("scroll", function() {sticky(divHeader, Nsticky);}, { passive: false });
