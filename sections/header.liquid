@@ -68,7 +68,7 @@
 
 {%- if shop.customer_accounts_enabled -%}
   <div class="account__header">
-    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link link--text focus-inset">
+    <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="account_link__header">
       <span class="visually-hidden">
         {%- liquid
           if customer
@@ -83,14 +83,8 @@
 {%- endif -%}
 
 <div class="cart__header">
-  <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link link--text focus-inset" id="cart-icon-bubble">
-    {%- liquid
-        if cart == empty
-          render 'icon-cart-empty'
-        else
-          render 'icon-cart'
-        endif
-      -%}
+  <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
+
     <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
     {%- if cart != empty -%}
       <div class="cart-count-bubble">
@@ -100,6 +94,7 @@
         <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
       </div>
     {%- endif -%}
+    
   </a>
 </div>
 
