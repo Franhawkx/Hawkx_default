@@ -69,6 +69,7 @@
 {%- if shop.customer_accounts_enabled -%}
   <div class="account__header">
     <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="account_link__header">
+    {%- comment -%}
       <span class="visually-hidden">
         {%- liquid
           if customer
@@ -78,6 +79,8 @@
           endif
         -%}
       </span>
+      {%- endcomment -%}
+
     </a>
   </div>
 {%- endif -%}
@@ -85,6 +88,7 @@
 <div class="cart__header">
   <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
 
+    {%- comment -%}
     <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
     {%- if cart != empty -%}
       <div class="cart-count-bubble">
@@ -94,6 +98,7 @@
         <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
       </div>
     {%- endif -%}
+    {%- endcomment -%}
     
   </a>
 </div>
