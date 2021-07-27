@@ -60,7 +60,7 @@ html {
 	}
 
 	.logo__header {
-		width: 200px;
+		width: 140px;
 		filter: invert(1);
 
 		a {
@@ -77,8 +77,8 @@ html {
 		display: flex;
 		justify-content: center;
 		margin-left: auto;
-		font-size: 1.2em;
-		font-weight: 500;
+		font-size: 1.3em;
+		font-weight: 600;
 
 		& > div {
 			position:relative;
@@ -146,9 +146,9 @@ html {
 		}
 
 		.account__header {
-			min-width: 50px;
-			width: 50px;
-			height: 50px;
+			min-width: 40px;
+			width: 40px;
+			height: 40px;
 			background-color: black;
 			color:white;
 
@@ -184,9 +184,9 @@ html {
 		}
 }
 	.search__header {
-		min-width: 50px;
-		width: 50px;
-		height: 50px;
+		min-width: 40px;
+		width: 40px;
+		height: 40px;
 		background-color: black;
 		color:white;
 		margin-left: auto;
