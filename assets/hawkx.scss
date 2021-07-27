@@ -51,8 +51,13 @@ html {
 	justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #1b1b1b1b;
+    background-color: white;
 	padding: 25px 10%;
+
+	-webkit-box-shadow: 0 10px 35px -30px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 0 10px 35px -30px rgba(0,0,0,.75);
+    box-shadow: 0 10px 35px -30px rgb(0 0 0 / 75%);
+    transition: .2s ease-out;
 
 	& > div,
 	& > nav {
