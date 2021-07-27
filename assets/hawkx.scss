@@ -48,6 +48,10 @@ body {
 				margin-right: 20px;
 			}
 
+			li {
+				list-style: none;
+			}
+
 			& > ul {
 				width: max-content;
 				position: absolute;
