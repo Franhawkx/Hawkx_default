@@ -51,6 +51,7 @@ body {
 			width: max-content;
 			position: absolute;
 			background-color: white;
+			border: 1px solid black;
 			padding: 5px 0px;
 			margin:0px;
 			opacity: 0;
@@ -70,7 +71,7 @@ body {
 					position: relative;
 
 					& > ul {
-						top: calc(100% - 5px);
+						top: 100%;
     					left: 100%;
 						@extend ul;
 					}
