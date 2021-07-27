@@ -37,6 +37,7 @@ body {
 
 	.logo__header {
 		width: 200px;
+		filter: invert(1);
 
 		a {
 			display: flex;
