@@ -7,27 +7,27 @@
 
   <nav class="nav_header">
     {%- for link in section.settings.menu.links -%}
-        <div class="{%- if link.child_active -%}child_active{% endif %}{% if link.current %} current{% endif %}">
+        <div class="{%- if link.child_active -%}child_active{% endif %}{% if link.current %} active{% endif %}">
           <a href="{{ link.url | escape }}" aria-label="{{ link.title | escape }}" target="_self">{{ link.title | escape }}</a>
 
           {%- if link.links != blank -%}
             <ul>
-            {%- for child_link in link.links -%}
-              <li class=" {%- if child_link.links != blank -%}child_active{% endif %}{% if child_link.current %} current{% endif %}">
-                <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
+              {%- for child_link in link.links -%}
+                <li class=" {%- if child_link.links != blank -%}child_active{% endif %}{% if child_link.current %} active{% endif %}">
+                  <a href="{{ child_link.url | escape }}" aria-label="{{ child_link.title | escape }}" target="_self">{{ child_link.title | escape }}</a>
 
-                {%- if child_link.links != blank -%}
-                  <ul>
-                  {%- for grand_child_link in child_link.links -%}
-                    <li class="{% if grand_child_link.current %}current{% endif %}">
-                      <a href="{{ grand_child_link.url | escape }}" aria-label="{{ grand_child_link.title | escape }}" target="_self">{{ grand_child_link.title | escape }}</a>
-                    </li>
-                  {%- endfor -%}
-                  </ul>
-                {%- endif -%}
+                  {%- if child_link.links != blank -%}
+                    <ul>
+                      {%- for third_child_link in child_link.links -%}
+                        <li class="{% if third_child_link.current %}active{% endif %}">
+                          <a href="{{ third_child_link.url | escape }}" aria-label="{{ third_child_link.title | escape }}" target="_self">{{ third_child_link.title | escape }}</a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
 
-              </li>
-            {%- endfor -%}
+                </li>
+              {%- endfor -%}
             </ul>
           {%- endif -%}
 
@@ -37,7 +37,6 @@
   </nav>
 
 </header>
-
 
 
 
