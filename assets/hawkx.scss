@@ -78,7 +78,6 @@ html {
 
 		.button_movil_nav__header {
 			display:none;
-			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			width: 30px;
@@ -86,6 +85,10 @@ html {
 			margin: 0px;
 			padding: 0px;
 			border: 0px;
+
+			@include max-media(1024px) {
+				display: flex;
+			}
 
 			div {
 				width: 100%;
