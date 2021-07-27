@@ -56,6 +56,7 @@ body {
 		height: 50px;
 		background-color: black;
 		color:white;
+		margin-left: 20px;
 
 		a {
 			width: 100%;
@@ -77,7 +78,6 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color:white;
 
 		&:after {
 			content: " S";
@@ -94,7 +94,6 @@ body {
 
 	.cart__header {
 		@extend .account__header;
-		margin-left: 20px;
 
 		a {
 			width: 100%;
