@@ -76,6 +76,23 @@ html {
 	.nav__header {
 		margin-left: auto;
 
+		.button_movil_nav__header {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 30px;
+			height: 30px;
+			margin: 0px;
+			padding: 0px;
+			border: 0px;
+
+			div {
+				width: 100%;
+				height: 5px;
+				background-color: black;
+			}
+		}
+
 		nav {
 			display: flex;
 			justify-content: center;
