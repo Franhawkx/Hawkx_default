@@ -32,6 +32,17 @@ body {
 		width: 100%;
 	}
 
+	nav {
+		display: flex;
+
+		& > div {
+
+			& > ul {
+				display:none;
+			}
+		}
+	}
+
 
 	.account__header {
 		min-width: 30px;
