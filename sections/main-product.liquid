@@ -46,6 +46,7 @@
         </button>
       {%- endif -%}
     </div>
+    <button id="añadir_producto">Añadir al carrito este producto</button>
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -59,7 +60,7 @@
               {{- block.settings.text -}}
             </p>
 
-            <button id="añadir_producto">Añadir al carrito este producto</button>
+            
           {%- when 'title' -%}
             <h1 class="product__title" id="{{product.id}}">
               {{ product.title | escape }}
