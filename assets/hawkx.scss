@@ -49,9 +49,11 @@ body {
 
 			& > ul {
 				position: absolute;
-				top:100%;
-				opacity:0;
+				top: 100%;
+				opacity: 0;
 				pointer-events: none;
+				background-color: white;
+				padding: 15px 20px;
 
 			}
 
