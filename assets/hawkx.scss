@@ -54,14 +54,19 @@ body {
 
 
 	.container_icon__header{
-		
+
+		margin-left: 20px;
+
+		&:not(:last-child) {
+			margin-right: 20px,
+		}
+
 		.account__header {
 			min-width: 50px;
 			width: 50px;
 			height: 50px;
 			background-color: black;
 			color:white;
-			margin-left: 20px;
 
 			a {
 				width: 100%;
