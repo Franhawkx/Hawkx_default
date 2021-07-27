@@ -80,10 +80,14 @@ body {
 		color:white;
 
 		&:after {
-			content: " A";
+			content: " S";
 		}
 
 		form {
+			display: none;
+		}
+
+		.search_close__header {
 			display: none;
 		}
 	}
