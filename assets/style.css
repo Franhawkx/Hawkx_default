@@ -1,0 +1,72 @@
+
+
+
+
+
+
+
+
+     
+:root {
+    --font-body-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --font-body-style: normal;
+    --font-body-weight: 400;
+
+    --font-heading-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --font-heading-style: normal;
+    --font-heading-weight: 400;
+
+    --color-base-text: #1A1B18;
+    --color-base-text-rgb: 26, 27, 24;
+    --color-base-background-1: #FFFFFF;
+    --color-base-background-1-rgb: 255, 255, 255;
+    --color-base-background-2: #FAF1E9;
+    --color-base-background-2-rgb: 250, 241, 233;
+    --color-base-solid-button-labels: #FFFFFF;
+    --color-base-solid-button-labels-rgb: 255, 255, 255;
+    --color-base-outline-button-labels: #445958;
+    --color-base-outline-button-labels-rgb: 68, 89, 88;
+    --color-base-accent-1: #445958;
+    --color-base-accent-1-rgb: 68, 89, 88;
+    --color-base-accent-2: #9D572C;
+    --color-base-accent-2-rgb: 157, 87, 44;
+
+    --color-base-text-opacity-10-percent: #e8e8e8;
+    --color-base-text-opacity-20-percent: #d1d1d1;
+    --color-base-text-opacity-55-percent: #818280;
+    --color-base-text-opacity-85-percent: #3c3d3b;
+    --color-base-accent-1-opacity-10-percent: #eceeee;
+    --color-base-accent-2-opacity-10-percent: #f5eeea;
+}
+
+*,
+    *::before,
+    *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100%;
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.06rem;
+    line-height: 1.8;
+    font-family: var(--font-body-family);
+    font-style: var(--font-body-style);
+    font-weight: var(--font-body-weight);
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        font-size: 1.6rem;
+    }
+}
