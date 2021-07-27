@@ -52,13 +52,13 @@ body {
 			position: absolute;
 			background-color: white;
 			border: 1px solid black;
-			padding: 5px 0px;
+			padding: 0px;
 			margin:0px;
 			opacity: 0;
 			pointer-events: none;
 
 			li {
-				padding: 10px 20px;
+				padding: 15px 20px 5px;
 				list-style: none;
 			}
 		}
@@ -71,7 +71,7 @@ body {
 					position: relative;
 
 					& > ul {
-						top: 100%;
+						top: 0px;
     					left: 100%;
 						@extend ul;
 					}
