@@ -35,7 +35,20 @@ body {
 		width: max-content;
 	}
 
-	nav {
+	.logo__header {
+		width: 200px;
+
+		a {
+			display: flex;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.nav__header {
 		display: flex;
 		justify-content: center;
 		margin-left: auto;
@@ -84,9 +97,6 @@ body {
 						}
 					}
 				}
-
-				
-
 			}
 
 			&:hover {
