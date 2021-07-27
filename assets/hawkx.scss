@@ -34,13 +34,15 @@ body {
 
 
 	.account__header {
+		min-width: 30px;
 		width: 30px;
 		height: 30px;
-		background-color:red;
+		background-color: red;
 	}
 
 	.cart__header {
 		@extend .account__header;
+		margin-left: 20px;
 
 	}
 
