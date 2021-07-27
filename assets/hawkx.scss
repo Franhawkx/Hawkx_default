@@ -32,5 +32,17 @@ body {
 		width: 100%;
 	}
 
+
+	.account__header {
+		width: 30px;
+		height: 30px;
+		background-color:red;
+	}
+
+	.cart__header {
+		@extend .account_header;
+
+	}
+
 }
 
