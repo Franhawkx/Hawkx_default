@@ -47,33 +47,30 @@ body {
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
-
-		li {
-			list-style: none;
+		ul {
+			width: max-content;
+			position: absolute;
+			background-color: white;
+			padding: 15px 20px;
+			margin:0px;
+			opacity: 0;
+			pointer-events: none;
+			li {
+				list-style: none;
+			}
 		}
 
 			& > ul {
-				width: max-content;
-				position: absolute;
 				top: 100%;
-				opacity: 0;
-				pointer-events: none;
-				background-color: white;
-				padding: 15px 20px;
-				margin:0px;
+				@extend ul;
 
 				li {
 					position: relative;
 
 					& > ul {
-						position: absolute;
-						top:100%;
-						left: 100%;
-						opacity: 0;
-						pointer-events: none;
-						background-color: white;
-						padding: 15px 20px;
-						margin:0px;
+						top: calc(100% - 15px);
+    					left: calc(100% + 20px);
+						@extend ul;
 					}
 	
 					&:hover {
