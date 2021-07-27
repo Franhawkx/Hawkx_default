@@ -3,16 +3,21 @@ Hoja javascipt en sucio para trabajar el JS del tema
 ========================================================*/
 
 
-
+window.onload = function() {
+    let boton_añadir_producto = document.querySelector('#añadir_producto');
+    boton_añadir_producto.addEventListener('click', subirProduct, false);
+};
 
 /*Petición de añadir el producto al carrito*/
 
 function subirProduct(){
+    let id = document.querySelector('.product__title').id;
+
     const url= '/cart/add.js';
     let productos = {
         'items': [
         {
-            'id': 40607206015127,
+            'id': id,
             'quantity': 2
         }
         ]
