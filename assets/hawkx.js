@@ -8,11 +8,7 @@ window.onload = function() {
     const divHeader = document.getElementById("shopify-section-header");
     const header = document.querySelectorAll("#shopify-section-header header")[0];
 
-    console.log(divHeader.style.height);
-    console.log(header.style.height);
-
-
-    divHeader.style.height = header.style.height;
+    divHeader.style.height = header.offsetHeight;
 
     const Nsticky = document.querySelectorAll("#shopify-section-announcement-bar")[0].offsetHeight;
     window.addEventListener("scroll", function() {sticky(divHeader, Nsticky);}, { passive: false });
