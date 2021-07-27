@@ -41,13 +41,16 @@ body {
 		margin-left: auto;
 
 		& > div {
+			position:relative;
 			
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
 
 			& > ul {
-				display:none;
+				opacity:0;
+				pointer-events: none;
+
 			}
 		}
 	}
