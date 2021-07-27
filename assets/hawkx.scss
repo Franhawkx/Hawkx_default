@@ -54,9 +54,6 @@ html {
     background-color: #1b1b1b1b;
 	padding: 25px 10%;
 
-	font-size: 1.2em;
-	font-weight: 500;
-
 	& > div,
 	& > nav {
 		width: max-content;
@@ -80,6 +77,8 @@ html {
 		display: flex;
 		justify-content: center;
 		margin-left: auto;
+		font-size: 1.2em;
+		font-weight: 500;
 
 		& > div {
 			position:relative;
