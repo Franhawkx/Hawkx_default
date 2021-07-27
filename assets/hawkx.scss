@@ -26,6 +26,7 @@ body {
     flex-direction: row;
     width: 100%;
     background-color: #1b1b1b1b;
+	padding: 15px 10%;
 
 	& > div,
 	& > nav {
@@ -46,9 +47,6 @@ body {
 			}
 		}
 	}
-
-	
-
 
 	.account__header {
 		min-width: 50px;
@@ -107,7 +105,6 @@ body {
 				content: " C";
 			}
 		}
-
 	}
 
 }
