@@ -10,6 +10,12 @@ Hoja de estilos en sucio para trabajar el CSS del tema
 @import 'variables.scss';
 @import 'funciones.scss';
 
+
+html {
+    box-sizing: border-box;
+}
+
+
 body {
 	@include media-max(797px) {
 		overflow: v(body-overflow);
