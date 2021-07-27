@@ -3,9 +3,9 @@
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 {%- endcomment -%}
 
-<header>
+<header id="container__header">
 
-  <nav class="nav_header">
+  <nav class="nav__header">
     {%- for link in section.settings.menu.links -%}
         <div class="{%- if link.child_active -%}has_children{% endif %}{% if link.child_current %} child_active{% endif %}{% if link.active %} active{% endif %}">
           <a href="{{ link.url | escape }}" aria-label="{{ link.title | escape }}" target="_self">{{ link.title | escape }}</a>
