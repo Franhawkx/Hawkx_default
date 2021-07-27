@@ -17,3 +17,19 @@ body {
 		@include tap-highlight-none();
 	}
 }
+
+/*Header
+=======================================*/
+
+#container__header {
+	display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #1b1b1b1b;
+
+	& > div,
+	& > nav {
+		width: 100%;
+	}
+
+}
