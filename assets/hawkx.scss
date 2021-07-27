@@ -74,14 +74,15 @@ html {
 	}
 
 	.nav__header {
-		display: flex;
-		justify-content: center;
 		margin-left: auto;
-		font-size: 1.3em;
-		font-weight: 600;
-		text-transform: capitalize;
 
 		nav {
+			display: flex;
+			justify-content: center;
+			margin-left: auto;
+			font-size: 1.3em;
+			font-weight: 600;
+			text-transform: capitalize;
 
 			& > div {
 				position:relative;
