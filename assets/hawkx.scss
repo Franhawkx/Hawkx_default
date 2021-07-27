@@ -13,19 +13,24 @@ Hoja de estilos en sucio para trabajar el CSS del tema
 
 html {
     box-sizing: border-box;
-}
 
+	body {
+		@include media-max(797px) {
+			overflow: v(body-overflow);
+			overflow-x: hidden;
+			@include tap-highlight-none();
+		}
+	
+		font-family: Poppins;
+		font-size: 14px;
 
-body {
-	@include media-max(797px) {
-		overflow: v(body-overflow);
-		overflow-x: hidden;
-		@include tap-highlight-none();
+		div {
+			box-sizing: border-box;
+		}
 	}
-
-	font-family: Poppins;
-	font-size: 14px;
 }
+
+
 
 /*Header
 =======================================*/
