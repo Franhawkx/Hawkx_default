@@ -5,24 +5,26 @@ Hoja javascipt en sucio para trabajar el JS del tema
 
 window.onload = function() {
     //Función para añadir la clase sticky al header cuando se hace scroll Fran
-    const divHeader = document.getElementById("shopify-section-header");
+    const container_header = document.getElementById("shopify-section-header");
     const header = document.querySelectorAll("#shopify-section-header header")[0];
-    //divHeader.style.height = header.offsetHeight + "px";
-
+    
     const Nsticky = document.querySelectorAll("#shopify-section-announcement-bar")[0].offsetHeight;
-    window.addEventListener("scroll", function() {sticky(divHeader, Nsticky);}, { passive: false });
+    window.addEventListener("scroll", function() {sticky_menu(container_header, header, Nsticky);}, { passive: false });
 
     if (pageYOffset >= Nsticky  || scrollY >= Nsticky) {
-        divHeader.classList.add("sticky");
+        container_header.style.height = header.offsetHeight + "px";
+        container_header.classList.add("sticky");
     }
 }
 
 
 //Función para añadir la clase sticky al header cuando se hace scroll Fran
-function sticky($element, $number) {
+function sticky_menu($container, $element, $number) {
+  $container.style.height = $element.offsetHeight + "px";
+
     if (pageYOffset >= $number || scrollY >= $number) {
-      $element.classList.add("sticky");
+      $container.classList.add("sticky");
     } else if(pageYOffset < $number || scrollY < $number){
-      $element.classList.remove("sticky");
+      $container.classList.remove("sticky");
     }
 }
