@@ -70,7 +70,7 @@ function response(err, data) {
     console.log('Something went wrong: ' + err);
   } else {
     console.log('Your query: ' + data);
-    return $data;
+    return data;
   }
 }
 
