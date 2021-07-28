@@ -65,16 +65,6 @@ function getJSON($url, $callback) {
   xhr.send();
 };
 
-function response(err, data) {
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    console.log('Your query: ' + data);
-    return data;
-  }
-}
-
-
 /*function update_cart(err, data) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
   if (err !== null) {
@@ -159,6 +149,13 @@ function update_cart(count) {
     cart_count.innerText = count;   
 }
 
+function response(err, data) {
+  if (err !== null) {
+    console.log('Something went wrong: ' + err);
+  } else {
+    return data;
+  }
+}
 
 /*
 
