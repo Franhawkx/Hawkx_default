@@ -90,16 +90,6 @@ function response(err, data) {
   }
 }*/
 
-function update_cart(count) {
-  const cart_count = document.querySelectorAll(".count_car__header span")[0];
-    if ( count != 0 )  {
-      cart_count.classList.remove("empty");
-    } else {
-      cart_count.classList.add("empty");
-    }
-    cart_count.innerText = count;   
-}
-
 
 /*function postJSON($url, $json) {
   var xhr = new XMLHttpRequest();
@@ -130,6 +120,8 @@ function postJSON($mode, $data) {
     $url = "/cart/clear.js";
   }
 
+  var count = 0;
+
   fetch($url,{ 
     method: 'POST',
     headers: {
@@ -143,9 +135,9 @@ function postJSON($mode, $data) {
       .then(data => {
         
         if ($mode == "add") {
-          var count = Object.keys(data).length;
+          count = Object.keys(data).length;
         } else {
-          var count = data.item_count;
+          count = data.item_count;
         }
         update_cart(count);
 
@@ -153,10 +145,17 @@ function postJSON($mode, $data) {
       .catch((error) => {
         console.error('Error:', error);
   });
-
-
 };
 
+function update_cart(count) {
+  const cart_count = document.querySelectorAll(".count_car__header span")[0];
+    if ( count != 0 )  {
+      cart_count.classList.remove("empty");
+    } else {
+      cart_count.classList.add("empty");
+    }
+    cart_count.innerText = count;   
+}
 
 
 /*
