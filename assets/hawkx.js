@@ -50,9 +50,9 @@ function toggle($element, $class) {
 
 //Función hacer llamada json
 //getJSON();
-var getJSON = function(url, callback) {
+var getJSON = function(url, method, callback) {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
+  xhr.open(method, url, true);
   xhr.responseType = 'json';
   xhr.onload = function() {
     var status = xhr.status;
