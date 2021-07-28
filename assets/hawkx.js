@@ -112,7 +112,7 @@ function update_cart(err, data) {
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
-    const cart_count = document.querySelectorAll(".count_car__header")[0];
+    const cart_count = document.getElementById("count_car__header");
     count = data.item_count;
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
