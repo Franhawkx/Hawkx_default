@@ -194,7 +194,15 @@ function print_product_cart(err, data) {
 
            console.log(content);
 
-           container.innerHTML += content;
+           const $element = document.getElementById(element.id);
+
+           if($element != undefined) {
+            $element.innerHTML = content;
+           } else {
+            container.innerHTML += content;
+           }
+
+          
     });
 
   }
