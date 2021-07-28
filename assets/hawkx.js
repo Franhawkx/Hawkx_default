@@ -127,7 +127,7 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            getJSON("/cart.js", response);            
+            getJSON("/cart.js", update_get_cart);            
           } else {
             count = data.item_count;
             update_cart(count);
@@ -149,11 +149,19 @@ function update_cart(count) {
     cart_count.innerText = count;   
 }
 
-function response(err, data) {
+function update_get_cart(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    return data;
+    count = data.item_count;
+
+    const cart_count = document.querySelectorAll(".count_car__header span")[0];
+    if ( count != 0 )  {
+      cart_count.classList.remove("empty");
+    } else {
+      cart_count.classList.add("empty");
+    }
+    cart_count.innerText = count;
   }
 }
 
