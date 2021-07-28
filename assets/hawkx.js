@@ -24,13 +24,9 @@ window.onload = function() {
       const form_search = document.querySelectorAll(".search__header form");
       const searh_search = document.querySelectorAll(".search__header .search_input__header");
 
-      button_search[0].addEventListener("click", function() { toggle(this, "open"); }, { passive: false });
+      button_search[0].addEventListener("click", function() { toggle(this, "open"); searh_search[0].focus(); }, { passive: false });
       form_search[0].addEventListener("click", function(event) { event.stopPropagation(); }, { passive: false });
-      button_search[0].addEventListener("click", function() { searh_search[0].focus(); }, { passive: false });
-      
-      
-      
-
+  
 }
 // Fin onload
 
