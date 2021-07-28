@@ -91,6 +91,11 @@ function update_cart(err, data) {
 }
 
 
+function update_cart2() {
+
+}
+
+
 /*function postJSON($url, $json) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
@@ -117,7 +122,7 @@ function postJSON($url, $data) {
     body: JSON.stringify($data)
       })
       .then(response => {
-        getJSON ("/cart.js", update_cart);
+        //getJSON ("/cart.js", update_cart);
         return response.json();
       })
       .catch((error) => {
