@@ -94,7 +94,7 @@ var postJSON = function($url, $json) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      getJSON ("/cart.js", $update_cart);
+      getJSON ("/cart.js", update_cart);
     } else {
       
     }
