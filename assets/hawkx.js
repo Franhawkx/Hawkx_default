@@ -76,7 +76,7 @@ var response = function(err, data) {
 
 
 
-var postJSON = function($url, $json) {
+/*var postJSON = function($url, $json) {
   var xhr = new XMLHttpRequest();
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.open("POST", $url, true);
@@ -90,7 +90,31 @@ var postJSON = function($url, $json) {
     }
   };
   xhr.send(JSON.stringify($json));
+};*/
+
+var postJSON = function($url, $data) {
+  
+  fetch($url,{ 
+    method: 'POST',  
+    headers: { 
+      'Content-type' : 'text/json' 
+    }, 
+    body: JSON.stringify($data) 
+      }) 
+      .then(response =>  
+        response.json() 
+      ) 
+      .then(data => {  
+          console.log(data) 
+      }) 
+
+
 };
+
+
+
+f
+
 
 /*
 
