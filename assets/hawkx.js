@@ -48,6 +48,38 @@ function toggle($element, $class) {
 }
 
 
+//Funcion para obtener datos de un producto especifico
+function getProduct($url, $callback) {
+  fetch($url,{ 
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    $callback(data.status, data)
+  });
+};
+
+
+//Funcion para obtener datos del carrito
+function getCART($callback) {
+  fetch("/cart.js",{ 
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    $callback(data.status, data)
+  });
+};
 //Funcion para obtener datos del carrito
 function getCART($callback) {
   fetch("/cart.js",{ 
