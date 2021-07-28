@@ -93,7 +93,7 @@ function update_cart(err, data) {
 function update_cart2(data) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
-  $data = data;
+  console.log(data);
     var count = data.item_count;
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
