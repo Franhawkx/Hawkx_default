@@ -133,15 +133,18 @@ function postJSON($mode, $data) {
         return response.json();
       })
       .then(data => {
-        
-        if ($mode == "add") {
-          count = Object.keys(data).length;
-        } else {
-          count = data.item_count;
-        }
         console.log(data);
-        console.log(count);
-        update_cart(count);
+        if(data.status != "bad_request") {
+          if ($mode == "add") {
+            count = Object.keys(data).length;
+          } else {
+            count = data.item_count;
+          }
+          console.log(count);
+          update_cart(count);
+        }
+        
+       
 
       })
       .catch((error) => {
