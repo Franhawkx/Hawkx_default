@@ -50,7 +50,7 @@ function toggle($element, $class) {
 
 //Función hacer llamada json
 //getJSON();
-function getJSON($url, $callback) {
+/*function getJSON($url, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", $url, true);
   xhr.responseType = 'json';
@@ -63,7 +63,7 @@ function getJSON($url, $callback) {
     }
   };
   xhr.send();
-};
+};*/
 
 /*function update_cart(err, data) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
@@ -95,6 +95,23 @@ function getJSON($url, $callback) {
   };
   xhr.send(JSON.stringify($json));
 };*/
+
+
+var getJSON = function($url) {
+  
+  fetch($url,{ 
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+      })
+      .then(response => {
+        return response.json();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+  });
+};
 
 
 function postJSON($mode, $data) {
@@ -186,14 +203,13 @@ postJSON("/cart/clear.js")
 
 
 
-var postJSON = function($url, $data) {
+var getJSON = function($url, $data) {
   
   fetch($url,{ 
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json'
-    },
-    body: JSON.stringify($data)
+    }
       })
       .then(response => {
         return response.json();
@@ -201,8 +217,6 @@ var postJSON = function($url, $data) {
       .catch((error) => {
         console.error('Error:', error);
   });
-
-
 };
 
 
