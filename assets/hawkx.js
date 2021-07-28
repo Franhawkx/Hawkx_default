@@ -65,11 +65,11 @@ var getJSON = function(url, callback) {
   xhr.send();
 };
 
-function response(err, data) {
+/*function (err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
     console.log('Your query count: ' + data);
     $data = data;
   }
-}
+}*/
