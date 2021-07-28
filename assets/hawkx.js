@@ -129,10 +129,10 @@ function print_product_cart(err, data) {
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
-    count = data.item_count;
-    for (var i = 0; i < count; i++) {
-      console.log(data.items[i].id);
-    }
+
+    data.items.forEach(element => {
+      console.log(element.id);
+    });
 
   }
 }
