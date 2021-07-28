@@ -190,6 +190,10 @@
                   </label>
                   {% endfor -%}
 
+                  <script>
+                    alert("{{ variant.url }}");
+                  </script>
+
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
