@@ -114,7 +114,7 @@ var postJSON = function($url, $data) {
 
 
 
-var getJSON = function($url, $callback) {
+var getJSON = function($url) {
   fetch($url,{ 
     method: 'GET',  
     headers: { 
@@ -162,7 +162,7 @@ postJSON("/cart/add.js", {
   ]
 } )
 
-getJSON("/products/vino-ramon-2", response)
+getJSON("/products/vino-ramon-2.js", response)
 
 
 */
