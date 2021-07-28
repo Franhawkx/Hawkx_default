@@ -50,20 +50,52 @@ function toggle($element, $class) {
 
 //Función hacer llamada json
 //getJSON();
-var getJSON = function(url, method, callback) {
+var getJSON = function($url, $callback) {
   var xhr = new XMLHttpRequest();
-  xhr.open(method, url, true);
+  xhr.open("GET", $url, true);
   xhr.responseType = 'json';
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      callback(null, xhr.response);
+      $callback(null, xhr.response);
     } else {
-      callback(status, xhr.response);
+      $callback(status, xhr.response);
     }
   };
   xhr.send();
 };
+
+
+var postJSON = function($url, $json) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", $url, true);
+  xhr.responseType = 'json';
+  xhr.onload = function() {
+    var status = xhr.status;
+    if (status === 200) {
+      console.log(xhr.response);
+    } else {
+      console.log(xhr.response);
+    }
+  };
+  xhr.send(JSON.stringify($json));
+};
+
+
+
+
+{
+  items: [
+    {
+      quantity: 1,
+      id: 794864229,
+      properties: {
+        'First name': 'Caroline'
+      }
+    }
+  ]
+}
+
 
 /*function (err, data) {
   if (err !== null) {
