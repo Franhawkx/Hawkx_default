@@ -1,6 +1,9 @@
-.body {
+
+.cartInterface{
+    width:100%;
     display:flex;
-justify-content:center;}
+    justify-content:center;
+}
 .cartInterface__titles{
     width: 80%;
     display: flex;
