@@ -197,7 +197,12 @@
                       let boton = document.getElementById('boton_pruebas');
                       boton.addeventListener('click', dimeId,false);
                     }
+                    function dimeId(){
+                      let variante_id = '{{ variant.id }}';
+                      console.log(variante_id);  
+                    }
 
+                    
                   </script>
 
                   <script type="application/json">
