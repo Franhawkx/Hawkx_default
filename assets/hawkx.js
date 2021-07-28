@@ -105,7 +105,7 @@ function recuperarItemsCarrito() {
 function eliminarProduct(){
     const url= '/cart/change.js';
     let eliminar = {
-        "quantity": 0,
+        "quantity": 0, //Esto tiene que ser fijo a cero para asi poder indicarle que queremos eliminarlo
         "id":40607206015127
     }
     const request = {

@@ -172,7 +172,6 @@
                           <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
-                                
                                 form="product-form-{{ section.id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
@@ -185,6 +184,28 @@
                   {%- endfor -%}
                   <script type="application/json">
                     {{ product.variants | json }}
+
+                    {% assign variantes = product.variants | json %}
+                    {% assign contador = 0%}
+                    {% for variante in variantes %}
+                      window.onload = function () {
+                        let variantes_html = document.querySelector('variant-radios').querySelector('fieldset').querySelectorAll('input');
+                        for (let i = 0; i < variantes_html.length; i++){
+                          document.querySelector('variant-radios').querySelector('fieldset').querySelectorAll('input')[contador].dataset.id = variante.id
+                      }
+                    }
+                    {% contador | plus: 1 %}
+                    {% endfor %}
+
+                    window.onload = function () {
+                      let variantes_html = document.querySelector('variant-radios').querySelector('fieldset').querySelectorAll('input');
+                      for (let i = 0; i < variantes_html.length; i++){
+                        document.querySelector('variant-radios').querySelector('fieldset').querySelectorAll('input')[i].dataset.id = "patata"
+                      }
+                    }
+                      
+
+
                   </script>
                 </variant-radios>
               {%- else -%}
