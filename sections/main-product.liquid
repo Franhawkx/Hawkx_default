@@ -195,17 +195,7 @@
                       }
                     }
                     {% contador | plus: 1 %}
-                    {% endfor %}
-
-                    window.onload = function () {
-                      let variantes_html = document.querySelector('variant-radios').querySelector('fieldset').querySelectorAll('input');
-                      for (let i = 0; i < variantes_html.length; i++){
-                        document.querySelector('variant-radios').querySelector('fieldset').querySelectorAll('input')[i].dataset.id = "patata"
-                      }
-                    }
-                      
-
-
+                    {% endfor %}  
                   </script>
                 </variant-radios>
               {%- else -%}
