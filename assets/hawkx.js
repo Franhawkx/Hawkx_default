@@ -44,7 +44,7 @@ function subirProduct(){
         'items': [
         {
             'id': 40607206015127,
-            'quantity': 2
+            'quantity': 1
         }
         ]
     };
@@ -68,6 +68,7 @@ function subirProduct(){
     .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
+    location.reload();
 }
 /*Petición para ver los productos del carrito*/
 function recuperarItemsCarrito() {
