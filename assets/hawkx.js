@@ -113,17 +113,24 @@ var postJSON = function($url, $data) {
 
 
 
-var getJSON = function($url, $response, $data) {
+var getJSON = function($url) {
   fetch($url,{ 
     method: 'GET',  
     headers: { 
       'Content-type' : 'text/json' 
     }
       }) 
-      
+      .then(response =>  
+        response.json(),
+        function() {
+          console.log("hola");
+        }
+        
+      ) 
+      .then(data => {  
+          console.log(data) 
+      }) 
 }
-
-function hola() {console.log("hola")}
 
 
 /*
