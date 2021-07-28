@@ -46,3 +46,20 @@ function sticky_menu($container, $element, $number) {
 function toggle($element, $class) {
   $element.classList.toggle($class);
 }
+
+
+//Función hacer llamada json
+var getJSON = function(url, callback) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'json';
+  xhr.onload = function() {
+    var status = xhr.status;
+    if (status === 200) {
+      callback(null, xhr.response);
+    } else {
+      callback(status, xhr.response);
+    }
+  };
+  xhr.send();
+};
