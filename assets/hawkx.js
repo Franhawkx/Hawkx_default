@@ -137,6 +137,7 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
+            console.log(getJSON("/cart.js", response));
             count = getJSON("/cart.js", response);
             count = count.item_count;
             
