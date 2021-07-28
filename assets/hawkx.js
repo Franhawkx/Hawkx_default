@@ -65,7 +65,7 @@ var getJSON = function(url, callback) {
   xhr.send();
 };
 
-function response (err, data) {
+function response(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
