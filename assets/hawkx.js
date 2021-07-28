@@ -91,7 +91,7 @@ function update_cart(err, data) {
 }
 
 
-function postJSON($url, $json) {
+/*function postJSON($url, $json) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
   xhr.responseType = 'json';
@@ -104,8 +104,28 @@ function postJSON($url, $json) {
     }
   };
   xhr.send(JSON.stringify($json));
-};
+};*/
 
+
+function postJSON($url, $data) {
+  
+  fetch($url,{ 
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify($data)
+      })
+      .then(response => {
+        getJSON ("/cart.js", update_cart);
+        return response.json();
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+  });
+
+
+};
 
 
 
