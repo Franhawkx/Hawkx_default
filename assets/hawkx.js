@@ -130,6 +130,15 @@ var getJSON = function($url, $callback) {
       }) 
 }
 
+var response = function(err, data) {
+  if (err !== null) {
+    console.log('Something went wrong: ' + err);
+  } else {
+    console.log('Your query: ' + data.id);
+    $data = data;
+  }
+}
+
 console.log("hola");
 
 /*
