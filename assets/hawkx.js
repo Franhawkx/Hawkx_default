@@ -80,8 +80,7 @@ var postJSON = function($url, $json) {
   var xhr = new XMLHttpRequest();
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.open("POST", $url, true);
-
-  /*xhr.responseType = 'json';
+  xhr.responseType = 'json';
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
@@ -89,8 +88,7 @@ var postJSON = function($url, $json) {
     } else {
       console.log(xhr.response);
     }
-  };*/
-
+  };
   xhr.send(JSON.stringify($json));
 };
 
