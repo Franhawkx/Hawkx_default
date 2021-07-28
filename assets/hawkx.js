@@ -121,5 +121,4 @@ function borrarVariante(id){
     .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
-    $.get("/cart/change?line=1&quantity=0");
 }
