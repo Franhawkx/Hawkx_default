@@ -130,8 +130,7 @@ function postJSON($url, $data) {
     body: JSON.stringify($data)
       })
       .then(response => {
-        response.json();
-        alert(response);
+        return response.json();
       })
       .then(data => {
         alert(data);
