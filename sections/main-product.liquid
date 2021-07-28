@@ -62,7 +62,7 @@
 
             
           {%- when 'title' -%}
-            <h1 class="product__title" id="{{ product.selected_variant.id }}">
+            <h1 class="product__title" id="{{ product.selected_or_first_available_variant.id }}">
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
