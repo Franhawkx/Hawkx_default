@@ -80,7 +80,7 @@ var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   
   xhr.open("POST", $url, true);
-  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  xhr.setRequestHeader("Content-Type", "application/json");
   xhr.responseType = 'json';
   xhr.onload = function() {
     var status = xhr.status;
