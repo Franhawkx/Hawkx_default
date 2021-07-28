@@ -96,25 +96,20 @@ function toggle($element, $class) {
   xhr.send(JSON.stringify($json));
 };*/
 
-
 function getCART() {
-  
-  $data = fetch("/cart.js",{ 
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "/cart.js", true);
+  xhr.responseType = 'json';
+  xhr.onload = function() {
+    var status = xhr.status;
+    if (status === 200) {
+      return xhr.response;
+    } else {
+      return "error";
     }
-      })
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        return data;
-    });
-
-    return $data;
+  };
+  xhr.send();
 };
-
 
 function postJSON($mode, $data) {
   if ($mode == "add") {
