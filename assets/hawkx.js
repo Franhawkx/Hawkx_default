@@ -131,7 +131,7 @@ function print_product_cart(err, data) {
     console.log('El error es: ' + err);
   } else {
     data.items.forEach(element => {
-      '<tr class="cart-item" id="element.id">'+
+      var content = '<tr class="cart-item" id="element.id">'+
                   '<td class="cart-item__media">'+
                     
                       '<img class="cart-item__image" src="'+element.featured_image.url+'" alt="element.featured_image.alt" loading="lazy" width="75" height="75">'+
@@ -190,7 +190,9 @@ function print_product_cart(err, data) {
                       '</a>'+
                     '</cart-remove-button>'+
                   '</td>'+
-           '</tr>'
+           '</tr>';
+
+           container.innerHTML += content;
     });
 
   }
