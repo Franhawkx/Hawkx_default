@@ -74,6 +74,19 @@ var response = function(err, data) {
   }
 }
 
+
+const cart = document.querySelectorAll(".cart_link__header")[0];
+
+var update_cart = function(err, data) {
+  if (err !== null) {
+    console.log('Something went wrong: ' + err);
+  } else {
+    cart.innerText = Object.keys($data).length
+  }
+}
+
+
+
 var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
