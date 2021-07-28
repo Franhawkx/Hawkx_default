@@ -50,7 +50,7 @@ function toggle($element, $class) {
 
 //Función hacer llamada json
 //getJSON();
-/*var getJSON = function($url, $callback) {
+var getJSON = function($url, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", $url, true);
   xhr.responseType = 'json';
@@ -72,11 +72,11 @@ var response = function(err, data) {
     console.log('Your query: ' + data.id);
     $data = data;
   }
-}*/
+}
 
 
 
-/*var postJSON = function($url, $json) {
+var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.open("POST", $url, true);
@@ -84,15 +84,15 @@ var response = function(err, data) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      console.log(xhr.response);
+      $callback(null, xhr.response);
     } else {
-      console.log(xhr.response);
+      $callback(status, xhr.response);
     }
   };
   xhr.send(JSON.stringify($json));
-};*/
+};
 
-var postJSON = function($url, $data) {
+/*var postJSON = function($url, $data) {
   
   fetch($url,{ 
     method: 'POST',
@@ -130,7 +130,7 @@ var getJSON = function($url) {
       .then(data => {  
           console.log(data) 
       }) 
-}
+}*/
 
 
 /*
