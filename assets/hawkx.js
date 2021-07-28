@@ -92,6 +92,8 @@ function update_cart(err, data) {
 
 function update_cart2(data) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
+
+  $data = data;
     var count = data.item_count;
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
@@ -131,7 +133,7 @@ function postJSON($url, $data) {
         response.json();
       })
       .then(data => {
-        update_cart(err, data);
+        update_cart2(data);
       })
       .catch((error) => {
         console.error('Error:', error);
