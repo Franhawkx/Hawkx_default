@@ -124,6 +124,16 @@ function update_cart(err, data) {
   }
 }
 
+//Callback para pintar los datos del carrito
+function update_cart(err, data) {
+  if (err !== null && err !== undefined) {
+    console.log('El error es: ' + err);
+  } else {
+    
+   console.log(data)
+  }
+}
+
 
 /*
 let json = {
