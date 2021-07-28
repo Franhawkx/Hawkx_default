@@ -99,7 +99,7 @@ function toggle($element, $class) {
 
 function getCART() {
   
-  fetch("/cart.js",{ 
+  $data = fetch("/cart.js",{ 
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
