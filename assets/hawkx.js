@@ -75,7 +75,7 @@ var response = function(err, data) {
 }
 
 
-const cart_count = document.querySelectorAll(".count_car__header")[0];
+const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
 var update_cart = function(err, data) {
   if (err !== null) {
