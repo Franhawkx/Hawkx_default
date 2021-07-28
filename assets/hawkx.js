@@ -64,22 +64,6 @@ function getProduct($url, $callback) {
   });
 };
 
-
-//Funcion para obtener datos del carrito
-function getCART($callback) {
-  fetch("/cart.js",{ 
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    $callback(data.status, data)
-  });
-};
 //Funcion para obtener datos del carrito
 function getCART($callback) {
   fetch("/cart.js",{ 
