@@ -105,7 +105,7 @@ function update_cart2($data) {
     } else {
       cart_count.classList.add("empty");
     }
-    cart_count.innerText = count; /*
+    cart_count.innerText = count; */
 
 }
 
