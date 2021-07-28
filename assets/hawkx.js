@@ -131,6 +131,7 @@ function postJSON($url, $data) {
       })
       .then(response => {
         response.json();
+        alert(response);
       })
       .then(data => {
         alert(data);
