@@ -81,9 +81,7 @@ var update_cart = function(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    cart.innerText = data.item_count;
-    $data = data;
-   
+    cart.innerText = data.items.length;   
   }
 }
 
