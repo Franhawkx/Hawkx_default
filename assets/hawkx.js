@@ -163,7 +163,7 @@ function print_product_cart(err, data) {
                         
 
                       '</button>'+
-                      '<input class="quantity__input" type="number" name="updates[]" value="6" min="0" aria-label="Cantidad para Vino Ramón 2" id="Quantity-1" data-index="1">'+
+                      '<input class="quantity__input" type="number" name="updates[]" value="'+ element.quantity +'" min="0" aria-label="Cantidad para Vino Ramón 2" id="Quantity-1" data-index="1">'+
                       '<button class="quantity__button no-js-hidden" name="plus" type="button">'+
                         '<span class="visually-hidden">Aumentar cantidad para '+ element.product_title +'</span>'+
                        
