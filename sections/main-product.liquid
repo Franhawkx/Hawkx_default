@@ -201,14 +201,12 @@
 
                   <script>
                     function init(){
-                      alert('Algo1');
                       let boton = document.getElementById('boton_pruebas');
                       boton.addEventListener('click', dimeId, false);
                     }
 
                     
                     function dimeId() {
-                      console.log('Algo');
                       let variantes = document.querySelectorAll('.seleccionar_variantes input');
                       for (let variant of variantes){
                         if(variant.checked == true){
