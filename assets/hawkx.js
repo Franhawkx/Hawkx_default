@@ -64,6 +64,7 @@ function getCART($callback) {
   });
 };
 
+//Funcion para limpiar el carrito
 function clearCART($callback){
   fetch("/cart/clear.js",{ 
     method: 'POST',
