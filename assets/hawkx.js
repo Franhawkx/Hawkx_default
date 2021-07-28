@@ -184,7 +184,7 @@ function print_product_cart(err, data) {
                         '</span></div>'+
 
                     '<cart-remove-button id="Remove-1" data-index="1">'+
-                      '<a href="/cart/change?id=40607204278423:96d8bd9225ec0243a9323fac3db60f8e&amp;quantity=0" class="button button--tertiary" aria-label="Eliminar Vino Ramón 2">'+
+                      '<a href="/cart/change?id='+ element.id +':96d8bd9225ec0243a9323fac3db60f8e&amp;quantity=0" class="button button--tertiary" aria-label="Eliminar Vino Ramón 2">'+
                        
 
                       '</a>'+
