@@ -28,12 +28,14 @@
       <hr>
       <div class="cartInterface">
         <div class="cartInterface__line-item">
+          <div class="flex"> 
             <div>
               {{ item.image | img_url: '100x100' | img_tag }}
             </div>
             <div>     
               <p>{{item.title}}</p>
             </div>
+          </div> 
             <div>
               {{item.final_price}}
               
