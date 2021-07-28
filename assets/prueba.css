@@ -1,20 +1,20 @@
-.father{
+.cartInterface{
     width: 100%;
     background-color:black;
     display: flex;
     justify-content: center;
 }
-.container{
+.cartInterface__container{
     width: 80%;
     display: flex;
     justify-content: space-between;
 }
-.container__Child1{
+.cartInterface__container__child1{
     width:45%;
     display: flex;
     justify-content: space-between;
 }
-.container__Child2 {
+.cartInterface__container__child2{
     width: 45%;
     display: flex;
     justify-content: space-between;
