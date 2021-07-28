@@ -99,11 +99,10 @@
 
     <div class="cart__header">
       <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
-
       {%- if cart != empty -%}
-          <div class="cart-count-bubble">
+          <div class="count_car__header">
             {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
+              <span>{{ cart.item_count }}</span>
             {%- endif -%}
           </div>
         {%- endif -%}
