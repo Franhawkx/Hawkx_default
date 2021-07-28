@@ -98,19 +98,18 @@ function toggle($element, $class) {
 
 //Funcion para obtener datos del carrito
 function getCART($callback) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "/cart.js", true);
-  xhr.responseType = 'json';
-  xhr.onload = function() {
-    var status = xhr.status;
-    if (status === 200) {
-      $callback(null, xhr.response);
-    } else {
-      $callback(status, xhr.response);
+  fetch($url,{ 
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
     }
-  };
-
-  xhr.send();
+  })
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+    $callback(data.status, data)
+  });
 };
 
 //Funcion para obtener datos del carrito
