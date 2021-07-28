@@ -57,9 +57,9 @@ function getJSON($url, $callback) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      return $callback(null, xhr.response);
+      $callback(null, xhr.response);
     } else {
-      return $callback(status, xhr.response);
+      r$callback(status, xhr.response);
     }
   };
   xhr.send();
