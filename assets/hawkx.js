@@ -102,7 +102,8 @@ var postJSON = function($url, $data) {
     body: JSON.stringify($data) 
       }) 
       .then(response =>  
-        response.json() 
+        response.json(),
+        console.log(response)
       ) 
       .then(data => {  
           console.log(data) 
