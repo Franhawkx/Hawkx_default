@@ -110,7 +110,7 @@ let json = {
     40607204278423: 2,
   }
 };
-postJSON("/cart/update.js", json, getJSON("/cart.js", response))
+postJSON("/cart/update.js", json, getJSON("/cart.js", update_cart))
 
 
 
