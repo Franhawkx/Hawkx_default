@@ -181,6 +181,8 @@
                       </fieldset>
                   {%- endfor -%}
                   
+                  <button id="boton_pruebas">PULSAME</button>
+
                   {% for variant in product.variants %}
                     <h2>{{ variant }}</h2>  
                     <h1>AYUDA</h1>
@@ -190,6 +192,14 @@
 
                   <script type="application/json">
                     {{ product.variants | json }}
+
+                    let boton = document.getElementById('boton_pruebas');
+                    boton.addeventListener('click', dimeId,false);
+
+                    function dimeId(){
+                      console.log('El id es: ' + {{ variant.selected }});
+                    }
+
                   </script>
                 </variant-radios>
               {%- else -%}
