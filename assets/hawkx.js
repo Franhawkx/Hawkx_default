@@ -108,7 +108,7 @@ function eliminarProduct(){
         'items': [
             {
                 'id': 40607206015127,
-                'quantity': 0   //Con esto le decimos que lo borre
+                'item_count': 0   //Con esto le decimos que lo borre
             }
         ]
     };
