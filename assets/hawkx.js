@@ -81,9 +81,8 @@ var update_cart = function(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    console.log(data);
-    cart.innerText = Object.keys(data).length;
-    $data = data;
+    cart.innerText = data.item_count;
+   
   }
 }
 
@@ -105,7 +104,28 @@ var postJSON = function($url, $json, $callback) {
   xhr.send(JSON.stringify($json));
 };
 
-/*var postJSON = function($url, $data) {
+/*
+
+let json = {
+  updates: {
+    40607204278423: 2,
+  }
+};
+postJSON("/cart/update.js", json, getJSON("/cart.js", response))
+
+
+
+
+
+
+
+
+
+
+
+
+
+var postJSON = function($url, $data) {
   
   fetch($url,{ 
     method: 'POST',
