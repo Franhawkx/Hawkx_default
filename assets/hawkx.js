@@ -49,7 +49,7 @@ function subirProduct(){
     let productos = {
         'items': [
         {
-            'id': 7048058634391,
+            'id': 40607206015127,
             'quantity': 2
         }
         ]
@@ -96,4 +96,41 @@ function recuperarItemsCarrito() {
         .catch(function (error) {
             console.log('Ha habido un problema: ', error);
         });
+}
+
+
+
+
+//Peticion para añadir un producto al carrito por su id
+function eliminarProduct(){
+    const url= '/cart/change.js';
+    let productos = {
+        'items': [
+            {
+                'id': 40607206015127,
+                'quantity': 0   //Con esto le decimos que lo borre
+            }
+        ]
+    };
+    const request = {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(productos)
+    };
+
+    fetch(url,request)
+    .then(function(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+        return response.json();
+    })
+    .then(function(responseAsObject) {
+        console.log(responseAsObject);
+    })
+    .catch(function(error) {
+        console.log('Ha habido un problema: ', error);
+    });
 }
