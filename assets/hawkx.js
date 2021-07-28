@@ -77,12 +77,19 @@ var response = function(err, data) {
 
 const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
-var update_cart = function(err, data) {
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    cart_count.innerText = data.item_count;   
+
+
+function update_cart() {
+  var $update_cart = function(err, data) {
+    if (err !== null) {
+      console.log('Something went wrong: ' + err);
+    } else {
+      cart_count.innerText = data.item_count;   
+    }
   }
+
+  getJSON ("/cart.js", $update_cart);
+  
 }
 
 
@@ -109,7 +116,7 @@ let json = {
     40607204278423: 2,
   }
 };
-postJSON("/cart/update.js", json, getJSON("/cart.js", update_cart))
+postJSON("/cart/update.js", json, update_cart)
 
 
 
