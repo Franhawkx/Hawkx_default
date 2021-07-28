@@ -102,7 +102,7 @@
       {%- if cart != empty -%}
           <div class="count_car__header">
             
-              <span>{%- if cart.item_count < 100 -%}{{ cart.item_count }} {%- else -%} +99 {%- endif -%}</span>
+              <span>{%- if cart.item_count < 100 -%}{{ cart.item_count }}{%- else -%}+99{%- endif -%}</span>
            
           </div>
         {%- endif -%}
