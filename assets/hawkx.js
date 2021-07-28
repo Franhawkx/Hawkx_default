@@ -95,7 +95,7 @@ var postJSON = function($url, $json, $callback) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      $callback("json", xhr.response);
+      $callback(null, xhr.response);
     } else {
       $callback(status, xhr.response);
     }
