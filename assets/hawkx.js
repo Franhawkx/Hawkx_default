@@ -68,8 +68,8 @@ function subirProduct(){
     .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
-    location.reload();
-    location.reload();
+    
+    
 
 
 }
@@ -93,8 +93,9 @@ function recuperarItemsCarrito() {
 }
 
 var botonPrueba = document.querySelector(".botonPrueba");
-botonPrueba.addEventListener('click', borrarVariante);
-function borrarVariante(){
+botonPrueba.addEventListener('click', borrarVariante,false);
+
+function borrarVariante(id){
     const url= '/cart/change.js';
     let eliminar = {
         "quantity": 0, //Esto tiene que ser fijo a cero para asi poder indicarle que queremos eliminarlo
@@ -105,7 +106,7 @@ function borrarVariante(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"quantity": 0,"id":"40607206015127"})
+        body: JSON.stringify(eliminar)
     };
     fetch(url,request)
     .then(function(response) {
@@ -120,6 +121,6 @@ function borrarVariante(){
     .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
-    location.reload();
-    location.reload();
+
+    
 }
