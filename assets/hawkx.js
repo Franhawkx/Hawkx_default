@@ -112,12 +112,12 @@ function postJSON($url, $data) {
   fetch($url,{ 
     method: 'POST',
     headers: {
-      'Content-Type': 'text/json'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify($data)
       })
       .then(response => {
-        //getJSON ("/cart.js", update_cart);
+        getJSON ("/cart.js", update_cart);
         return response.json();
       })
       .catch((error) => {
