@@ -113,7 +113,7 @@ function eliminarProduct(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(eliminar);
+        body: JSON.stringify(eliminar)
     };
 
     fetch(url,request)
