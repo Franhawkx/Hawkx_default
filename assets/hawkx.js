@@ -98,7 +98,7 @@ function toggle($element, $class) {
 
 //Funcion para obtener datos del carrito
 function getCART($callback) {
-  fetch($url,{ 
+  fetch("/cart.js",{ 
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
