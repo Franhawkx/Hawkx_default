@@ -20,6 +20,10 @@ window.onload = function() {
           container_header.classList.add("sticky");
       }
 
+      const button_search = document.querySelectorAll(".search__header");
+      button_search[0].addEventListener("click", function() {toggle(this, "open");}, { passive: false });
+      
+
 }
 // Fin onload
 
