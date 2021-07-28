@@ -181,7 +181,9 @@
                       </fieldset>
                   {%- endfor -%}
                   <script type="application/json">
-                    {{ product.variants | json }}
+                    {% assign variantes = product.variants | json %}
+                    {{ variantes[0] }}
+                    
                   </script>
                 </variant-radios>
               {%- else -%}
