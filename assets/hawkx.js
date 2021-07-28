@@ -144,12 +144,13 @@ function postJSON($mode, $data) {
           if ($mode == "add") {
             getCART(update_cart);    
           }else {
-            update_cart(null, data);
+            update_cart(data.status, data);
           }
         }
       });
 };
 
+//Call
 function update_cart(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
