@@ -129,14 +129,7 @@ var getJSON = function($url) {
       }) 
 }
 
-var response = function(err, data) {
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    console.log('Your query: ' + data.id);
-    $data = data;
-  }
-}
+
 
 console.log("hola");
 
@@ -161,7 +154,7 @@ postJSON("/cart/add.js", {
   ]
 } )
 
-getJSON("/products/vino-ramon-2.js", response)
+getJSON("/products/vino-ramon-2.js")
 
 
 */
