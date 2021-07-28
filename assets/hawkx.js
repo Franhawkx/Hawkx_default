@@ -22,8 +22,12 @@ window.onload = function() {
 
       const button_search = document.querySelectorAll(".search__header");
       const form_search = document.querySelectorAll(".search__header form");
-      button_search[0].addEventListener("click", function(event) { toggle(this, "open");}, { passive: false });
-      form_search[0].addEventListener("click", function(event) { event.stopPropagation();}, { passive: false });
+      const searh_search = document.querySelectorAll(".search__header .search_input__header");
+
+      button_search[0].addEventListener("click", function() { toggle(this, "open"); }, { passive: false });
+      form_search[0].addEventListener("click", function(event) { event.stopPropagation(); }, { passive: false });
+      button_search[0].addEventListener("click", function() { searh_search.focus(); }, { passive: false });
+      
       
       
 
