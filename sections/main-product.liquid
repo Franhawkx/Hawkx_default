@@ -183,23 +183,22 @@
                   
                   <button id="boton_pruebas">PULSAME</button>
 
-                  {% for variant in product.variants %}
                   <div class="seleccionar_variantes">
-                    {% if forloop.first == true %}
-                      <input type="radio" id = "{{variant.id}}" value = "{{variant.id}}" name="variante" checked="true">
-                      <label for="{{variant.id}}">
-                        {{variant.title}}
-                      </label>
-                    {% else %}
-                      <input type="radio" id = "{{variant.id}}" value = "{{variant.id}}" name="variante">
-                      <label for="{{variant.id}}">
-                        {{variant.title}}
-                      </label>
-                    {% endif %}
+                    {% for variant in product.variants %}
+                      {% if forloop.first == true %}
+                        <input type="radio" id = "{{variant.id}}" value = "{{variant.id}}" name="variante" checked="true">
+                        <label for="{{variant.id}}">
+                          {{variant.title}}
+                        </label>
+                      {% else %}
+                        <input type="radio" id = "{{variant.id}}" value = "{{variant.id}}" name="variante">
+                        <label for="{{variant.id}}">
+                          {{variant.title}}
+                        </label>
+                      {% endif %}
+                    {% endfor -%}
                   </div>
-
-                  {% endfor -%}
-
+                  
                   <script>
                     
                   </script>
