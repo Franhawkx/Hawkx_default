@@ -101,9 +101,9 @@
       <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
       {%- if cart != empty -%}
           <div class="count_car__header">
-            {%- if cart.item_count < 100 -%}
-              <span>{{ cart.item_count }}</span>
-            {%- endif -%}
+            
+              <span>{%- if cart.item_count < 100 -%}{{ cart.item_count }} {%- else -%} +99 {%- endif -%}</span>
+           
           </div>
         {%- endif -%}
 
