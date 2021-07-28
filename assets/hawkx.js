@@ -74,6 +74,7 @@ var response = function(err, data) {
   }
 }
 
+/*
 
 var postJSON = function($url, $json) {
   var xhr = new XMLHttpRequest();
@@ -105,3 +106,6 @@ var json = {
 postJSON("/cart/add.js", json )
 
 getJSON("/products/vino-ramon-2", response)
+
+
+*/
