@@ -194,7 +194,7 @@ function print_product_cart(err, data) {
 
            console.log(content);
 
-           const $element = document.getElementById(element.id);
+           var $element = document.getElementById(element.id);
 
            if($element != undefined) {
             $element.innerHTML = content;
