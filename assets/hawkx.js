@@ -44,49 +44,39 @@ function sticky_menu($container, $element, $number) {
 
 
 //Peticion para añadir un producto al carrito por su id
-function subirProduct() {
-    //let id = document.querySelector('.product__title').id;
-
-    let formData = {
-
-        'items': [{
-
-            'id': 7048056864919,
-
+function subirProduct(){
+    const url= '/cart/add.js';
+    let productos = {
+        'items': [
+        {
+            'id': 40607206015127,
             'quantity': 2
-
-        }]
-
+        }
+        ]
     };
 
-
-    fetch('/cart/add.js', {
-
-        method: 'POST',
-
+    const request = {
+        method: 'POST', 
         headers: {
-
             'Content-Type': 'application/json'
-
         },
+        body: JSON.stringify(productos)
+    };
 
-        body: JSON.stringify(formData)
-
-    })
-    .then(function (response) {
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
+    fetch(url,request)
+    .then(function(response) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
         return response.json();
     })
-    .then(function (responseAsObject) {
+    .then(function(responseAsObject) {
         console.log(responseAsObject);
     })
-    .catch(function (error) {
+    .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
 }
-
 
 /*Petición para ver los productos del carrito*/
 
