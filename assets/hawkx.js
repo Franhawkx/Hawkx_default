@@ -109,7 +109,7 @@ function getCART() {
         return response.json();
       })
       .then(data => {
-        $data = data;
+        return $data = data;
     });
 
     return $data;
