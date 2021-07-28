@@ -132,6 +132,9 @@ function postJSON($mode, $data) {
       .then(response => {
         return response.json();
       })
+      .catch((error) => {
+        console.error('Error:', error);
+      })
       .then(data => {
         console.log(data);
         if(data.status != "bad_request") {
@@ -143,13 +146,7 @@ function postJSON($mode, $data) {
           console.log(count);
           update_cart(count);
         }
-        
-       
-
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-  });
+      });
 };
 
 function update_cart(count) {
