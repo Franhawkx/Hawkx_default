@@ -75,13 +75,13 @@ var response = function(err, data) {
 }
 
 
-const cart = document.querySelectorAll(".cart_link__header")[0];
+const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
 var update_cart = function(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    cart.innerText = data.items.length;   
+    cart_count.innerText = data.items.length;   
   }
 }
 
