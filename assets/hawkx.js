@@ -127,7 +127,7 @@ function postJSON($url, $data) {
   fetch($url,{ 
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/json'
     },
     body: JSON.stringify($data)
       })
