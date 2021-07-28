@@ -54,6 +54,7 @@ html {
 #shopify-section-header{
 	
 	#container__header {
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -241,13 +242,65 @@ html {
 				content: "S";
 			}
 
+
 			form {
 				display: none;
+				align-items: center;
+				position: absolute;
+				height: 100%;
+				display: flex;
+				background-color: white;
+				width: 100%;
+				top: 0px;
+				left: 0px;
+				justify-content: center;
+
+				div {
+					width: 100%;
+					padding: 0px 10%;
+					display: flex;
+					align-items: center;
+				}
+
+				input {
+					width: 80%;
+					height: 40px;
+					padding: 10px 35px 10px 15px;
+					border-radius: 5px 0px 0px 5px;
+					border: 1px solid black;
+				}
+
+				label {
+					display: none;
+				}
+
+				button {
+					width: 20%;
+					height: 40px;
+					border-radius: 0px 5px 5px 0px;
+					border: 1px solid black;
+				}
 			}
 
 			.search_close__header {
 				display: none;
 			}
+
+			&.open {
+				&:after {
+					z-index: 999;
+					left: calc(10% + 15px);
+					color: black;
+					position: absolute;
+				}
+
+				form {
+					display: block;
+				}
+			}
+			
+
+			
 		}
 
 	}
