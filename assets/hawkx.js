@@ -110,7 +110,6 @@ function getCART() {
   };
 
   xhr.send();
-  return xhr.onload;  
 };
 
 function postJSON($mode, $data) {
