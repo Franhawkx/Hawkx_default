@@ -183,7 +183,7 @@
                   <script type="application/json">
                     {{ product.variants | json }}
                     {% assign variantes = product.variants | json %}
-                    {{variantes[0].id}}
+                    console.log(variantes);
                   </script>
                 </variant-radios>
               {%- else -%}
