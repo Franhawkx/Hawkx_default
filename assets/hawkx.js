@@ -155,6 +155,7 @@ function update_cart(err, data) {
     console.log('Something went wrong: ' + err);
   } else {
     const cart_count = document.querySelectorAll(".count_car__header span")[0];
+    count = data.item_count;
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
     } else {
