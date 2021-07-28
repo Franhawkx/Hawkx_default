@@ -80,7 +80,7 @@ function clearCART($callback){
 }
 
 //Funcion para obtener datos del carrito
-function updateCART($mode, $data) {
+function updateCART($mode, $data, $callback) {
   if ($mode == "add") {
     $url = "/cart/add.js";
   } else if($mode == "update") {
@@ -99,9 +99,9 @@ function updateCART($mode, $data) {
   })
   .then(data => {
       if ($mode == "add") {
-        getCART(update_cart);    
+        getCART($callback);    
       }else {
-        update_cart(data.status, data);
+        $callback(data.status, data);
       }
   });
 
