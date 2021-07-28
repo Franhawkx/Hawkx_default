@@ -21,8 +21,9 @@
         </div>  
         
     </div>
-    <hr>
+   
       {% for item in cart.items %}
+      <hr>
         <div class="cartInterface__line-item">
           <div>
             {{ item.image | img_url: '100x100' | img_tag }}
@@ -40,7 +41,7 @@
             Borrar
           </button>
         </div>
-        <hr>
+        
 
       {% endfor %}
     
