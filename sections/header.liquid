@@ -99,13 +99,10 @@
 
     <div class="cart__header">
       <a href="{{ routes.cart_url }}" class="cart_link__header" id="cart_link__header">
-      {%- if cart != empty -%}
+      
           <div class="count_car__header">
-            
-              <span>{%- if cart.item_count < 100 -%}{{ cart.item_count }}{%- else -%}+99{%- endif -%}</span>
-           
+              <span>{%- if cart != empty -%}{%- elsif cart.item_count < 100 -%}{{ cart.item_count }}{%- else -%}+99{%- endif -%}</span>
           </div>
-        {%- endif -%}
 
         {%- comment -%}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
