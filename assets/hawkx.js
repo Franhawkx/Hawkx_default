@@ -129,6 +129,7 @@ function print_product_cart(err, data) {
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
+    $data = data;
    console.log(data)
   }
 }
