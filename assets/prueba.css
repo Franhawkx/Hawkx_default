@@ -1,6 +1,6 @@
 .cartInterface{
     width: 100%;
-    background-color:black;
+    height:200px;
     display: flex;
     justify-content: center;
 }
