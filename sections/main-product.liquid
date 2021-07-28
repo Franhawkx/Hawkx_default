@@ -170,7 +170,7 @@
                         {%- for value in option.values -%}
                           <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
-                                id = "{{ option.id }}"
+                                data-id = "{{ option.id }}"
                                 value="{{ value | escape }}"
                                 form="product-form-{{ section.id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
