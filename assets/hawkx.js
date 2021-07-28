@@ -103,6 +103,7 @@ function getCART() {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
+      console.log(xhr.response);
       return xhr.response;
     } else {
       return "error";
