@@ -12,19 +12,22 @@
 <h1>TU CARRITO</h1>
 <div class="cartInterface">
   {% if cart.items.length != 0 %}
-    
+    <div class="cartInterface__container">
+      <div class="cartInterface__container__child1">
+        <p>PRODUCTO</p>
+        <p>PRECIOS</p>
+      </div>
+      <div class="cartInterface__container__child2">
+        <p>CANTIDAD</p>
+        <p>TOTAL</p>
+      </div>  
+    </div>
     {% for item in cart.items %}
-        <div class="cartInterface__container">
-          <div class="cartInterface__container__child1">
-            <p>PRODUCTO</p>
-            <p>PRECIOS</p>
-          </div>
-          <div class="cartInterface__container__child2">
-            <p>CANTIDAD</p>
-            <p>TOTAL</p>
-            <h1>jahsdfohasñfjasjdfh </h1>
-          </div>  
-        </div>
+      <div>
+        {{ item.image | img_url: '100x100' | img_tag }}
+      </div>
+      <div></div>
+      <div></div>
       <hr>
 
     {% endfor %}
