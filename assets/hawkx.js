@@ -103,21 +103,13 @@ function recuperarItemsCarrito() {
 
 //Peticion para añadir un producto al carrito por su id
 function eliminarProduct(){
-    const url= '/cart/update.js';
-    let productos = {
-        'items': [
-            {
-                'id': 40607206015127,
-                'item_count': 0   //Con esto le decimos que lo borre
-            }
-        ]
-    };
+    const url= '/cart/change.js';
     const request = {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(productos)
+        body: JSON.stringify({"quantity": 0,"id":"40607206015127"})
     };
 
     fetch(url,request)
