@@ -220,6 +220,17 @@ html {
 					align-items: center;
 					color:inherit;
 
+					.count_car__header {
+
+						span {
+							&.empty {
+								display:none;
+							}
+
+						}
+
+					}
+
 					&:after {
 						content: "C";
 					}
