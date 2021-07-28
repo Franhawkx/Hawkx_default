@@ -96,6 +96,7 @@ function toggle($element, $class) {
   xhr.send(JSON.stringify($json));
 };*/
 
+//Funcion para obtener datos del carrito
 function getCART($callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/cart.js", true);
@@ -112,6 +113,7 @@ function getCART($callback) {
   xhr.send();
 };
 
+//Funcion para obtener datos del carrito
 function postJSON($mode, $data) {
   if ($mode == "add") {
     $url = "/cart/add.js";
@@ -125,32 +127,27 @@ function postJSON($mode, $data) {
     $url = "/cart/clear.js";
   }
 
-  var count = 0;
-
   fetch($url,{ 
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify($data)
-      })
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
+  })
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+      if ($mode == "add") {
+        getCART(update_cart);    
+      }else {
+        update_cart(data.status, data);
+      }
+  });
 
-        if(data.status != "bad_request") {
-
-          if ($mode == "add") {
-            getCART(update_cart);    
-          }else {
-            update_cart(data.status, data);
-          }
-        }
-      });
 };
 
-//Call
+//Callback para actualizar el carrito segun respuesta
 function update_cart(err, data) {
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
