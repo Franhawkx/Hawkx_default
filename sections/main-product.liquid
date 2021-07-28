@@ -171,6 +171,7 @@
                           <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
                                 value="{{ value | escape }}"
+                                data-id = "{{ option.id }}"
                                 form="product-form-{{ section.id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
@@ -181,9 +182,7 @@
                       </fieldset>
                   {%- endfor -%}
                   <script type="application/json">
-                    {% assign variantes = product.variants | json %}
-                    {{ variantes[0] }}
-                    
+                    {{ product.variants | json }}
                   </script>
                 </variant-radios>
               {%- else -%}
