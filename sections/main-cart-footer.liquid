@@ -11,15 +11,33 @@
 
 <h1>TU CARRITO</h1>
 <div class="cartInterface">
-  <div class="cartInterface__container">
-    <div class="cartInterface__container__child1">
-      <p>PRODUCTO</p>
-      <p>PRECIOS</p>
-    </div>
-    <div class="cartInterface__container__child2">
-      <p>CANTIDAD</p>
-      <p>TOTAL</p>
-    </div>  
-  </div>
+  {% if cart.items.length != 0 %}
+    
+      {% for item in cart.items %}
+      <div class="cartInterface__container">
+        <div class="cartInterface__container__child1">
+          <p>PRODUCTO</p>
+          <p>PRECIOS</p>
+        </div>
+        <div class="cartInterface__container__child2">
+          <p>CANTIDAD</p>
+          <p>TOTAL</p>
+        </div>  
+      </div>
+      <hr>
+
+    {% endfor %}
+  
+  {% else %}
+      <div>
+        <h1>TU CARRITO ESTÁ VACIO</h1>
+      </div>
+  {% endif %}
+  
 </div>
 <hr>
+{% if condition %}
+  
+{% else %}
+  
+{% endif %}
