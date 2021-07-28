@@ -122,6 +122,4 @@ function borrarVariante(){
     });
     location.reload();
     location.reload();
-
-
 }

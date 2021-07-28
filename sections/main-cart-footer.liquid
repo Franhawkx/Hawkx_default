@@ -29,18 +29,18 @@
       <div class="cartInterface">
         <div class="cartInterface__line-item">
           <div class="flex"> 
-            <div>
+            <div class="alignItems">
               {{ item.image | img_url: '100x100' | img_tag }}
             </div>
-            <div>     
+            <div class="alignItems">     
               <p>{{item.title}}</p>
             </div>
           </div> 
-            <div>
+            <div class="alignItems">
               {{item.final_price}}
               
             </div>
-            <div>
+            <div class="alignItems">
               {{item.quantity}}
             </div>
             <button class="botonPrueba">
