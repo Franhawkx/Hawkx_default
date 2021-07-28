@@ -73,18 +73,18 @@ function subirProduct() {
         body: JSON.stringify(formData)
 
     })
-
-        .then(response => {
-
-            return response.json();
-
-        })
-
-        .catch((error) => {
-
-            console.error('Error:', error);
-
-        });
+    .then(function (response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+        return response.json();
+    })
+    .then(function (responseAsObject) {
+        console.log(responseAsObject);
+    })
+    .catch(function (error) {
+        console.log('Ha habido un problema: ', error);
+    });
 }
 
 
