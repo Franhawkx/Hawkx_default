@@ -91,7 +91,7 @@ var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.responseType = 'json';
+  xhr.responseType = 'text';
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
