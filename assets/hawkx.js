@@ -133,6 +133,7 @@ function postJSON($url, $data) {
       })
       .then(response => {
         //getJSON ("/cart.js", update_cart);
+        console.log(response.json());
         return response.json();
       })
       .catch((error) => {
