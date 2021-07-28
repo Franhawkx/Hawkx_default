@@ -114,7 +114,7 @@ function getCART($callback) {
 };
 
 //Funcion para obtener datos del carrito
-function postJSON($mode, $data) {
+function postCART($mode, $data) {
   if ($mode == "add") {
     $url = "/cart/add.js";
   } else if($mode == "update") {
