@@ -129,8 +129,6 @@ function print_product_cart(err, data) {
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
-
-    console.log(data.items);
     data.items.forEach(element => {
       console.log(element.quantity);
     });
