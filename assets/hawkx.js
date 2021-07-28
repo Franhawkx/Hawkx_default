@@ -75,9 +75,8 @@ function response(err, data) {
 }
 
 
-const cart_count = document.querySelectorAll(".count_car__header span")[0];
-
 function update_cart(err, data) {
+  const cart_count = document.querySelectorAll(".count_car__header span")[0];
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
