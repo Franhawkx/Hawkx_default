@@ -78,6 +78,7 @@ var response = function(err, data) {
 
 var postJSON = function($url, $json) {
   var xhr = new XMLHttpRequest();
+  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.open("POST", $url, true);
   xhr.responseType = 'json';
   xhr.onload = function() {
@@ -93,7 +94,8 @@ var postJSON = function($url, $json) {
 
 /*
 
-var json =  items: [
+var json = {
+  items: [
     {
       quantity: 1,
       id: 7048058142871
@@ -102,7 +104,8 @@ var json =  items: [
 }
 
 
-postJSON("/cart/add.js", items: [
+postJSON("/cart/add.js", {
+  items: [
     {
       quantity: 1,
       id: 7048058142871
