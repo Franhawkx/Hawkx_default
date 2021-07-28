@@ -80,7 +80,7 @@ function clearCART($callback){
   });
 }
 
-//Funcion para obtener datos del carrito
+//Funcion para actualizar datos del carrito
 function updateCART($mode, $data, $callback) {
   if ($mode == "add") {
     $url = "/cart/add.js";
