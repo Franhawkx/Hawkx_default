@@ -138,12 +138,13 @@ function postJSON($mode, $data) {
 
           if ($mode == "add") {
             count = Object.keys(data).length;
+            console.log(data);
           } else {
             count = data.item_count;
           }
 
           update_cart(count);
-          
+
         }
       });
 };
