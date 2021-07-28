@@ -4,98 +4,106 @@ Hoja javascipt en sucio para trabajar el JS del tema
 
 /* Inicio onload
 ========================================================*/
-window.onload = function() {
+window.onload = function () {
 
     // Función para añadir la clase sticky al header cuando se hace scroll Fran
-      const container_header = document.getElementById("shopify-section-header"); // Definimos el contenedor del elemento que va a ser sticky
-      const header = document.querySelectorAll("#shopify-section-header header")[0]; // Definimos el elemento que va a ser sticky
-      const Nsticky = document.querySelectorAll("#shopify-section-announcement-bar")[0].offsetHeight; // Definimos la cantidad de desplazamiento antes de aplicar sticky
+    const container_header = document.getElementById("shopify-section-header"); // Definimos el contenedor del elemento que va a ser sticky
+    const header = document.querySelectorAll("#shopify-section-header header")[0]; // Definimos el elemento que va a ser sticky
+    const Nsticky = document.querySelectorAll("#shopify-section-announcement-bar")[0].offsetHeight; // Definimos la cantidad de desplazamiento antes de aplicar sticky
 
-      // Añadimos el evento para escuvhar el desplazamiento
-      window.addEventListener("scroll", function() {sticky_menu(container_header, header, Nsticky);}, { passive: false });
+    // Añadimos el evento para escuvhar el desplazamiento
+    window.addEventListener("scroll", function () {
+        sticky_menu(container_header, header, Nsticky);
+    }, {
+        passive: false
+    });
 
-      // Comprobamos si existe desplazamiento vertical en scroll para aplicar sticky
-      if (pageYOffset >= Nsticky || scrollY >= Nsticky) {
-          container_header.style.height = header.offsetHeight + "px";
-          container_header.classList.add("sticky");
-      }
+    // Comprobamos si existe desplazamiento vertical en scroll para aplicar sticky
+    if (pageYOffset >= Nsticky || scrollY >= Nsticky) {
+        container_header.style.height = header.offsetHeight + "px";
+        container_header.classList.add("sticky");
+    }
 
-      //let boton_añadir_producto = document.querySelector('#añadir_producto');
-      //boton_añadir_producto.addEventListener('click', subirProduct, false);
+    //let boton_añadir_producto = document.querySelector('#añadir_producto');
+    //boton_añadir_producto.addEventListener('click', subirProduct, false);
 }
 // Fin onload
 
 
 //Función para añadir la clase sticky al header cuando se hace scroll Fran
 function sticky_menu($container, $element, $number) {
-  $container.style.height = $element.offsetHeight + "px";
+    $container.style.height = $element.offsetHeight + "px";
 
     if (pageYOffset >= $number || scrollY >= $number) {
-      $container.classList.add("sticky");
-    } else if(pageYOffset < $number || scrollY < $number){
-      $container.classList.remove("sticky");
+        $container.classList.add("sticky");
+    } else if (pageYOffset < $number || scrollY < $number) {
+        $container.classList.remove("sticky");
     }
 }
 
 
 
 //Peticion para añadir un producto al carrito por su id
-function subirProduct(){
+function subirProduct() {
     //let id = document.querySelector('.product__title').id;
 
-    const url= '/cart/add.js';
     let formData = {
 
         'items': [{
-       
-         'id': 7048058142871,
-       
-         'quantity': 2
-       
-         }]
-       
-       };
 
-    const request = {
-        method: 'POST', 
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+            'id': 36110175633573,
+
+            'quantity': 2
+
+        }]
+
     };
 
-    fetch(url,request)
-    .then(function(response) {
-    if (!response.ok) {
-        throw Error(response.statusText);
-    }
-        return response.json();
+
+    fetch('/cart/add.js', {
+
+        method: 'POST',
+
+        headers: {
+
+            'Content-Type': 'application/json'
+
+        },
+
+        body: JSON.stringify(formData)
+
     })
-    .then(function(responseAsObject) {
-        console.log(responseAsObject);
-    })
-    .catch(function(error) {
-        console.log('Ha habido un problema: ', error);
-    });
+
+        .then(response => {
+
+            return response.json();
+
+        })
+
+        .catch((error) => {
+
+            console.error('Error:', error);
+
+        });
 }
 
 
 /*Petición para ver los productos del carrito*/
 
-function recuperarItemsCarrito(){
+function recuperarItemsCarrito() {
     fetch('/cart.js')
-    .then(function(response) {
-    if (!response.ok) {
-        throw Error(response.statusText);
-    }
-        return response.json();
-    })
-    .then(function(responseAsObject) {
-        for (let i = 0; i < responseAsObject.items.length; i++) {
-            console.log('Titulo: ' + responseAsObject.items[i].title + ', precio: ' + responseAsObject.items[i].price + ', cantidad: ' + responseAsObject.items[i].quantity + ', enlace a su imagen: ' + responseAsObject.items[i].image);    
-        }
-    })
-    .catch(function(error) {
-        console.log('Ha habido un problema: ', error);
-    });
+        .then(function (response) {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then(function (responseAsObject) {
+            for (let i = 0; i < responseAsObject.items.length; i++) {
+                console.log('Titulo: ' + responseAsObject.items[i].title + ', precio: ' + responseAsObject.items[i].price + ', cantidad: ' + responseAsObject.items[i].quantity + ', enlace a su imagen: ' + responseAsObject.items[i].image);
+            }
+        })
+        .catch(function (error) {
+            console.log('Ha habido un problema: ', error);
+        });
 }
