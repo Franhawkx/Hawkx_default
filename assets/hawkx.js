@@ -69,7 +69,7 @@ var getJSON = function(url, callback) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    console.log('Your query count: ' + data);
+    console.log('Your query: ' + data);
     $data = data;
   }
 }*/
