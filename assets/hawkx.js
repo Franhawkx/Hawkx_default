@@ -116,6 +116,6 @@ function borrarVariante(){
     .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
-    window.reload();
+    location.reload();
 
 }
