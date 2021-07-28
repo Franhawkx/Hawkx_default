@@ -1,12 +1,18 @@
+.father{
+    width: 80%;
+    background-color:white;
+}
 .container{
     display: flex;
     justify-content: space-between;
 }
 .container__Child1{
+    width: 50%;
     display: flex;
     justify-content: space-between;
 }
 .container__Child2 {
+    width: 50%;
     display: flex;
     justify-content: space-between;
 }
