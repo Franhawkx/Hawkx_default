@@ -3,18 +3,19 @@
 
 
 {{ 'hawk.css' | asset_url | stylesheet_tag }}
+{{ 'prueba.css' | asset_url | stylesheet_tag }}
 
 {% if cart.items.length == 0 %}
     
 {% endif %}
 
 <h1>TU CARRITO</h1>
-<div>
-  <div>
+<div class="container">
+  <div class="container__Child1">
     <p>PRODUCTO</p>
     <p>PRECIOS</p>
   </div>
-  <div>
+  <div class="container__Child2">
     <p>CANTIDAD</p>
     <p>TOTAL</p>
   </div>  

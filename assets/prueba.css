@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.container__Child1{
+    display: flex;
+}
+.container__Child2 {
+    display: flex;
+}
