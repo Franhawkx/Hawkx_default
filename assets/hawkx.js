@@ -20,8 +20,8 @@ window.onload = function() {
           container_header.classList.add("sticky");
       }
 
-      let boton_añadir_producto = document.querySelector('#añadir_producto');
-      boton_añadir_producto.addEventListener('click', subirProduct, false);
+      //let boton_añadir_producto = document.querySelector('#añadir_producto');
+      //boton_añadir_producto.addEventListener('click', subirProduct, false);
 }
 // Fin onload
 
