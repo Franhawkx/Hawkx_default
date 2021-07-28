@@ -104,7 +104,7 @@ function getCART() {
     var status = xhr.status;
     if (status === 200) {
       console.log(xhr.response);
-      return xhr.response;
+      $data = xhr.response;
     } else {
       return "error";
     }
