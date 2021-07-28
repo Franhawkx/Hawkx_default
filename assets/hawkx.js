@@ -120,15 +120,10 @@ var getJSON = function($url, $response, $data) {
       'Content-type' : 'text/json' 
     }
       }) 
-      .then(response =>  
-        response.json(),
-        $response
-      ) 
-      .then(data => {  
-          console.log(data)
-          $data
-      }) 
+      
 }
+
+function hola() {console.log("hola")}
 
 
 /*
