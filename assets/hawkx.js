@@ -139,6 +139,8 @@ function postJSON($mode, $data) {
         } else {
           count = data.item_count;
         }
+        console.log(data);
+        console.log(count);
         update_cart(count);
 
       })
