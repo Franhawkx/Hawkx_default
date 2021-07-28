@@ -97,9 +97,9 @@ function toggle($element, $class) {
 };*/
 
 
-function getJSON($url) {
+function getCART() {
   
-  fetch($url,{ 
+  fetch("/cart.js",{ 
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -144,7 +144,7 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            data = getJSON("/cart.js");    
+            data = getJSON();    
           }
           count = data.item_count;
           update_cart(count);
