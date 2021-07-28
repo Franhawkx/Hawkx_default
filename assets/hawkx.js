@@ -130,7 +130,7 @@ let json = {
     40607204278423: 4,
   }
 };
-postJSON("update", json)
+updateCART("update", json, update_cart)
 
 let json = {
  'items': [{
@@ -139,5 +139,5 @@ let json = {
   }]
 };
 
-postJSON("add", json)
+updateCART("add", json, update_cart)
 */
