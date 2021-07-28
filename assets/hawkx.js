@@ -117,13 +117,9 @@ function getCART($callback) {
 function postJSON($mode, $data) {
   if ($mode == "add") {
     $url = "/cart/add.js";
-  }
-
-  if($mode == "update") {
+  } else if($mode == "update") {
     $url = "/cart/update.js";
-  }
-
-  if($mode == "clear") {
+  }else if($mode == "clear") {
     $url = "/cart/clear.js";
   }
 
