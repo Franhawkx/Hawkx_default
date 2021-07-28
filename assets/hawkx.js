@@ -144,14 +144,10 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            getJSON("/cart.js", update_get_cart);            
-          } else {
-            count = data.item_count;
-            update_cart(count);
+            data = getJSON("/cart.js");       
           }
-
-          
-
+          count = data.item_count;
+          update_cart(count);
         }
       });
 };
