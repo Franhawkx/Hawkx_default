@@ -191,24 +191,20 @@
 
 
                   <script>
-                                     alert('HOLAAAAAA')
+                    alert('HOLAAAAAA')
                     window.onload = function()
                     {
                       let boton = document.getElementById('boton_pruebas');
                       boton.addeventListener('click', dimeId,false);
-
-                      function dimeId(){
+                    }
+                    
+                    function dimeId(){
                         console.log('El id es: ' + {{ variant.selected }});
-                      }
                     }
                   </script>
 
                   <script type="application/json">
-   
                     {{ product.variants | json }}
-
-
-
                   </script>
                 </variant-radios>
               {%- else -%}
