@@ -119,8 +119,7 @@ var getJSON = function($url, $callback) {
     method: 'GET',  
     headers: { 
       'Content-type' : 'text/json' 
-    }, 
-    body: JSON.stringify($data) 
+    }
       }) 
       .then(response =>  
         response.json(),
