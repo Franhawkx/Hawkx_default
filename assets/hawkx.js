@@ -163,15 +163,14 @@ function update_cart(err, data) {
   }
 }
 
-/*
 
+/*
 let json = {
   updates: {
-    40607204278423: 2,
+    40607204278423: 4,
   }
 };
-postJSON("/cart/update.js", json)
-
+postJSON("update", json)
 
 let json = {
  'items': [{
@@ -180,116 +179,5 @@ let json = {
   }]
 };
 
-postJSON("/cart/add.js", json)
-
-postJSON("/cart/clear.js")
-
-
-
-
-
-
-
-
-var getJSON = function($url, $data) {
-  
-  fetch($url,{ 
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-      })
-      .then(response => {
-        return response.json();
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-  });
-};
-
-
-
-var getJSON = function($url) {
-  fetch($url,{ 
-    method: 'GET',  
-    headers: { 
-      'Content-type' : 'text/json' 
-    }
-      }) 
-      .then(response =>  
-        response.json(),
-        function() {
-          console.log("hola");
-        }
-        
-      ) 
-      .then(data => {  
-          console.log(data) 
-      }) 
-}*/
-
-
-/*
-
-var json = {
-  items: [
-    {
-      quantity: 1,
-      id: 7048058142871
-    }
-  ]
-}
-
-
-postJSON("/cart/add.js", {
-  items: [
-    {
-      quantity: 1,
-      id: 7048058142871
-    }
-  ]
-} )
-
-postJSON("/cart/update.js", {
-  updates: {
-    7048058142871: 2
-  }
-})
-
-getJSON("/products/vino-ramon-2.js")
-
-
-let formData =  {
-  items: [
-    {
-      quantity: 1,
-      id: 7048058142871
-    }
-  ]
-};
-
-let json = {
- 'items': [{
-  'id': 40607204278423,
-  'quantity': 2
-  }]
-};
-
-postJSON("/cart/add.js", json, update_cart)
-
-fetch('/cart/add.js', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(formData)
-})
-.then(response => {
-  return response.json();
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
-
-
+postJSON("add", json)
 */
