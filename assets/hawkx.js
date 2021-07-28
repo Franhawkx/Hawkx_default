@@ -81,10 +81,10 @@ function update_cart(err, data) {
     console.log('Something went wrong: ' + err);
   } else {
     var count = data.item_count;
-    if (count != 0 && !cart_count.classList.contains("item"))  {
+    if ( count != 0 )  {
       cart_count.classList.add("item");
       cart_count.classList.remove("empty");
-    } else if (!cart_count.classList.contains("empty")) {
+    } else {
       cart_count.classList.remove("item");
       cart_count.classList.add("empty");
     }
