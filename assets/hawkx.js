@@ -134,11 +134,11 @@ function print_product_cart(err, data) {
       var content = '<tr class="cart-item" id="element.id">'+
                   '<td class="cart-item__media">'+
                     
-                      '<img class="cart-item__image" src="'+element.featured_image.url+'" alt="element.featured_image.alt" loading="lazy" width="75" height="75">'+
+                      '<img class="cart-item__image" src="'+ element.featured_image.url +'" alt="element.featured_image.alt" loading="lazy" width="75" height="75">'+
                     
                   '</td>'+
 
-                  '<td class="cart-item__details"><a href="/products/'+element.url+'" class="cart-item__name break">element.product_title</a><dl></dl>'+
+                  '<td class="cart-item__details"><a href="/products/'+ element.url +'" class="cart-item__name break">element.product_title</a><dl></dl>'+
 
                       '<p class="product-option"></p><ul class="discounts list-unstyled" role="list" aria-label="Descuento"></ul>'+
 
@@ -149,7 +149,7 @@ function print_product_cart(err, data) {
 
                   '<td class="cart-item__prices right">'+
                     '<div class="cart-item__price-wrapper"><span class="price price--end">'+
-                          element.price+
+                          element.price +
                         '</span></div>'+
                   '+</td>'+
 
