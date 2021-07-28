@@ -122,8 +122,7 @@ var getJSON = function($url) {
     }
       }) 
       .then(response =>  
-        response.json(),
-        console.log(response)
+        response.json()
       ) 
       .then(data => {  
           console.log(data) 
