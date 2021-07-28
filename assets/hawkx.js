@@ -108,9 +108,9 @@ function getCART() {
       .then(response => {
         return response.json();
       })
-      .catch((error) => {
-        console.error('Error:', error);
-  });
+      .then(data => {
+      return data;
+    });
 };
 
 
