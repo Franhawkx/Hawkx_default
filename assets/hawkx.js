@@ -104,6 +104,10 @@ function recuperarItemsCarrito() {
 //Peticion para añadir un producto al carrito por su id
 function eliminarProduct(){
     const url= '/cart/change.js';
+    let eliminar = {
+        "quantity": 0,
+        "id":40607206015127
+    }
     const request = {
         method: 'POST', 
         headers: {
