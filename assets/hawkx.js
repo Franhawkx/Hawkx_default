@@ -241,6 +241,16 @@ function print_product_cart(err, data) {
 }
 
 
+
+//Callback para actualizar el carrito segun respuesta
+function info(err, data) {
+  if (err !== null && err !== undefined) {
+    console.log('El error es: ' + err);
+  } else {
+    console.log(data);
+  }
+}
+
 /*
 let json = {
   updates: {
