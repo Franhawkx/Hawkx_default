@@ -314,6 +314,13 @@ html {
 				right: 10%;
 				top: 50%;
     			transform: translateY(-50%);
+				color: white;
+				justify-content: center;
+				align-items: center;
+
+				&:after {
+					content: "c";
+				}
 			}
 
 			&.open {
@@ -329,7 +336,7 @@ html {
 				}
 
 				.search_close__header {
-					display: block;
+					display: flex;
 				}
 			}
 			
