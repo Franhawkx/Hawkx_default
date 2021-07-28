@@ -81,8 +81,12 @@ function update_cart(err, data) {
     console.log('Something went wrong: ' + err);
   } else {
     var count = data.item_count;
-    if (!(count != 0)) {
-      count = "";
+    if (count != 0 && !cart_count.classList.contains("item"))  {
+      cart_count.classList.add("item");
+      cart_count.classList.remove("empty");
+    } else if (!cart_count.classList.contains("empty")) {
+      cart_count.classList.remove("item");
+      cart_count.classList.add("empty");
     }
     cart_count.innerText = count;   
   }
@@ -125,6 +129,8 @@ let json = {
 };
 
 postJSON("/cart/add.js", json)
+
+postJSON("/cart/clear.js")
 
 
 
