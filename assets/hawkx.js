@@ -70,7 +70,7 @@ function response(err, data) {
     console.log('Something went wrong: ' + err);
   } else {
     console.log('Your query: ' + data);
-    $data = data;
+    return $data;
   }
 }
 
@@ -137,10 +137,7 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            count = data.items.quantity;
-            console.log(data.items.quantity);
-            console.log(data[0].quantity);
-            console.log(data);
+            getJSON("/cart.js", $callback)
           } else {
             count = data.item_count;
           }
