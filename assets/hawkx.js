@@ -132,7 +132,7 @@ function print_product_cart(err, data) {
 
     console.log(data.items);
     data.items.forEach(element => {
-      console.log(element.id);
+      console.log(element.quantity);
     });
 
   }
