@@ -137,8 +137,9 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            count = data.quantity;
-            $data = data;
+            count = data.items.quantity;
+            console.log(data.items.quantity);
+            console.log(data[0].quantity);
             console.log(data);
           } else {
             count = data.item_count;
