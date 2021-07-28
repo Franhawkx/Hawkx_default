@@ -154,14 +154,7 @@ function update_get_cart(err, data) {
     console.log('Something went wrong: ' + err);
   } else {
     count = data.item_count;
-
-    const cart_count = document.querySelectorAll(".count_car__header span")[0];
-    if ( count != 0 )  {
-      cart_count.classList.remove("empty");
-    } else {
-      cart_count.classList.add("empty");
-    }
-    cart_count.innerText = count;
+    update_cart(count)
   }
 }
 
