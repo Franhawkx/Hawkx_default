@@ -21,7 +21,7 @@ window.onload = function() {
       }
 
       const button_search = document.querySelectorAll(".search__header");
-      button_search[0].addEventListener("click", function() {toggle(this, "open");}, { passive: false });
+      button_search[0].addEventListener("click", function(event) { event.stopPropagation(); toggle(this, "open");}, { passive: false });
       
 
 }
