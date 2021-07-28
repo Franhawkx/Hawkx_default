@@ -90,10 +90,8 @@ function response(err, data) {
   }
 }*/
 
-function update_cart(data) {
+function update_cart(count) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
-
-    var count = data.item_count;
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
     } else {
@@ -119,8 +117,19 @@ function update_cart(data) {
 };*/
 
 
-function postJSON($url, $data) {
-  
+function postJSON($mode, $data) {
+  if ($mode == "add") {
+    $url = "/cart/add.js";
+  }
+
+  if($mode == "update") {
+    $url = "/cart/update.js";
+  }
+
+  if($mode == "clear") {
+    $url = "/cart/clear.js";
+  }
+
   fetch($url,{ 
     method: 'POST',
     headers: {
@@ -132,9 +141,14 @@ function postJSON($url, $data) {
         return response.json();
       })
       .then(data => {
-        console.log(data);
-        console.log(Object.keys(data).length);
-        update_cart(data);
+        
+        if ($mode == "add") {
+          var count = Object.keys(data).length;
+        } else {
+          var count = data.item_count;
+        }
+        update_cart(count);
+
       })
       .catch((error) => {
         console.error('Error:', error);
