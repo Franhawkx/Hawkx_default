@@ -49,6 +49,7 @@ function toggle($element, $class) {
 
 
 //Función hacer llamada json
+//getJSON();
 var getJSON = function(url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
@@ -64,10 +65,11 @@ var getJSON = function(url, callback) {
   xhr.send();
 };
 
-/*getJSON('https://desarrollo-tema.myshopify.com//products/vino-ramon.js', function(err, data) {
+function response (err, data) {
   if (err !== null) {
-    alert('Something went wrong: ' + err);
+    console.log('Something went wrong: ' + err);
   } else {
-    alert('Your query count: ' + data); $data = data;
+    console.log('Your query count: ' + data);
+    $data = data;
   }
-});*/
+}
