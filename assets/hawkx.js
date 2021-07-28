@@ -75,7 +75,7 @@ function response(err, data) {
 }
 
 
-function update_cart(err, data) {
+/*function update_cart(err, data) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
   if (err !== null) {
     console.log('Something went wrong: ' + err);
@@ -88,11 +88,10 @@ function update_cart(err, data) {
     }
     cart_count.innerText = count;   
   }
-}
+}*/
 
-function update_cart2(data) {
+function update_cart(data) {
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
-
 
     var count = data.item_count;
     if ( count != 0 )  {
@@ -133,7 +132,7 @@ function postJSON($url, $data) {
         return response.json();
       })
       .then(data => {
-        update_cart2(data);
+        update_cart(data);
       })
       .catch((error) => {
         console.error('Error:', error);
