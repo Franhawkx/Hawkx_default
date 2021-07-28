@@ -93,17 +93,22 @@ var postJSON = function($url, $json) {
 
 /*
 
-var json = {
-  items: [
+var json =  items: [
     {
-      quantity: 2,
-      id: 7048058142871,
+      quantity: 1,
+      id: 7048058142871
     }
   ]
 }
 
 
-postJSON("/cart/add.js", json )
+postJSON("/cart/add.js", items: [
+    {
+      quantity: 1,
+      id: 7048058142871
+    }
+  ]
+} )
 
 getJSON("/products/vino-ramon-2", response)
 
