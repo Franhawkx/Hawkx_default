@@ -131,14 +131,14 @@ function print_product_cart(err, data) {
     console.log('El error es: ' + err);
   } else {
     data.items.forEach(element => {
-      var content = '<tr class="cart-item" id="element.id">'+
+      var content = '<tr class="cart-item" id="'+ element.id +'">'+
                   '<td class="cart-item__media">'+
                     
-                      '<img class="cart-item__image" src="'+ element.featured_image.url +'" alt="element.featured_image.alt" loading="lazy" width="75" height="75">'+
+                      '<img class="cart-item__image" src="'+ element.featured_image.url +'" alt="'+ element.featured_image.alt +'" loading="lazy" width="75" height="75">'+
                     
                   '</td>'+
 
-                  '<td class="cart-item__details"><a href="/products/'+ element.url +'" class="cart-item__name break">element.product_title</a><dl></dl>'+
+                  '<td class="cart-item__details"><a href="/products/'+ element.url +'" class="cart-item__name break">'+ element.product_title +'</a><dl></dl>'+
 
                       '<p class="product-option"></p><ul class="discounts list-unstyled" role="list" aria-label="Descuento"></ul>'+
 
@@ -159,13 +159,13 @@ function print_product_cart(err, data) {
                     '</label>'+
                     '<quantity-input class="quantity">'+
                       '<button class="quantity__button no-js-hidden" name="minus" type="button">'+
-                        '<span class="visually-hidden">Reducir cantidad para element.product_title</span>'+
+                        '<span class="visually-hidden">Reducir cantidad para '+ element.product_title+'</span>'+
                         
 
                       '</button>'+
                       '<input class="quantity__input" type="number" name="updates[]" value="6" min="0" aria-label="Cantidad para Vino Ramón 2" id="Quantity-1" data-index="1">'+
                       '<button class="quantity__button no-js-hidden" name="plus" type="button">'+
-                        '<span class="visually-hidden">Aumentar cantidad para element.product_title</span>'+
+                        '<span class="visually-hidden">Aumentar cantidad para '+ element.product_title +'</span>'+
                        
 
                       '</button>'+
