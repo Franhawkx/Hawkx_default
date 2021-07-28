@@ -270,6 +270,15 @@ html {
 					padding: 10px 15px 10px 30px;
 					border-radius: 5px 0px 0px 5px;
 					border: 1px solid black;
+					outline: none;
+
+					&:focus {
+						border: 1px solid blue !important;
+					}
+
+					&:focus-visible {
+						border: 1px solid blue !important;
+					}
 				}
 
 				label {
