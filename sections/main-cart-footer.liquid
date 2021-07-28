@@ -26,8 +26,15 @@
       <div>
         {{ item.image | img_url: '100x100' | img_tag }}
       </div>
-      <div></div>
-      <div></div>
+      <div> 
+        <p>{{item.title}}</p>
+      </div>
+      <div>
+        {{item.quantity}}
+      </div>
+      <div>
+        {{item.final_price}}
+      </div>
       <hr>
 
     {% endfor %}
