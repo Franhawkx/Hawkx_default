@@ -130,13 +130,12 @@ function print_product_cart(err, data) {
     console.log('El error es: ' + err);
   } else {
 
-    console.log(data)
+    console.log(data);
     count = data.items_count;
     for (var i = 0; index < count; i++) {
       console.log(data.items[i].id);
     }
 
-  }
   }
 }
 
