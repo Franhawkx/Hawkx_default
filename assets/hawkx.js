@@ -93,7 +93,7 @@ function recuperarItemsCarrito() {
 }
 
 var botonPrueba = document.querySelector(".botonPrueba");
-botonPrueba.addEventListener('click', borrarVariante,false);
+botonPrueba.addEventListener('click', borrarVariante);
 
 function borrarVariante(id){
     const url= '/cart/change.js';
@@ -106,7 +106,7 @@ function borrarVariante(id){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(eliminar)
+        body: JSON.stringify({"quantity": 0,"id":"40607206015127"})
     };
     fetch(url,request)
     .then(function(response) {
@@ -121,6 +121,4 @@ function borrarVariante(id){
     .catch(function(error) {
         console.log('Ha habido un problema: ', error);
     });
-
-    
 }
