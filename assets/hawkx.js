@@ -69,6 +69,9 @@ function subirProduct(){
         console.log('Ha habido un problema: ', error);
     });
     location.reload();
+    location.reload();
+
+
 }
 /*Petición para ver los productos del carrito*/
 function recuperarItemsCarrito() {
@@ -118,5 +121,7 @@ function borrarVariante(){
         console.log('Ha habido un problema: ', error);
     });
     location.reload();
+    location.reload();
+
 
 }
