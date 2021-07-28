@@ -20,6 +20,7 @@
     justify-content: space-between;
 }
 .cartInterface__line-item{
+    width: 80%;
     display: flex;
     justify-content: space-between;
 }
