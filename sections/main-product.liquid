@@ -184,25 +184,11 @@
                   <button id="boton_pruebas">PULSAME</button>
 
                   {% for variant in product.variants %}
-                    <h2>{{ variant.id }}</h2>  
-                    <input type="hidden" name="id" value="{{ variant.id}}"/>
+                  <input type="radio" id = "{{variant.id}}">
+                  <label for="{{variant.id}}">
+                    {{variant.title}}
+                  </label>
                   {% endfor -%}
-
-
-                  <script>
-                    alert('HOLAAAAAA')
-                    window.onload = function()
-                    {
-                      let boton = document.getElementById('boton_pruebas');
-                      boton.addeventListener('click', dimeId,false);
-                    }
-                    function dimeId(){
-                      let variante_id = '{{ variant.id }}';
-                      console.log(variante_id);  
-                    }
-
-                    
-                  </script>
 
                   <script type="application/json">
                     {{ product.variants | json }}
