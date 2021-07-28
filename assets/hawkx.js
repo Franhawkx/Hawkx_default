@@ -81,7 +81,7 @@ var update_cart = function(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    cart_count.innerText = data.item_count;   
+    cart_count.innerText = data.items.length;   
   }
 }
 
@@ -94,7 +94,7 @@ var postJSON = function($url, $json, $callback) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      
+      $callback;
     } else {
       
     }
