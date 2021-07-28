@@ -5,14 +5,12 @@
 {{ 'hawk.css' | asset_url | stylesheet_tag }}
 {{ 'prueba.css' | asset_url | stylesheet_tag }}
 
-{% if cart.items.length == 0 %}
-    
-{% endif %}
-<div >
+
+
   <h1>TU CARRITO</h1>
-  <div class="cartInterface">
+  
     {% if cart.items.length != 0 %}
-          
+    <div class="cartInterface__titles">
         <div class="cartInterface__container__child1"> 
           <p>PRODUCTO</p>
           <p>PRECIOS</p>
@@ -22,8 +20,9 @@
           <p>TOTAL</p>
         </div>  
         <hr class="displayBlock">
+    </div>
       {% for item in cart.items %}
-        <div class="displayBlock">
+        <div class="cartInterface__line-item">
           <div>
             {{ item.image | img_url: '100x100' | img_tag }}
           </div>
@@ -37,10 +36,10 @@
             {{item.final_price}}
           </div>
           <button class="botonPrueba">
-            PULSA AQUI
+            Borrar
           </button>
         </div>
-        <hr class="displayBlock">
+        <hr>
 
       {% endfor %}
     
@@ -50,6 +49,5 @@
         </div>
     {% endif %}
     
-  </div>
+  
   <hr>
-</div>
