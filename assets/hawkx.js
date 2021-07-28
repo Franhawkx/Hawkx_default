@@ -138,6 +138,7 @@ function postJSON($mode, $data) {
 
           if ($mode == "add") {
             count = data.quantity;
+            $data = data;
             console.log(data);
           } else {
             count = data.item_count;
