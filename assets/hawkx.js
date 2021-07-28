@@ -153,7 +153,7 @@ function postJSON($mode, $data) {
 //Call
 function update_cart(err, data) {
   if (err !== null && err !== undefined) {
-    console.log('Something went wrong: ' + err);
+    console.log('El error es: ' + err);
   } else {
     const cart_count = document.querySelectorAll(".count_car__header span")[0];
     count = data.item_count;
