@@ -162,4 +162,28 @@ postJSON("/cart/update.js", {
 getJSON("/products/vino-ramon-2.js")
 
 
+let formData =  {
+  items: [
+    {
+      quantity: 1,
+      id: 7048058142871
+    }
+  ]
+};
+
+fetch('/cart/add.js', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(formData)
+})
+.then(response => {
+  return response.json();
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
+
+
 */
