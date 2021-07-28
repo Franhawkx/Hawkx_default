@@ -8,45 +8,48 @@
 {% if cart.items.length == 0 %}
     
 {% endif %}
+<div >
+  <h1>TU CARRITO</h1>
+  <div class="cartInterface">
+    {% if cart.items.length != 0 %}
+          
+        <div class="cartInterface__container__child1"> 
+          <p>PRODUCTO</p>
+          <p>PRECIOS</p>
+        </div>
+        <div class="cartInterface__container__child2">
+          <p>CANTIDAD</p>
+          <p>TOTAL</p>
+        </div>  
+        <hr class="displayBlock">
+      {% for item in cart.items %}
+        <div class="displayBlock">
+          <div>
+            {{ item.image | img_url: '100x100' | img_tag }}
+          </div>
+          <div>     
+            <p>{{item.title}}</p>
+          </div>
+          <div>
+            {{item.quantity}}
+          </div>
+          <div>
+            {{item.final_price}}
+          </div>
+          <button class="botonPrueba">
+            PULSA AQUI
+          </button>
+        </div>
+        <hr class="displayBlock">
 
-<h1>TU CARRITO</h1>
-<div class="cartInterface">
-  {% if cart.items.length != 0 %}
-    <div class="cartInterface__container">
-      <div class="cartInterface__container__child1">
-        <p>PRODUCTO</p>
-        <p>PRECIOS</p>
-      </div>
-      <div class="cartInterface__container__child2">
-        <p>CANTIDAD</p>
-        <p>TOTAL</p>
-      </div>  
-    </div>
-    {% for item in cart.items %}
-      <div>
-        {{ item.image | img_url: '100x100' | img_tag }}
-      </div>
-      <div> 
-        <p>{{item.title}}</p>
-      </div>
-      <div>
-        {{item.quantity}}
-      </div>
-      <div>
-        {{item.final_price}}
-      </div>
-      <button class="botonPrueba">
-        PULSA AQUI
-      </button>
-      <hr>
-
-    {% endfor %}
-  
-  {% else %}
-      <div>
-        <h1>TU CARRITO ESTÁ VACIO</h1>
-      </div>
-  {% endif %}
-  
+      {% endfor %}
+    
+    {% else %}
+        <div>
+          <h1>TU CARRITO ESTÁ VACIO</h1>
+        </div>
+    {% endif %}
+    
+  </div>
+  <hr>
 </div>
-<hr>
