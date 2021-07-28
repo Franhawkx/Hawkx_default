@@ -211,6 +211,7 @@ html {
 
 			.cart__header {
 				@extend .account__header;
+				position: relative;
 
 				a {
 					width: 100%;
