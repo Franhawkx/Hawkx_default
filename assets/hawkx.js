@@ -130,6 +130,7 @@ var getJSON = function($url, $callback) {
       }) 
 }
 
+console.log("hola");
 
 /*
 
