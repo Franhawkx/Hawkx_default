@@ -10,16 +10,17 @@
 {% endif %}
 
 <h1>TU CARRITO</h1>
-<div class="container">
-  <div class="container__Child1">
-    <p>PRODUCTO</p>
-    <p>PRECIOS</p>
+<div>
+  <div class="container">
+    <div class="container__Child1">
+      <p>PRODUCTO</p>
+      <p>PRECIOS</p>
+    </div>
+    <div class="container__Child2">
+      <p>CANTIDAD</p>
+      <p>TOTAL</p>
+    </div>  
   </div>
-  <div class="container__Child2">
-    <p>CANTIDAD</p>
-    <p>TOTAL</p>
-  </div>  
-</div>
 <hr>
 
 {% for item in cart.items %}
@@ -38,7 +39,8 @@
       <p>Precio Total</p>
     </div>
   </div>
+
 {% endfor %}
 
-
+</div>
 

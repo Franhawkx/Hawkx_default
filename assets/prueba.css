@@ -4,7 +4,9 @@
 }
 .container__Child1{
     display: flex;
+    justify-content: space-between;
 }
 .container__Child2 {
     display: flex;
+    justify-content: space-between;
 }
