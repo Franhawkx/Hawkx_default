@@ -126,7 +126,7 @@ function update_cart(err, data) {
 
 //Callback para pintar los datos del carrito
 function print_product_cart(err, data) {
-  const container = document.querySelectorAll(".cart-items tbody");
+  const container = document.querySelectorAll(".cart-items tbody")[0];
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
@@ -191,6 +191,8 @@ function print_product_cart(err, data) {
                     '</cart-remove-button>'+
                   '</td>'+
            '</tr>';
+
+           console.log(content);
 
            container.innerHTML += content;
     });
