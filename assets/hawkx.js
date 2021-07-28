@@ -48,54 +48,6 @@ function toggle($element, $class) {
 }
 
 
-//Función hacer llamada json
-//getJSON();
-/*function getJSON($url, $callback) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", $url, true);
-  xhr.responseType = 'json';
-  xhr.onload = function() {
-    var status = xhr.status;
-    if (status === 200) {
-      $callback(null, xhr.response);
-    } else {
-      $callback(status, xhr.response);
-    }
-  };
-  xhr.send();
-};*/
-
-/*function update_cart(err, data) {
-  const cart_count = document.querySelectorAll(".count_car__header span")[0];
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    var count = data.item_count;
-    if ( count != 0 )  {
-      cart_count.classList.remove("empty");
-    } else {
-      cart_count.classList.add("empty");
-    }
-    cart_count.innerText = count;   
-  }
-}*/
-
-
-/*function postJSON($url, $json) {
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", $url, true);
-  xhr.responseType = 'json';
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.onload = function() {
-    var status = xhr.status;
-    if (status === 200) {
-      getJSON ("/cart.js", update_cart);
-    } else {  
-    }
-  };
-  xhr.send(JSON.stringify($json));
-};*/
-
 //Funcion para obtener datos del carrito
 function getCART($callback) {
   fetch("/cart.js",{ 
@@ -112,14 +64,27 @@ function getCART($callback) {
   });
 };
 
+function clearCART(){
+  fetch("/cart/clear.js",{ 
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => {
+    return response.json();
+  })
+  .then(data => {
+      update_cart(data.status, data);
+  });
+}
+
 //Funcion para obtener datos del carrito
 function updateCART($mode, $data) {
   if ($mode == "add") {
     $url = "/cart/add.js";
   } else if($mode == "update") {
     $url = "/cart/update.js";
-  }else if($mode == "clear") {
-    $url = "/cart/clear.js";
   }
 
   fetch($url,{ 
