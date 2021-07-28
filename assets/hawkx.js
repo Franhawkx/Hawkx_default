@@ -95,7 +95,6 @@ var response = function(err, data) {
 var postJSON = function($url, $data) {
   
   fetch($url,{ 
-    method: 'POST',  
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -153,6 +152,12 @@ postJSON("/cart/add.js", {
     }
   ]
 } )
+
+postJSON("/cart/update.js", {
+  updates: {
+    7048058142871: 2
+  }
+})
 
 getJSON("/products/vino-ramon-2.js")
 
