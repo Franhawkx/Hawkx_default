@@ -181,7 +181,7 @@
                       </fieldset>
                   {%- endfor -%}
                   <script type="application/json">
-                    console.log({{ product.variants | json }});
+                    {{ product.variants | json }}
                   </script>
                 </variant-radios>
               {%- else -%}
@@ -209,7 +209,6 @@
                   {%- endfor -%}
 
                   <script type="application/json">
-                    console.log("aqui")
                     {{ product.variants | json }}
                   </script>
                 </variant-selects>
