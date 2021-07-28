@@ -95,13 +95,17 @@ function update_cart2($data) {
 
   const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
-    var count = $data.item_count;
+  $$data = $data;
+
+  console.log($data);
+
+    /*var count = $data.item_count;
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
     } else {
       cart_count.classList.add("empty");
     }
-    cart_count.innerText = count;   
+    cart_count.innerText = count; /*
 
 }
 
@@ -133,7 +137,6 @@ function postJSON($url, $data) {
       })
       .then(response => {
         //getJSON ("/cart.js", update_cart);
-        $data = response.json();
         return response.json();
       })
       .catch((error) => {
