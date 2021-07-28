@@ -91,7 +91,6 @@ var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.responseType = 'text';
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
@@ -183,12 +182,14 @@ let formData =  {
   ]
 };
 
-let formData = {
+let json = {
  'items': [{
   'id': 40607204278423,
   'quantity': 2
   }]
 };
+
+postJSON("/cart/add.js", json, update_cart)
 
 fetch('/cart/add.js', {
   method: 'POST',
