@@ -13,17 +13,17 @@
 <div class="cartInterface">
   {% if cart.items.length != 0 %}
     
-      {% for item in cart.items %}
-      <div class="cartInterface__container">
-        <div class="cartInterface__container__child1">
-          <p>PRODUCTO</p>
-          <p>PRECIOS</p>
+    {% for item in cart.items %}
+        <div class="cartInterface__container">
+          <div class="cartInterface__container__child1">
+            <p>PRODUCTO</p>
+            <p>PRECIOS</p>
+          </div>
+          <div class="cartInterface__container__child2">
+            <p>CANTIDAD</p>
+            <p>TOTAL</p>
+          </div>  
         </div>
-        <div class="cartInterface__container__child2">
-          <p>CANTIDAD</p>
-          <p>TOTAL</p>
-        </div>  
-      </div>
       <hr>
 
     {% endfor %}
