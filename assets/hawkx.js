@@ -88,7 +88,7 @@ var postJSON = function($url, $json) {
       console.log(xhr.response);
     }
   };
-  xhr.send($json);
+  xhr.send(JSON.stringify($json));
 };
 
 /*
@@ -97,7 +97,7 @@ var json = {
   items: [
     {
       quantity: 2,
-      id: 7048058142871
+      id: 7048058142871,
     }
   ]
 }
