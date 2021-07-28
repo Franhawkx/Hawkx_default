@@ -41,7 +41,7 @@ function sticky_menu($container, $element, $number) {
 
 //Peticion para añadir un producto al carrito por su id
 function subirProduct(){
-    let id = document.querySelector('.product__title').id;
+    //let id = document.querySelector('.product__title').id;
 
     const url= '/cart/add.js';
     let productos = {
