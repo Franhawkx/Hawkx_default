@@ -96,16 +96,16 @@ function toggle($element, $class) {
   xhr.send(JSON.stringify($json));
 };*/
 
-function getCART() {
+function getCART($callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", "/cart.js", true);
   xhr.responseType = 'json';
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      return xhr.response;
+      $callback(null, xhr.response);
     } else {
-      return "error";
+      $callback(status, xhr.response);
     }
   };
 
@@ -142,10 +142,11 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            data = getCART();    
+            getCART(update_get_cart);    
+          }else {
+            count = data.item_count;
+            update_cart(count);
           }
-          count = data.item_count;
-          update_cart(count);
         }
       });
 };
