@@ -34,3 +34,8 @@ function sticky_menu($container, $element, $number) {
       $container.classList.remove("sticky");
     }
 }
+
+//Función para añadir o quitar una clase
+function toggle($element, $class) {
+  $element.classList.toggle($class);
+}
