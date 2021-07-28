@@ -126,11 +126,71 @@ function update_cart(err, data) {
 
 //Callback para pintar los datos del carrito
 function print_product_cart(err, data) {
+  const container = document.querySelectorAll(".cart-items tbody");
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
     data.items.forEach(element => {
-      console.log(element);
+      '<tr class="cart-item" id="element.id">'+
+                  '<td class="cart-item__media">'+
+                    
+                      '<img class="cart-item__image" src="'+element.featured_image.url+'" alt="element.featured_image.alt" loading="lazy" width="75" height="75">'+
+                    
+                  '</td>'+
+
+                  '<td class="cart-item__details"><a href="/products/'+element.url+'" class="cart-item__name break">element.product_title</a><dl></dl>'+
+
+                      '<p class="product-option"></p><ul class="discounts list-unstyled" role="list" aria-label="Descuento"></ul>'+
+
+                    '<p class="cart-item__error" id="Line-item-error-1">'+
+                      '<span class="cart-item__error-text"></span>'+
+                    '</p>'+
+                  '</td>'+
+
+                  '<td class="cart-item__prices right">'+
+                    '<div class="cart-item__price-wrapper"><span class="price price--end">'+
+                          element.price+
+                        '</span></div>'+
+                  '+</td>'+
+
+                  '<td class="cart-item__quantity">'+
+                    '<label class="medium-down" for="Quantity-1">'+
+                      'Cantidad'+
+                    '</label>'+
+                    '<quantity-input class="quantity">'+
+                      '<button class="quantity__button no-js-hidden" name="minus" type="button">'+
+                        '<span class="visually-hidden">Reducir cantidad para element.product_title</span>'+
+                        
+
+                      '</button>'+
+                      '<input class="quantity__input" type="number" name="updates[]" value="6" min="0" aria-label="Cantidad para Vino Ramón 2" id="Quantity-1" data-index="1">'+
+                      '<button class="quantity__button no-js-hidden" name="plus" type="button">'+
+                        '<span class="visually-hidden">Aumentar cantidad para element.product_title</span>'+
+                       
+
+                      '</button>'+
+                    '</quantity-input>'+
+                  '</td>'+
+
+                  '<td class="cart-item__totals right">'+
+                    '<div class="loading-overlay hidden">'+
+                      '<div class="loading-overlay__spinner">'+
+                       
+                      '</div>'+
+                    '</div>'+
+
+                    '<div class="cart-item__price-wrapper medium-up"><span class="price price--end">'+
+                          '€450,00'+
+                        '</span></div>'+
+
+                    '<cart-remove-button id="Remove-1" data-index="1">'+
+                      '<a href="/cart/change?id=40607204278423:96d8bd9225ec0243a9323fac3db60f8e&amp;quantity=0" class="button button--tertiary" aria-label="Eliminar Vino Ramón 2">'+
+                       
+
+                      '</a>'+
+                    '</cart-remove-button>'+
+                  '</td>'+
+           '</tr>'
     });
 
   }
