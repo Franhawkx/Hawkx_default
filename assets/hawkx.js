@@ -65,6 +65,15 @@ var getJSON = function($url, $callback) {
   xhr.send();
 };
 
+var response = function(err, data) {
+  if (err !== null) {
+    console.log('Something went wrong: ' + err);
+  } else {
+    console.log('Your query: ' + data);
+    $data = data;
+  }
+}
+
 
 var postJSON = function($url, $json) {
   var xhr = new XMLHttpRequest();
@@ -82,6 +91,7 @@ var postJSON = function($url, $json) {
 };
 
 
+postJSON("/cart/add.js", )
 
 
 {
@@ -95,13 +105,3 @@ var postJSON = function($url, $json) {
     }
   ]
 }
-
-
-/*function (err, data) {
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    console.log('Your query: ' + data);
-    $data = data;
-  }
-}*/
