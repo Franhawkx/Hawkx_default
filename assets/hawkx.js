@@ -113,7 +113,7 @@ var postJSON = function($url, $data) {
 
 
 
-var getJSON = function($url) {
+var getJSON = function($url, $response, $data) {
   fetch($url,{ 
     method: 'GET',  
     headers: { 
@@ -121,16 +121,15 @@ var getJSON = function($url) {
     }
       }) 
       .then(response =>  
-        response.json()
+        response.json(),
+        $response
       ) 
       .then(data => {  
-          console.log(data) 
+          console.log(data)
+          $data
       }) 
 }
 
-
-
-console.log("hola");
 
 /*
 
@@ -169,6 +168,13 @@ let formData =  {
       id: 7048058142871
     }
   ]
+};
+
+let formData = {
+ 'items': [{
+  'id': 40607204278423,
+  'quantity': 2
+  }]
 };
 
 fetch('/cart/add.js', {
