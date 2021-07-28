@@ -129,8 +129,14 @@ function print_product_cart(err, data) {
   if (err !== null && err !== undefined) {
     console.log('El error es: ' + err);
   } else {
-   console.log(data)
-   console.log(data.items[1].id)
+
+    console.log(data)
+    count = data.items_count;
+    for (var i = 0; index < count; i++) {
+      console.log(data.items[i].id);
+    }
+
+  }
   }
 }
 
