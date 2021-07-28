@@ -77,23 +77,16 @@ var response = function(err, data) {
 
 const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
-
-
-function update_cart() {
-  var $update_cart = function(err, data) {
-    if (err !== null) {
-      console.log('Something went wrong: ' + err);
-    } else {
-      cart_count.innerText = data.item_count;   
-    }
+var update_cart = function(err, data) {
+  if (err !== null) {
+    console.log('Something went wrong: ' + err);
+  } else {
+    cart_count.innerText = data.item_count;   
   }
-
-  getJSON ("/cart.js", $update_cart);
-  
 }
 
 
-var postJSON = function($url, $json, $callback) {
+var postJSON = function($url, $json) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
   xhr.responseType = 'json';
@@ -101,7 +94,7 @@ var postJSON = function($url, $json, $callback) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      $callback;
+      getJSON ("/cart.js", $update_cart);
     } else {
       
     }
@@ -116,7 +109,7 @@ let json = {
     40607204278423: 2,
   }
 };
-postJSON("/cart/update.js", json, update_cart)
+postJSON("/cart/update.js", json)
 
 
 
