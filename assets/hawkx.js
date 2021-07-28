@@ -117,8 +117,10 @@ function postJSON($url, $data) {
     body: JSON.stringify($data)
       })
       .then(response => {
-        getJSON ("/cart.js", update_cart);
-        return response.json();
+        response.json();
+      })
+      .then(data => {
+        update_cart(err, data);
       })
       .catch((error) => {
         console.error('Error:', error);
