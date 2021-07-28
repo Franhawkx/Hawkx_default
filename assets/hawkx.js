@@ -50,7 +50,7 @@ function toggle($element, $class) {
 
 //Función hacer llamada json
 //getJSON();
-var getJSON = function($url, $callback) {
+function getJSON($url, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", $url, true);
   xhr.responseType = 'json';
@@ -65,7 +65,7 @@ var getJSON = function($url, $callback) {
   xhr.send();
 };
 
-var response = function(err, data) {
+function response(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
@@ -77,7 +77,7 @@ var response = function(err, data) {
 
 const cart_count = document.querySelectorAll(".count_car__header span")[0];
 
-var update_cart = function(err, data) {
+function update_cart(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
@@ -86,7 +86,7 @@ var update_cart = function(err, data) {
 }
 
 
-var postJSON = function($url, $json) {
+function postJSON($url, $json) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
   xhr.responseType = 'json';
@@ -95,8 +95,7 @@ var postJSON = function($url, $json) {
     var status = xhr.status;
     if (status === 200) {
       getJSON ("/cart.js", update_cart);
-    } else {
-      
+    } else {  
     }
   };
   xhr.send(JSON.stringify($json));
@@ -112,9 +111,14 @@ let json = {
 postJSON("/cart/update.js", json)
 
 
+let json = {
+ 'items': [{
+  'id': 40607204278423,
+  'quantity': 2
+  }]
+};
 
-
-
+postJSON("/cart/add.js", json)
 
 
 
