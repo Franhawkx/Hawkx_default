@@ -47,7 +47,7 @@ function subirProduct(){
     let productos = {
         'items': [
         {
-            'id': 7048058634391,
+            'id': 7048056864919,
             'quantity': 2
         }
         ]
