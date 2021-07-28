@@ -69,16 +69,13 @@ var response = function(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    console.log('Your query: ' + data.id);
+    console.log('Your query: ' + data);
     $data = data;
   }
 }
 
-
-
 var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
-  
   xhr.open("POST", $url, true);
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.responseType = 'json';
