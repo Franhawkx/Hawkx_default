@@ -80,7 +80,11 @@ function update_cart(err, data) {
   if (err !== null) {
     console.log('Something went wrong: ' + err);
   } else {
-    cart_count.innerText = data.item_count;   
+    var count = data.item_count;
+    if (!(count != 0)) {
+      count = "";
+    }
+    cart_count.innerText = count;   
   }
 }
 
@@ -99,6 +103,7 @@ function postJSON($url, $json) {
   };
   xhr.send(JSON.stringify($json));
 };
+
 
 
 
