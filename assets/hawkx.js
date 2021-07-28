@@ -26,7 +26,7 @@ window.onload = function() {
 
       button_search[0].addEventListener("click", function() { toggle(this, "open"); }, { passive: false });
       form_search[0].addEventListener("click", function(event) { event.stopPropagation(); }, { passive: false });
-      button_search[0].addEventListener("click", function() { searh_search.focus(); }, { passive: false });
+      button_search[0].addEventListener("click", function() { searh_search[0].focus(); }, { passive: false });
       
       
       
