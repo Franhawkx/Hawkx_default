@@ -235,11 +235,8 @@ html {
 						font-size: 1em;
 						font-weight: 400;
 
-						span {
-							&.empty {
-								display:none;
-							}
-
+						&.empty {
+							display:none;
 						}
 
 					}
