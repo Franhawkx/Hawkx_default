@@ -1,0 +1,43 @@
+
+
+
+
+{{ 'hawk.css' | asset_url | stylesheet_tag }}
+
+{% if cart.items.length == 0 %}
+    
+{% endif %}
+
+<h1>TU CARRITO</h1>
+<div>
+  <div>
+    <p>PRODUCTO</p>
+    <p>PRECIOS</p>
+  </div>
+  <div>
+    <p>CANTIDAD</p>
+    <p>TOTAL</p>
+  </div>  
+</div>
+<hr>
+
+{% for item in cart.items %}
+  <div>
+    <img src="item.image.url" alt="">
+    <p>{{item.name}}</p>
+  </div>
+  <div>
+    <p>{{item.price}}</p>
+    <div class="cantidad">
+      <button></button>
+      <p></p>
+      <button></button>
+    </div>
+    <div>
+      <p>Precio Total</p>
+    </div>
+  </div>
+{% endfor %}
+
+
+
