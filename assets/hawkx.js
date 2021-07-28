@@ -110,6 +110,7 @@ function getCART() {
       })
       .then(data => {
       var $data = data;
+      return $data;
     });
 
     return $data;
