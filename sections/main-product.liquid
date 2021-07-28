@@ -200,11 +200,13 @@
                   </div>
 
                   <script>
-                    window.onload = function(){
+                    function init(){
+                      alert('Algo1');
                       let boton = document.getElementById('boton_pruebas');
                       boton.addEventListener('click', dimeId, false);
                     }
-                    alert('Algo');
+
+                    
                     function dimeId() {
                       alert('Algo');
                       let variantes = document.querySelectorAll('.seleccionar_variantes input');
@@ -214,6 +216,9 @@
                         }
                       }
                     }
+
+                    document.addEventListener('DOMContentLoaded',init, false);
+
                   </script>
 
 
