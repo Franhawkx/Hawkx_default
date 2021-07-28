@@ -51,7 +51,7 @@ function toggle($element, $class) {
 //Funcion para obtener datos del carrito
 function getCART($callback) {
   fetch("/cart.js",{ 
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     }
@@ -62,6 +62,7 @@ function getCART($callback) {
   .then(data => {
     $callback(data.status, data)
   });
+
 };
 
 function clearCART(){
