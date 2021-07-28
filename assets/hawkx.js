@@ -197,7 +197,7 @@ function print_product_cart(err, data) {
            const $element = document.getElementById(element.id);
 
            if($element != undefined) {
-            $element.innerHTML = "";
+            $element.innerHTML = content;
            } else {
             container.innerHTML += content;
            }
