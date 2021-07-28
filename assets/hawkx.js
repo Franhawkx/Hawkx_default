@@ -88,3 +88,8 @@ function recuperarItemsCarrito() {
         });
 }
 
+var botonPrueba = document.querySelector(".botonPrueba");
+botonPrueba.addEventListener('click', borrarVariante);
+function borrarVariante(){
+    console.log('hola')
+}
