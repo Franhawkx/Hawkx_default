@@ -59,7 +59,7 @@ function getJSON($url, $callback) {
     if (status === 200) {
       $callback(null, xhr.response);
     } else {
-      r$callback(status, xhr.response);
+      $callback(status, xhr.response);
     }
   };
   xhr.send();
