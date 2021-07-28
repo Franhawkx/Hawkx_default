@@ -82,10 +82,8 @@ function update_cart(err, data) {
   } else {
     var count = data.item_count;
     if ( count != 0 )  {
-      cart_count.classList.add("item");
       cart_count.classList.remove("empty");
     } else {
-      cart_count.classList.remove("item");
       cart_count.classList.add("empty");
     }
     cart_count.innerText = count;   
