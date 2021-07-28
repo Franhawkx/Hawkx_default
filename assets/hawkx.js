@@ -130,7 +130,7 @@ function print_product_cart(err, data) {
     console.log('El error es: ' + err);
   } else {
     data.items.forEach(element => {
-      console.log(element.quantity);
+      console.log(element);
     });
 
   }
