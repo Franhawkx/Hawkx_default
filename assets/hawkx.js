@@ -125,7 +125,7 @@ function postJSON($url, $data) {
   fetch($url,{ 
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/json'
     },
     body: JSON.stringify($data)
       })
@@ -133,7 +133,6 @@ function postJSON($url, $data) {
         response.json();
       })
       .then(data => {
-        data.json();
         console.log(data);
         update_cart2(data);
       })
