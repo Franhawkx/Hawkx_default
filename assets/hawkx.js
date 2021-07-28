@@ -142,31 +142,25 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            getCART(update_get_cart);    
+            getCART(update_cart);    
           }else {
-            count = data.item_count;
-            update_cart(count);
+            update_cart(null, data);
           }
         }
       });
 };
 
-function update_cart(count) {
-  const cart_count = document.querySelectorAll(".count_car__header span")[0];
+function update_cart(err, data) {
+  if (err !== null) {
+    console.log('Something went wrong: ' + err);
+  } else {
+    const cart_count = document.querySelectorAll(".count_car__header span")[0];
     if ( count != 0 )  {
       cart_count.classList.remove("empty");
     } else {
       cart_count.classList.add("empty");
     }
-    cart_count.innerText = count;   
-}
-
-function update_get_cart(err, data) {
-  if (err !== null) {
-    console.log('Something went wrong: ' + err);
-  } else {
-    count = data.item_count;
-    update_cart(count)
+    cart_count.innerText = count; 
   }
 }
 
