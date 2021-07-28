@@ -103,13 +103,14 @@ function getCART() {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      console.log(xhr.response);
-      $data = xhr.response;
+      return xhr.response;
     } else {
       return "error";
     }
   };
+
   xhr.send();
+  return xhr.onload;  
 };
 
 function postJSON($mode, $data) {
@@ -142,7 +143,7 @@ function postJSON($mode, $data) {
         if(data.status != "bad_request") {
 
           if ($mode == "add") {
-            data = getJSON();    
+            data = getCART();    
           }
           count = data.item_count;
           update_cart(count);
