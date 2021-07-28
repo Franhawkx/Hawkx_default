@@ -184,8 +184,7 @@
                   <button id="boton_pruebas">PULSAME</button>
 
                   {% for variant in product.variants %}
-                    <h2>{{ variant }}</h2>  
-                    <h1>AYUDA</h1>
+                    <h2>{{ variant.id }}</h2>  
                     <input type="hidden" name="id" value="{{ variant.id}}"/>
                   {% endfor -%}
 
