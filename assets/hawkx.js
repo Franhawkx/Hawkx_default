@@ -86,7 +86,6 @@ var update_cart = function(err, data) {
 }
 
 
-
 var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
@@ -95,9 +94,9 @@ var postJSON = function($url, $json, $callback) {
   xhr.onload = function() {
     var status = xhr.status;
     if (status === 200) {
-      $callback(null, xhr.response);
+      
     } else {
-      $callback(status, xhr.response);
+      
     }
   };
   xhr.send(JSON.stringify($json));
