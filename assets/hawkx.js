@@ -92,6 +92,7 @@ var update_cart = function(err, data) {
 var postJSON = function($url, $json, $callback) {
   var xhr = new XMLHttpRequest();
   xhr.open("POST", $url, true);
+  xhr.responseType = 'json';
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.onload = function() {
     var status = xhr.status;
