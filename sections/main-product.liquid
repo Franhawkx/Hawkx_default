@@ -181,6 +181,10 @@
                         {%- endfor -%}
                       </fieldset>
                   {%- endfor -%}
+                {% for variant in product.variants %}
+                <input type="hidden" name="id" value="{{ variant.id}}" />
+                {% endif %}
+
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
