@@ -89,19 +89,3 @@ var postJSON = function($url, $json) {
   };
   xhr.send(JSON.stringify($json));
 };
-
-
-postJSON("/cart/add.js", )
-
-
-{
-  items: [
-    {
-      quantity: 1,
-      id: 794864229,
-      properties: {
-        'First name': 'Caroline'
-      }
-    }
-  ]
-}
