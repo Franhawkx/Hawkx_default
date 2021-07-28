@@ -44,21 +44,24 @@ function subirProduct(){
     //let id = document.querySelector('.product__title').id;
 
     const url= '/cart/add.js';
-    let productos = {
-        'items': [
-        {
-            'id': 7048056864919,
-            'quantity': 2
-        }
-        ]
-    };
+    let formData = {
+
+        'items': [{
+       
+         'id': 36110175633573,
+       
+         'quantity': 2
+       
+         }]
+       
+       };
 
     const request = {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(productos)
+        body: JSON.stringify(formData)
     };
 
     fetch(url,request)
