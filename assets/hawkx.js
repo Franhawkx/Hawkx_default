@@ -132,7 +132,7 @@ function postJSON($url, $data) {
         return response.json();
       })
       .then(data => {
-        $data = data;
+        return $data = data;
         update_cart(data);
       })
       .catch((error) => {
