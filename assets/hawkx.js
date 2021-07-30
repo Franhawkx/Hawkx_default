@@ -142,7 +142,7 @@ function listar_clientes(){
         return response.json();
     })
     .then(function (responseAsObject) {
-        for (let i = 0; i < responseAsObject.items.length; i++) {
+        for (let i = 0; i < responseAsObject.length; i++) {
             console.log(responseAsObject);
         }
     })
