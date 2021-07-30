@@ -142,8 +142,8 @@ function listar_clientes(){
         return response.json();
     })
     .then(function (responseAsObject) {
+        console.log("Hola");
         for (let i = 0; i < responseAsObject.length; i++) {
-            console.log("Hola");
             console.log(responseAsObject);
         }
     })
