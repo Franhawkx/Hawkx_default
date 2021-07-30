@@ -143,6 +143,7 @@ function listar_clientes(){
     })
     .then(function (responseAsObject) {
         for (let i = 0; i < responseAsObject.length; i++) {
+            console.log("Hola");
             console.log(responseAsObject);
         }
     })
