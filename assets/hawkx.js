@@ -134,7 +134,7 @@ function eliminarProduct(){
 //API CLIENTES
 
 function listar_clientes(){
-    fetch('/admin/api/2021-07/customers.json ')
+    fetch('/admin/api/2021-07/customers.json')
     .then(function (response) {
         if (!response.ok) {
             throw Error(response.statusText);
