@@ -163,6 +163,8 @@ function crear_cliente(){
             "email": "javiduerme@patatas.com",
             "phone": "+15142546011",
             "verified_email": true,
+            "password": "newpass",
+            "password_confirmation": "newpass",
             "addresses": [
                 {
                     "address1": "123 Oak St",
