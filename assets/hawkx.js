@@ -50,7 +50,7 @@ function sticky_menu($container, $element, $number) {
           container_header.classList.add("sticky");
       }
 
-}
+
 // Fin onload
 
 
@@ -228,5 +228,6 @@ function crear_cliente(){
         .catch(function(error) {
             console.log('Ha habido un problema: ', error);
         });
+    }
 
 }
