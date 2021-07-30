@@ -46,6 +46,7 @@
         </button>
       {%- endif -%}
     </div>
+    <button id="añadir_producto">Añadir al carrito este producto</button>
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -58,8 +59,10 @@
             <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}">
               {{- block.settings.text -}}
             </p>
+
+            
           {%- when 'title' -%}
-            <h1 class="product__title">
+            <h1 class="product__title" id="{{ product.selected_or_first_available_variant.id }}">
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
@@ -177,6 +180,46 @@
                         {%- endfor -%}
                       </fieldset>
                   {%- endfor -%}
+                  
+                  <button id="boton_pruebas">PULSAME</button>
+                  <h1>Seleccionar la variante</h1>
+                  <div class="seleccionar_variantes">
+                    {% for variant in product.variants %}
+                      {% if forloop.first == true %}
+                        <input type="radio" id = "{{variant.id}}" value = "{{variant.id}}" name="variante" checked="true">
+                        <label for="{{variant.id}}">
+                          {{variant.title}}
+                        </label>
+                      {% else %}
+                        <input type="radio" id = "{{variant.id}}" value = "{{variant.id}}" name="variante">
+                        <label for="{{variant.id}}">
+                          {{variant.title}}
+                        </label>
+                      {% endif %}
+                    {% endfor -%}
+                  </div>
+
+                  <script>
+                    function init(){
+                      let boton = document.getElementById('boton_pruebas');
+                      boton.addEventListener('click', dimeId, false);
+                    }
+
+                    
+                    function dimeId() {
+                      let variantes = document.querySelectorAll('.seleccionar_variantes input');
+                      for (let variant of variantes){
+                        if(variant.checked == true){
+                          alert(variant.value);
+                        }
+                      }
+                    }
+
+                    document.addEventListener('DOMContentLoaded',init, false);
+
+                  </script>
+
+
                   <script type="application/json">
                     {{ product.variants | json }}
                   </script>
