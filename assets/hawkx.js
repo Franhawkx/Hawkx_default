@@ -152,3 +152,52 @@ function listar_clientes(){
     });
 
 }
+
+
+
+function crear_cliente(){
+    let cliente = {
+        "customer": {
+            "first_name": "Javier",
+            "last_name": "Espabila Noduermas",
+            "email": "javiduerme@patatas.com",
+            "phone": "+15142546011",
+            "verified_email": true,
+            "addresses": [
+                {
+                    "address1": "123 Oak St",
+                    "city": "Ottawa",
+                    "province": "ON",
+                    "phone": "555-1212",
+                    "zip": "123 ABC",
+                    "last_name": "Lastnameson",
+                    "first_name": "Mother",
+                    "country": "CA"
+                }
+            ]
+        }
+    };
+
+    const request = {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cliente)
+    };
+
+    fetch('/admin/api/2021-07/customers.json', request)
+    .then(function(response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+            return response.json();
+        })
+        .then(function(responseAsObject) {
+            console.log(responseAsObject);
+        })
+        .catch(function(error) {
+            console.log('Ha habido un problema: ', error);
+        });
+
+}
