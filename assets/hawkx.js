@@ -187,8 +187,9 @@ function crear_cliente(){
         },
         body: JSON.stringify(cliente)
     };
+    let url = '/admin/api/2021-07/customers.json';
 
-    fetch('/admin/api/2021-07/customers.json', request)
+    fetch(url, request)
     .then(function(response) {
         if (!response.ok) {
             throw Error(response.statusText);
