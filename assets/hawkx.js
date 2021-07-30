@@ -127,3 +127,27 @@ function eliminarProduct(){
         console.log('Ha habido un problema: ', error);
     });
 }
+
+
+
+
+//API CLIENTES
+
+function listar_clientes(){
+    fetch('/admin/api/2021-07/customers.json ')
+    .then(function (response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+        return response.json();
+    })
+    .then(function (responseAsObject) {
+        for (let i = 0; i < responseAsObject.items.length; i++) {
+            console.log(responseAsObject);
+        }
+    })
+    .catch(function (error) {
+        console.log('Ha habido un problema: ', error);
+    });
+
+}
