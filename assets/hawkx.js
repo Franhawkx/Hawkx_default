@@ -156,6 +156,8 @@ function listar_clientes(){
 
 
 function crear_cliente(){
+    deleteCookies();
+    console.log("Cookies: " + document.cookie);
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
@@ -211,4 +213,16 @@ function pruebaFetch(){
         .catch(function(error) {
             console.log('Ha habido un problema: ', error);
         });
+}
+
+function deleteCookies() {
+    var allCookies = document.cookie.split(';');
+    
+    // The "expire" attribute of every cookie is 
+    // Set to "Thu, 01 Jan 1970 00:00:00 GMT"
+    for (var i = 0; i < allCookies.length; i++)
+        document.cookie = allCookies[i] + "=;expires="
+        + new Date(0).toUTCString();
+
+
 }
