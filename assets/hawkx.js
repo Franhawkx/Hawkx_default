@@ -163,7 +163,7 @@ function crear_cliente(){
     
 
         
-    deleteAllCookies();
+    
     fetch(url,request)
     .then(function(response) {
         if (!response.ok) {
