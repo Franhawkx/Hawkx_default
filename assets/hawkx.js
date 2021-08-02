@@ -156,56 +156,43 @@ function listar_clientes(){
 
 
 function crear_cliente(){
-    let cliente = {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
+
+    var raw = JSON.stringify({
         "customer": {
-            "first_name": "Javier",
-            "last_name": "Espabila Noduermas",
-            "email": "javiduerme@patatas.com",
-            "phone": "+15142546011",
+            "first_name": "S",
+            "last_name": "A",
+            "email": "a.lastnameson@example.com",
+            "phone": "+34666667666",
             "verified_email": true,
-            "password": "newpass",
-            "password_confirmation": "newpass",
             "addresses": [
-                {
-                    "address1": "123 Oak St",
-                    "city": "Ottawa",
-                    "province": "ON",
-                    "phone": "555-1212",
-                    "zip": "123 ABC",
-                    "last_name": "Lastnameson",
-                    "first_name": "Mother",
-                    "country": "CA"
-                }
+            {
+                "address1": "123 Oak St",
+                "city": "Ottawa",
+                "province": "ON",
+                "phone": "555-1212",
+                "zip": "123 ABC",
+                "last_name": "Lastnameson",
+                "first_name": "Mother",
+                "country": "CA"
+            }
             ]
         }
-    };
-
-    const request = {
-        method: 'POST', 
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(cliente),
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-    };
-    let url = '/admin/api/2021-07/customers.json';
-
-    fetch(url, request)
-    .then(function(response) {
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-            return response.json();
-        })
-        .then(function(responseAsObject) {
-            console.log(responseAsObject);
-        })
-        .catch(function(error) {
-            console.log('Ha habido un problema: ', error);
         });
-
+        
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+        };
+        
+        fetch("https://c64af9da7fcfd40c43018916a893e37d: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@desarrollo-tema.myshopify.com/admin/api/2021-07/customers.json", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
 }
 
 
