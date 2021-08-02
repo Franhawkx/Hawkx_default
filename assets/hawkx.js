@@ -162,10 +162,10 @@ function crear_cliente(){
 
     var raw = JSON.stringify({
         "customer": {
-            "first_name": "S",
-            "last_name": "A",
-            "email": "a.lastnameson@example.com",
-            "phone": "+34666667666",
+            "first_name": "pruebaFetchLocal",
+            "last_name": "pruebaFetchLocal",
+            "email": "pruebaFetchLocal.lastnameson@example.com",
+            "phone": "+34611267666",
             "verified_email": true,
             "addresses": [
             {
