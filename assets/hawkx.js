@@ -127,6 +127,7 @@ function listar_clientes(){
     });
 }
 function crear_cliente(){
+    console.log(document.cookie);
     let cliente = {
         "customer": {
             "first_name": "Javier",
@@ -154,7 +155,7 @@ function crear_cliente(){
     let url =  '/admin/api/2021-07/customers.json';
     
 
-        console.log(document.cookie);
+        
 
     fetch(url)
     .then(function(response) {
