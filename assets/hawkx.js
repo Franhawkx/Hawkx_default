@@ -164,7 +164,7 @@ function crear_cliente(){
 
     
     deleteCookies();
-    
+
     fetch(url,request)
     .then(function(response) {
         
@@ -179,7 +179,7 @@ function crear_cliente(){
         .catch(function(error) {
             console.log('Ha habido un problema: ', error);
         });
-        console.log(document.cookie);
+        
 }
 function deleteCookies() {
     var allCookies = document.cookie.split(';');
