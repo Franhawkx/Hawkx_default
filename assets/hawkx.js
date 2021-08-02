@@ -198,7 +198,40 @@ fetch("/admin/api/2021-07/customers.json", requestOptions)
 
 
 function pruebaFetch(){
-    fetch('https://c64af9da7fcfd40c43018916a893e37d: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@desarrollo-tema.myshopify.com/admin/api/2021-07/customers.json')
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    
+    var raw = JSON.stringify({
+        "customer": {
+          "first_name": "jose",
+          "last_name": "jose",
+          "email": "jose.lastnameson@example.com",
+          "phone": "+34683969966",
+          "verified_email": true,
+          "addresses": [
+            {
+              "address1": "123 Oak St",
+              "city": "Ottawa",
+              "province": "ON",
+              "phone": "555-1212",
+              "zip": "123 ABC",
+              "last_name": "Lastnameson",
+              "first_name": "Mother",
+              "country": "CA"
+            }
+          ]
+        }
+      });
+
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw
+      };
+
+    fetch("/admin/api/2021-07/customers.json", requestOptions)
     .then(function(response) {
         if (!response.ok) {
             throw Error(response.statusText);
