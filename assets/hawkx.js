@@ -156,18 +156,16 @@ function listar_clientes(){
 
 
 function crear_cliente(){
-    deleteCookies();
-    console.log("Cookies: " + document.cookie);
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
 
 var raw = JSON.stringify({
   "customer": {
-    "first_name": "adrian",
-    "last_name": "adrian",
-    "email": "adri.lastnameson@example.com",
-    "phone": "+34683967266",
+    "first_name": "jose",
+    "last_name": "jose",
+    "email": "jose.lastnameson@example.com",
+    "phone": "+34683969966",
     "verified_email": true,
     "addresses": [
       {
@@ -213,16 +211,4 @@ function pruebaFetch(){
         .catch(function(error) {
             console.log('Ha habido un problema: ', error);
         });
-}
-
-function deleteCookies() {
-    var cookies = document.cookie;
-
-    for (var i = 0; i < cookies.split(";").length; ++i)
-    {
-        var myCookie = cookies[i];
-        var pos = myCookie.indexOf("=");
-        var name = pos > -1 ? myCookie.substr(0, pos) : myCookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
 }
