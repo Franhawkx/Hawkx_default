@@ -207,3 +207,21 @@ function crear_cliente(){
         });
 
 }
+
+
+
+function pruebaFetch(){
+    fetch('https://c64af9da7fcfd40c43018916a893e37d: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@desarrollo-tema.myshopify.com/admin/api/2021-07/customers.json')
+    .then(function(response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+            return response.json();
+        })
+        .then(function(responseAsObject) {
+            console.log(responseAsObject);
+        })
+        .catch(function(error) {
+            console.log('Ha habido un problema: ', error);
+        });
+}
