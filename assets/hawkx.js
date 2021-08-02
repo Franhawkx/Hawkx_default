@@ -163,10 +163,10 @@ function crear_cliente(){
     
 
     
-    
+    deleteAllCookies();
     fetch(url,request)
     .then(function(response) {
-        deleteAllCookies();
+        
         if (!response.ok) {
             throw Error(response.statusText);
         }
