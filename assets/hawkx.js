@@ -199,8 +199,6 @@ fetch("/admin/api/2021-07/customers.json", requestOptions)
 
 function pruebaFetch(){
 
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
     
     var raw = JSON.stringify({
         "customer": {
@@ -227,7 +225,6 @@ function pruebaFetch(){
 
       var requestOptions = {
         method: 'POST',
-        headers: myHeaders,
         body: raw
       };
 
