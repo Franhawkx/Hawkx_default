@@ -216,13 +216,13 @@ function pruebaFetch(){
 }
 
 function deleteCookies() {
-    var allCookies = document.cookie.split(';');
-    
-    // The "expire" attribute of every cookie is 
-    // Set to "Thu, 01 Jan 1970 00:00:00 GMT"
-    for (var i = 0; i < allCookies.length; i++)
-        document.cookie = allCookies[i] + "=;expires="
-        + new Date(0).toUTCString();
+    var cookies = document.cookie;
 
-
+    for (var i = 0; i < cookies.split(";").length; ++i)
+    {
+        var myCookie = cookies[i];
+        var pos = myCookie.indexOf("=");
+        var name = pos > -1 ? myCookie.substr(0, pos) : myCookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
 }
