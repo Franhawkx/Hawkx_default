@@ -164,6 +164,7 @@ function crear_cliente(){
 
     
     deleteCookies();
+    console.log(document.cookie)
 
     fetch(url,request)
     .then(function(response) {
