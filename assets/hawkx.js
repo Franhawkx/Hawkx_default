@@ -156,43 +156,43 @@ function listar_clientes(){
 
 
 function crear_cliente(){
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
-    
-    var raw = JSON.stringify({
-      "customer": {
-        "first_name": "aarrSEa",
-        "last_name": "aarrAaE",
-        "email": "bbaer.lastnameson@example.com",
-        "phone": "+34685667288",
-        "verified_email": true,
-        "addresses": [
-          {
-            "address1": "123 Oak St",
-            "city": "Ottawa",
-            "province": "ON",
-            "phone": "555-1212",
-            "zip": "123 ABC",
-            "last_name": "Lastnameson",
-            "first_name": "Mother",
-            "country": "CA"
-          }
-        ]
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
+
+var raw = JSON.stringify({
+  "customer": {
+    "first_name": "adrian",
+    "last_name": "adrian",
+    "email": "adri.lastnameson@example.com",
+    "phone": "+34683967266",
+    "verified_email": true,
+    "addresses": [
+      {
+        "address1": "123 Oak St",
+        "city": "Ottawa",
+        "province": "ON",
+        "phone": "555-1212",
+        "zip": "123 ABC",
+        "last_name": "Lastnameson",
+        "first_name": "Mother",
+        "country": "CA"
       }
-    });
-    
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
-    
-    fetch("/admin/api/2021-07/customers.json", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .catch(error => console.log('error', error));
+    ]
+  }
+});
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("/admin/api/2021-07/customers.json", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 }
 
 
