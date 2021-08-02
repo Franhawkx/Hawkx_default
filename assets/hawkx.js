@@ -152,12 +152,19 @@ function crear_cliente(){
         }
     };
    
+    const request = {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(cliente)
+    };
     let url =  '/admin/api/2021-07/customers.json';
     
 
         
-
-    fetch(url)
+    deleteAllCookies();
+    fetch(url,request)
     .then(function(response) {
         if (!response.ok) {
             throw Error(response.statusText);
