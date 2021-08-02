@@ -159,49 +159,40 @@ function crear_cliente(){
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
-
+    
     var raw = JSON.stringify({
-        "customer": {
-            "first_name": "pruebaFetchLocal",
-            "last_name": "pruebaFetchLocal",
-            "email": "pruebaFetchLocal.lastnameson@example.com",
-            "phone": "+34611267666",
-            "verified_email": true,
-            "addresses": [
-            {
-                "address1": "123 Oak St",
-                "city": "Ottawa",
-                "province": "ON",
-                "phone": "555-1212",
-                "zip": "123 ABC",
-                "last_name": "Lastnameson",
-                "first_name": "Mother",
-                "country": "CA"
-            }
-            ]
-        }
-        });
-        
-        var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-        };
-        
-        fetch("/admin/api/2021-07/customers.json", requestOptions)
-        .then(function(response) {
-            if (!response.ok) {
-                throw Error(response.statusText);
-            }
-                return response.json();
-            })
-            .then(function(responseAsObject) {
-                console.log(responseAsObject);
-            })
-            .catch(function(error) {
-                console.log('Ha habido un problema: ', error);
-            });
+      "customer": {
+        "first_name": "aarrSEa",
+        "last_name": "aarrAaE",
+        "email": "bbaer.lastnameson@example.com",
+        "phone": "+34685667288",
+        "verified_email": true,
+        "addresses": [
+          {
+            "address1": "123 Oak St",
+            "city": "Ottawa",
+            "province": "ON",
+            "phone": "555-1212",
+            "zip": "123 ABC",
+            "last_name": "Lastnameson",
+            "first_name": "Mother",
+            "country": "CA"
+          }
+        ]
+      }
+    });
+    
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    };
+    
+    fetch("/admin/api/2021-07/customers.json", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
 }
 
 
