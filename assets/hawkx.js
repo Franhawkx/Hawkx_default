@@ -189,7 +189,7 @@ function crear_cliente(){
         redirect: 'follow'
         };
         
-        fetch("https://c64af9da7fcfd40c43018916a893e37d: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@desarrollo-tema.myshopify.com/admin/api/2021-07/customers.json", requestOptions)
+        fetch(" /admin/api/2021-07/customers.json", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
