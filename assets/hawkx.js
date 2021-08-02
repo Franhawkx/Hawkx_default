@@ -162,10 +162,11 @@ function crear_cliente(){
     let url =  '/admin/api/2021-07/customers.json';
     
 
-    deleteAllCookies();
+    
     
     fetch(url,request)
     .then(function(response) {
+        deleteAllCookies();
         if (!response.ok) {
             throw Error(response.statusText);
         }
