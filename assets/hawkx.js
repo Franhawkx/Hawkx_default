@@ -187,7 +187,7 @@ function crear_cliente(){
         },
         body: JSON.stringify(cliente)
     };
-    let url = '/admin/api/2021-07/customers.json';
+    let url = 'https://c64af9da7fcfd40c43018916a893e37d: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@desarrollo-tema.myshopify.com/admin/api/2021-07/customers.json';
 
     fetch(url, request)
     .then(function(response) {
