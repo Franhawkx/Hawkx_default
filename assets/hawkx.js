@@ -189,7 +189,7 @@ function crear_cliente(){
         redirect: 'follow'
         };
         
-        fetch(" /admin/api/2021-07/customers.json", requestOptions)
+        fetch("/admin/api/2021-07/customers.json", requestOptions)
         .then(function(response) {
             if (!response.ok) {
                 throw Error(response.statusText);
