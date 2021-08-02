@@ -159,6 +159,8 @@ function crear_cliente(){
     };
     let url = 'https://c64af9da7fcfd40c43018916a893e37d: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@desarrollo-tema.myshopify.com/admin/api/2021-07/customers.json';
 
+        console.log(document.cookie);
+
     fetch(url, request)
     .then(function(response) {
         if (!response.ok) {
@@ -172,4 +174,5 @@ function crear_cliente(){
         .catch(function(error) {
             console.log('Ha habido un problema: ', error);
         });
+        console.log(document.cookie);
 }
