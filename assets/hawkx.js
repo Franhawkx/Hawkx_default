@@ -137,7 +137,7 @@ function deleteCookies() {
         + new Date(0).toUTCString();
 }
 function probandoEsto(){
-    fetch("https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json", {
+    fetch("/admin/api/2021-07/graphql.json", {
         method: "POST",
         headers: {  
             "Content-Type": "application/json",
@@ -162,6 +162,6 @@ function probandoEsto(){
     })
     .then(data => {
         console.log(data);
-        
+
     });
 }
