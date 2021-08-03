@@ -249,56 +249,27 @@ function pruebaFetch(){
 
 function probandoEsto(){
 
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
-      myHeaders.append("Cache-Control", "no-cache");
-
-      var raw = JSON.stringify({
-        "customer": {
-          "first_name": "alicia",
-          "last_name": "alicia",
-          "email": "alicia.lastnameson@example.com",
-          "phone": "+34683779966",
-          "verified_email": true,
-          "addresses": [
-            {
-              "address1": "123 Oak St",
-              "city": "Ottawa",
-              "province": "ON",
-              "phone": "555-1212",
-              "zip": "123 ABC",
-              "last_name": "Lastnameson",
-              "first_name": "Mother",
-              "country": "CA"
-            }
-          ]
-        }
-      });
-
-      var requestOptions = {
+    fetch('/admin/api/2021-07/graphql.json', {
         method: 'POST',
-        headers: myHeaders,
-        body: raw,
-      };
-
-
-      fetch("/admin/api/2021-07/customers.json", requestOptions)
-      .then(function (response) {
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-        return response.json();
-        })
-        .then(function (responseAsObject) {
-            console.log("Hola");
-            for (let i = 0; i < responseAsObject.length; i++) {
-                console.log(responseAsObject);
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          query: `
+          mutation{
+            customerCreate(input:{firstName:"Pepito" lastName:"Pepito" email:"asdfasdf@gmail.com" }){
+              customer{
+                email
+                firstName
+                lastName
+              }
             }
-        })
-        .catch(function (error) {
-            console.log('Ha habido un problema: ', error);
-        });
-
+          }
+            `
+        }),
+      })
+        .then((res) => res.json())
+        .then((result) => console.log(result));
+      
 
 }
