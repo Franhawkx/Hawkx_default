@@ -251,9 +251,8 @@ function probandoEsto(){
 
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
-      myHeaders.append("Authorization", "Basic [redacted]");
+      myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
       myHeaders.append("Cache-Control", "no-cache");
-      myHeaders.append("apikey", "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")
 
       var raw = JSON.stringify({
         "customer": {
