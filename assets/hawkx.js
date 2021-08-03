@@ -137,31 +137,21 @@ function deleteCookies() {
         + new Date(0).toUTCString();
 }
 function probandoEsto(){
-    fetch("/admin/api/2021-07/graphql.json", {
-        method: "POST",
-        headers: {  
-            "Content-Type": "application/json",
-            "Authorization": "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk="
-        },
-        body: JSON.stringify({
-            query: `
-            mutation{
-                customerCreate(input:{firstName:"Antonio" lastName:"Caparros" email:"hola@gmail.com" }){
-                  customer{
-                    email
-                    firstName
-                    lastName
-                  }
-                }
+   
+    var formData = JSON.stringify({
+        query: `
+        mutation{
+            customerCreate(input:{firstName:"Antonio" lastName:"Caparros" email:"hola@gmail.com" }){
+              customer{
+                email
+                firstName
+                lastName
               }
-                `
-        }) 
+            }
+          }
+            `
     })
-    .then(result => {
-        result.json();
-    })
-    .then(data => {
-        console.log(data.data);
-
-    });
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "POST https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json");
+    xhr.send(formData);
 }
