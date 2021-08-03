@@ -152,6 +152,6 @@ function probandoEsto(){
             `
     })
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "POST /admin/api/2021-07/graphql.json");
+    xhr.open("POST", "https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json");
     xhr.send(formData);
 }
