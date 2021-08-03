@@ -260,7 +260,8 @@ function probandoEsto(){
                         input:{
                             firstName: "dude",
                             lastName: "Dude",
-                            email: "w@w.com"
+                            email: "w@w.com",
+                            phone : "+34677569878"
                         }
                     )
                 }
@@ -270,6 +271,7 @@ function probandoEsto(){
                         firstName
                         lastName
                         email
+                        phone
                     }
                 }`
             })
