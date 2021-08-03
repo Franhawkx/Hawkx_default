@@ -260,7 +260,7 @@ function probandoEsto(){
         headers: myHeaders,
         body: JSON.stringify({
           query: `
-          mutation{
+          query mutation{
             customerCreate(input:{firstName:"Pepito" lastName:"Pepito" email:"asdfasdf@gmail.com" }){
               customer{
                 email
