@@ -138,7 +138,7 @@ function deleteCookies() {
 }
 function probandoEsto(){
    
-    var formData = JSON.stringify({
+    var form = JSON.stringify({
         query: `
         mutation{
             customerCreate(input:{firstName:"Antonio" lastName:"Caparros" email:"hola@gmail.com" }){
@@ -153,5 +153,5 @@ function probandoEsto(){
     })
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json");
-    xhr.send(formData);
+    xhr.send(form);
 }
