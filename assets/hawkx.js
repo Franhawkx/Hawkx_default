@@ -256,10 +256,10 @@ function probandoEsto(){
 
       var raw = JSON.stringify({
         "customer": {
-          "first_name": "jose",
-          "last_name": "jose",
-          "email": "jose.lastnameson@example.com",
-          "phone": "+34683969966",
+          "first_name": "alicia",
+          "last_name": "alicia",
+          "email": "alicia.lastnameson@example.com",
+          "phone": "+34683779966",
           "verified_email": true,
           "addresses": [
             {
