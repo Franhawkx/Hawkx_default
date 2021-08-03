@@ -245,3 +245,49 @@ function pruebaFetch(){
         console.log('Ha habido un problema: ', error);
     });
 }
+
+
+function probandoEsto(){
+
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append("Authorization", "Basic [redacted]");
+      myHeaders.append("Cache-Control", "no-cache");
+      myHeaders.append("apikey", "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")
+
+      var raw = JSON.stringify({
+        "customer": {
+          "first_name": "jose",
+          "last_name": "jose",
+          "email": "jose.lastnameson@example.com",
+          "phone": "+34683969966",
+          "verified_email": true,
+          "addresses": [
+            {
+              "address1": "123 Oak St",
+              "city": "Ottawa",
+              "province": "ON",
+              "phone": "555-1212",
+              "zip": "123 ABC",
+              "last_name": "Lastnameson",
+              "first_name": "Mother",
+              "country": "CA"
+            }
+          ]
+        }
+      });
+
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+      };
+
+
+      fetch("/admin/api/2021-07/customers.json", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
+
+
+}
