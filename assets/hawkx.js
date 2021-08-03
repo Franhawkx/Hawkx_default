@@ -256,7 +256,7 @@ function probandoEsto(){
             },
             body: JSON.stringify({
                 mutation: `{
-                    customrCreate(
+                    customerCreate(
                         input:{
                             firstName: "dude",
                             lastName: "Dude",
