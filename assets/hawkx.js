@@ -264,7 +264,7 @@ function probandoEsto(){
                         }
                     `
             }) 
-        }
+        })
         .then(result => {
             return result.json();
         })
