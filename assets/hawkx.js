@@ -255,25 +255,15 @@ function probandoEsto(){
                 "Authorization": "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk="
             },
             body: JSON.stringify({
-                mutation: `{
-                    customerCreate(
-                        input:{
-                            firstName: "dude",
-                            lastName: "Dude",
-                            email: "w@w.com",
-                            phone : "+34677569878"
-                        }
-                    )
-                }
-                {
-                    customer{
-                        id
+                mutation: `mutation{
+                    customerCreate(input:{firstName:"Paquito" lastName:"Chocolatero" email:"pacoChocolate@gmail.com" }){
+                      customer{
+                        email
                         firstName
                         lastName
-                        email
-                        phone
+                      }
                     }
-                }`
+                  }`
             })
         })
         .then(result => {
