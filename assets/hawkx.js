@@ -248,45 +248,37 @@ function pruebaFetch(){
 
 
 function probandoEsto(){
-
-
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Authorization", "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=");
-    
-
-    fetch('/admin/api/2021-07/graphql.json', {
-        method: 'POST',
-        headers: myHeaders,
-        body: JSON.stringify({
-          query: `
-          query mutation{
-            customerCreate(input:{firstName:"Pepito" lastName:"Pepito" email:"asdfasdf@gmail.com" }){
-              customer{
-                email
-                firstName
-                lastName
-              }
-            }
-          }
-            `
-        }),
-      })
-      .then(function (response) {
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-        return response.json();
-    })
-    .then(function (responseAsObject) {
-        console.log("Hola");
-        for (let i = 0; i < responseAsObject.length; i++) {
-            console.log(responseAsObject);
-        }
-    })
-    .catch(function (error) {
-        console.log('Ha habido un problema: ', error);
-    });
-      
-
+        fetch("/admin/api/2021-07/graphql.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk="
+            },
+            body: JSON.stringify({
+                mutation: `{
+                    customrCreate(
+                        input:{
+                            firstName: "dude",
+                            lastName: "Dude",
+                            email: "w@w.com"
+                        }
+                    )
+                }
+                {
+                    customer{
+                        id
+                        firstName
+                        lastName
+                        email
+                    }
+                }`
+            })
+        })
+        .then(result => {
+            return result.json();
+        })
+        .then(data => {
+            console.log("data returned:\n", data);
+            res.send(data);
+        });
 }
