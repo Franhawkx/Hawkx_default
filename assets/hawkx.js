@@ -152,17 +152,33 @@ function crear_cliente(){
     //     }
     // };
    
+    var data = "mutation{
+        customerCreate(input:{firstName:"Antonio" lastName:"Caparros" email:"hola@gmail.com" }){
+          customer{
+            email
+            firstName
+            lastName
+          }
+        }
+      }"
     const request = {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        body: JSON.stringify(data)
     };
+
     let url =  'https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json';
     
 
     
-  
+    {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data), // data can be `string` or {object}!
+        headers:{
+          'Content-Type': 'application/json'
+        }
     
 
     fetch(url,request)
@@ -171,7 +187,7 @@ function crear_cliente(){
         if (!response.ok) {
             throw Error(response.statusText);
         }
-            return response.json();
+            return response;
         })
         .then(function(responseAsObject) {
             console.log(responseAsObject);
@@ -186,7 +202,35 @@ function deleteCookies() {
     
     // The "expire" attribute of every cookie is 
     // Set to "Thu, 01 Jan 1970 00:00:00 GMT"
-    for (var i = 0; i < allCookies.length; i++)
+    for(var i = 0; i < allCookies.length; i++)
         document.cookie = allCookies[i] + "=;expires="
         + new Date(0).toUTCString();
+}
+function probandoEsto(){
+    fetch("https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json", {
+        method: "POST",
+        headers: {  
+            "Content-Type": "application/json",
+            "Authorization": "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk="
+        },
+        body: JSON.stringify({
+            query: `
+            mutation{
+                customerCreate(input:{firstName:"Antonio" lastName:"Caparros" email:"hola@gmail.com" }){
+                  customer{
+                    email
+                    firstName
+                    lastName
+                  }
+                }
+              }
+                `
+        }) 
+    })
+    .then(result => {
+        result.json();
+    })
+    .then(data => {
+        console.log(data.data);
+    });
 }
