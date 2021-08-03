@@ -268,8 +268,21 @@ function probandoEsto(){
             `
         }),
       })
-        .then((res) => res.json())
-        .then((result) => console.log(result));
+      .then(function (response) {
+        if (!response.ok) {
+            throw Error(response.statusText);
+        }
+        return response.json();
+    })
+    .then(function (responseAsObject) {
+        console.log("Hola");
+        for (let i = 0; i < responseAsObject.length; i++) {
+            console.log(responseAsObject);
+        }
+    })
+    .catch(function (error) {
+        console.log('Ha habido un problema: ', error);
+    });
       
 
 }
