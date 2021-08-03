@@ -252,7 +252,8 @@ function probandoEsto(){
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk="
+                "Authorization": "Basic YzY0YWY5ZGE3ZmNmZDQwYzQzMDE4OTE2YTg5M2UzN2Q6c2hwcGFfM2MzYzNhNzljNDUwMjA0Njg3NTUyY2U1ZTEwZDFkZDk=",
+                "access_token": "5d3042685090a0f3f7a8947f3bddacd1"
             },
             body: JSON.stringify({
                 query: `
