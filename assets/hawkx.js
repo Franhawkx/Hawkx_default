@@ -258,8 +258,12 @@ function probandoEsto(){
                 query: `
                         query {
                             customers{
-                                name
-                                lastname
+                                edge{
+                                    node{
+                                        firstName
+                                        lastName
+                                    }
+                                }
                             }
                         }
                     `
