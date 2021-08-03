@@ -126,77 +126,7 @@ function listar_clientes(){
         console.log('Ha habido un problema: ', error);
     });
 }
-function crear_cliente(){
-    
-    // let cliente = {
-    //     "customer": {
-    //         "first_name": "Javier",
-    //         "last_name": "Espabila Noduermas",
-    //         "email": "javiduerme@patatas.com",
-    //         "phone": "+15142546011",
-    //         "verified_email": true,
-    //         "password": "newpass",
-    //         "password_confirmation": "newpass",
-    //         "addresses": [
-    //             {
-    //                 "address1": "123 Oak St",
-    //                 "city": "Ottawa",
-    //                 "province": "ON",
-    //                 "phone": "555-1212",
-    //                 "zip": "123 ABC",
-    //                 "last_name": "Lastnameson",
-    //                 "first_name": "Mother",
-    //                 "country": "CA"
-    //             }
-    //         ]
-    //     }
-    // };
-   
-    var data = "mutation{
-        customerCreate(input:{firstName:"Antonio" lastName:"Caparros" email:"hola@gmail.com" }){
-          customer{
-            email
-            firstName
-            lastName
-          }
-        }
-      }"
-    const request = {
-        method: 'POST', 
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    };
-
-    let url =  'https://desarrollo-tema.myshopify.com/admin/api/2021-07/graphql.json';
-    
-
-    
-    {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers:{
-          'Content-Type': 'application/json'
-        }
-    
-
-    fetch(url,request)
-    .then(function(response) {
-        
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-            return response;
-        })
-        .then(function(responseAsObject) {
-            console.log(responseAsObject);
-        })
-        .catch(function(error) {
-            console.log('Ha habido un problema: ', error);
-        });
-        
-}
+             
 function deleteCookies() {
     var allCookies = document.cookie.split(';');
     
