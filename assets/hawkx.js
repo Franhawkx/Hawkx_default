@@ -279,6 +279,5 @@ function probandoEsto(){
         })
         .then(data => {
             console.log("data returned:\n", data);
-            res.send(data);
         });
 }
