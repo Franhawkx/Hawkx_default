@@ -161,6 +161,7 @@ function probandoEsto(){
         result.json();
     })
     .then(data => {
-        console.log(data.data);
+        console.log(data);
+        
     });
 }
