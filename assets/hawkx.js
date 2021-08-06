@@ -23,7 +23,7 @@ window.onload = function () {
     //boton_añadir_producto.addEventListener('click', subirProduct, false);
     var button = document.querySelector("#botonRegistro");
     button.addEventListener('click', enviarCliente(), false);
-    addEventListener("click")
+        
 }
 // Fin onload
 //Función para añadir la clase sticky al header cuando se hace scroll Fran
@@ -161,4 +161,5 @@ function probandoEsto(){
 }
 function enviarCliente(){
     alert(button.dataset.id);
+    alert("hola");
 }
