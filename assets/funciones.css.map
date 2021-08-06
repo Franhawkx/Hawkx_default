@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAiBC;;;6BAG8B;EAC7B,uBAAuB,EAAE,kBAAkB;EAC5C,kBAAkB,EAAE,uDAAuD;EAC1E,wBAAwB,EAAE,KAAK",
+"sources": ["funciones.scss"],
+"names": [],
+"file": "funciones.css"
+}

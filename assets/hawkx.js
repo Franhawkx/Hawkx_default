@@ -32,6 +32,7 @@ function sticky_menu($container, $element, $number) {
         $container.classList.remove("sticky");
     }
 }
+
 //Peticion para añadir un producto al carrito por su id
 function subirProduct(){
     const url= '/cart/add.js';
@@ -155,3 +156,4 @@ function probandoEsto(){
     xhr.open("POST", "/admin/api/2021-07/graphql.json");
     xhr.send(form);
 }
+alert("Hola");
