@@ -161,6 +161,6 @@ function probandoEsto(){
 }
 function enviarCliente(){
     var button = document.querySelector("#botonRegistro");
-    alert(button.dataset.id);
+    
     alert("hola");
 }
