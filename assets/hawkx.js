@@ -21,6 +21,9 @@ window.onload = function () {
     }
     //let boton_añadir_producto = document.querySelector('#añadir_producto');
     //boton_añadir_producto.addEventListener('click', subirProduct, false);
+    var button = document.querySelector("#botonRegistro");
+    button.addEventListener('click', enviarCliente(), false);
+    addEventListener("click")
 }
 // Fin onload
 //Función para añadir la clase sticky al header cuando se hace scroll Fran
@@ -156,4 +159,6 @@ function probandoEsto(){
     xhr.open("POST", "/admin/api/2021-07/graphql.json");
     xhr.send(form);
 }
-alert("Hola");
+function enviarCliente(){
+    alert(button.dataset.id);
+}

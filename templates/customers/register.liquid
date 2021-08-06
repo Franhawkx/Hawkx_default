@@ -111,7 +111,7 @@
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
-    <button id="botonRegistro">
+    <button id="botonRegistro" data-id ={{customer.id}}>
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
