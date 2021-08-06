@@ -1,6 +1,8 @@
 <div class="customer account">
   {% if customer %}
     ha iniciado sesion 
+    {{customer.email}}
+    {{customer.name}}
   {% endif %}
   <button id="botonRegistro" data-id ={{customer.id}}>
     hola que tal boton prueba

@@ -161,6 +161,5 @@ function probandoEsto(){
 }
 function enviarCliente(){
     var button = document.querySelector("#botonRegistro");
-    console.log(customer.id);
-    console.log(customer.email);
+    
 }
