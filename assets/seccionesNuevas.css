@@ -11,20 +11,35 @@
     display:flex;
     justify-content: center;
     align-items: center; 
-    height:80%;
+    height:350px;
 
 }
 .foto1{
     padding-top: 10px;
     padding-bottom:15px;
+    height:100%;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .foto2{
     padding-top: 10px;
     padding-bottom:15px;
+    height:100%;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .foto3{
     padding-top: 10px;
     padding-bottom:15px;
+    height:100%;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 img { 
     width: 100%; 
