@@ -54,10 +54,12 @@
         "label": "Tercera Foto"
     }
     ],
-    "blocks":[{
+    "blocks":[
+    {
         "name": "Título",
         "type": "text",
-        "settings":[{
+        "settings":[
+        {
                 
             "type": "text",
             "id": "titulo",
@@ -74,7 +76,7 @@
             "type": "image_picker",
             "id": "img1",
             "label": "Imagen 1",
-            "default": ""
+            
 
         }]
     },
@@ -86,7 +88,7 @@
             "type": "image_picker",
             "id": "img2",
             "label": "Imagen 2",
-            "default": ""
+            
 
         }]
     },
@@ -98,7 +100,7 @@
             "type": "image_picker",
             "id": "img3",
             "label": "Imagen 3",
-            "default": ""
+            
 
         }]
         
@@ -106,33 +108,30 @@
     
     
     ],
-    "presets": [
-    {
-      "name": "Mostrador",
-      "category":"subcategoria Mostrador",
-      "blocks": [
+    "presets": 
+    [
         {
-          "type": "text"
-        },
-        {
-          "type": "image_picker"
-        },
-        {
-          "type": "image_picker"
-        },
-        {
-          "type": "image_picker"
+            "name": "Mostrador",
+            "category":"Subcategoria Seccion",
+            "blocks": 
+            [
+                {
+                "type": "heading"
+                },
+                {
+                "type": "image_picker"
+                },
+                {
+                "type": "image_picker"
+                },
+                {
+                "type": "image_picker"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
     
     
-    
-
-
-
-
-    
+    }    
 }
 {% endschema %}
