@@ -2,9 +2,8 @@
     border: 20px solid red;
 
    background-color: red;
-    
-
-
+    width: 100%;
+    height:500px;
 }
 .titulo{
     display:flex;
@@ -17,6 +16,8 @@
 }
 .foto1{
     width:33%;
+    margin: 10px;
+
 }
 .foto2{
     width:33%;
@@ -24,3 +25,8 @@
 .foto3{
     width: 33%;
 }
+img { 
+    width: 100%; 
+    max-width: 368px; 
+    height: auto; 
+  }
