@@ -16,19 +16,21 @@
 
 }
 .foto1{
-    
-
+    padding-top: 10px;
+    padding-bottom:15px;
 }
 .foto2{
-    
+    padding-top: 10px;
+    padding-bottom:15px;
 }
 .foto3{
-    
+    padding-top: 10px;
+    padding-bottom:15px;
 }
 img { 
     width: 100%; 
     max-width: 368px; 
-    height: 207,3px; 
+    height: max-content;
   }
   h1{
     font-size: 38px;
