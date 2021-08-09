@@ -9,17 +9,17 @@
             {%- case block.type -%}
                 {%- when 'image_picker' -%}
                     <div class="foto1"> 
-                        <img src="{{ block.settings.img1 | img_url: '750x'}}" alt="img1">
+                        <img src="{{ block.settings.img1 | img_url: '100%'}}" alt="img1">
                     </div>
                 {%- when 'image_picker2' -%}
 
                     <div class="foto2">
-                        <img src="{{ section.block.img2 | img_url: '750x'}}" alt="img2">    
+                        <img src="{{ block.settings.img2 | img_url: '100%'}}" alt="img2">    
                     </div>
                 {%- when 'image_picker3' -%}
 
                     <div class="foto3">
-                        <img src="{{ section.block.settings.img3 | img_url: '750x'}}" alt="img3">
+                        <img src="{{ block.settings.img3 | img_url: '100%'}}" alt="img3">
                     </div>
                 {%- endcase -%}
       {%- endfor -%}
