@@ -18,12 +18,12 @@
                 {%- when 'image_picker2' -%}
 
                     <div class="foto2">
-                        <img src="{{ block.settings.img2 | img_url: '100%'}}" alt="img2">    
+                        <img src="{{ block.settings.img2 | img_url: '350x'}}" alt="img2">    
                     </div>
                 {%- when 'image_picker3' -%}
 
                     <div class="foto3">
-                        <img src="{{ block.settings.img3 | img_url: '100%'}}" alt="img3">
+                        <img src="{{ block.settings.img3 | img_url: '350x'}}" alt="img3">
                     </div>
                 {%- endcase -%}
       {%- endfor -%}
