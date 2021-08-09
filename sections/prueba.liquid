@@ -9,12 +9,12 @@
             {%- case block.type -%}
                 {%- when 'image_picker' -%}
                     <div class="foto1"> 
-                        <img srcset="{{ section.block.settings.img1 | img_url: '750x'}}" alt="img1">
+                        <img src="{{ section.block.img1.settings | img_url: '750x'}}" alt="img1">
                     </div>
                 {%- when 'image_picker2' -%}
 
                     <div class="foto2">
-                        <img srcset="{{ section.block.settings.img2 | img_url: '750x'}}" alt="img2">    
+                        <img srcset="{{ section.block.Im | img_url: '750x'}}" alt="img2">    
                     </div>
                 {%- when 'image_picker3' -%}
 
