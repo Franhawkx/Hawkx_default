@@ -16,11 +16,12 @@
 }
 .foto1{
     height:100%;
-    position: absolute;
+    position: relative;
     width: 100%;
    
 }
 .foto2{
+
     height:100%;
     position: relative;
     width: 100%;
