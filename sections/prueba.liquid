@@ -1,22 +1,28 @@
 <div class="sectionContainer">
+    <div></div>
     <h1 class="titulo">
        {{section.settings.titulo}}
     </h1>
     
     <div class="iamgenesContainer">
-        <div class="foto1"> 
-            <img src="sfaf.jpg" alt="img1">
-        </div>
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'image_picker' -%}
+                    <div class="foto1"> 
+                        <img src="sfaf.jpg" alt="img1">
+                    </div>
+                {%- when 'image_picker2' -%}
 
+                    <div class="foto2">
+                        <img src="adfad.jpg" alt="img2">    
+                    </div>
+                {%- when 'image_picker3' -%}
 
-        <div class="foto2">
-            <img src="adfad.jpg" alt="img2">    
-        </div>
-
-
-        <div class="foto3">
-            <img src="adadf.jpg" alt="img3">
-        </div>
+                    <div class="foto3">
+                        <img src="adadf.jpg" alt="img3">
+                    </div>
+                {%- endcase -%}
+      {%- endfor -%}
 
     </div>
     
