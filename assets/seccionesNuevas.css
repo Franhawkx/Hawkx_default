@@ -11,17 +11,16 @@
     justify-content: center;
 }
 .imagenesContainer{
-
-        
-       
-        
+    display:flex;
+    justify-content: space-around;
+    align-items: center; 
 }
 .foto1{
-
+    width:33%;
 }
 .foto2{
-
+    width:33%;
 }
 .foto3{
-
+    width: 33%;
 }
