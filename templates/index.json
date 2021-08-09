@@ -12,11 +12,13 @@
         "1628504704b3de786d-1": {
           "type": "image_picker2",
           "settings": {
+            "img2": "shopify:\/\/shop_images\/FLAMING_MOUNTAIN.jpg"
           }
         },
         "1628504704b3de786d-2": {
           "type": "image_picker3",
           "settings": {
+            "img3": "shopify:\/\/shop_images\/idea_maquetacion.jpg"
           }
         }
       },
