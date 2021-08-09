@@ -11,9 +11,10 @@
 }
 .imagenesContainer{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center; 
-    height:100%;
+    height:80%;
+
 }
 .foto1{
     
