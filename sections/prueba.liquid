@@ -1,0 +1,138 @@
+<H1>hola que tal</H1>
+
+<div class="sectionContainer">
+    <h1 class="titulo">
+        Hola Este es el titulo
+    </h1>
+    
+    <div>
+        <div class="foto1"> 
+            img1
+        </div>
+
+
+        <div class="foto2">
+            img2    
+        </div>
+
+
+        <div class="foto3">
+            img3
+        </div>
+
+    </div>
+    
+
+    
+</div>
+
+
+
+
+{% schema %}
+{
+    
+    "name": "Mostrador",
+    "tag": "section",
+    "class": "mostrador",
+    "settings": [
+    {
+        "type": "image_picker",
+        "id": "img1",
+        "label": "Primera Foto"
+
+
+    },
+    {
+        "type": "image_picker",
+        "id": "img2",
+        "label": "Segunda Foto"
+    },
+    {
+        "type": "image_picker",
+        "id": "img3",
+        "label": "Tercera Foto"
+    }
+    ],
+    "blocks":[{
+        "name": "Título",
+        "type": "text",
+        "settings":[{
+                
+            "type": "text",
+            "id": "titulo",
+            "label": "Título de la sección",
+            "default": "Título"
+
+        }]
+    },
+    {
+        "name": "Imagen 1",
+        "type": "image_picker",
+        "settings":[{
+                
+            "type": "image_picker",
+            "id": "img1",
+            "label": "Imagen 1",
+            "default": ""
+
+        }]
+    },
+    {
+        "name": "Imagen 2",
+        "type": "image_picker",
+        "settings":[{
+                
+            "type": "image_picker",
+            "id": "img2",
+            "label": "Imagen 2",
+            "default": ""
+
+        }]
+    },
+    {
+        "name": "Imagen 3",
+        "type": "image_picker",
+        "settings":[{
+                
+            "type": "image_picker",
+            "id": "img3",
+            "label": "Imagen 3",
+            "default": ""
+
+        }]
+        
+    }
+    
+    
+    ],
+    "presets": [
+    {
+      "name": "Mostrador",
+      "category":"subcategoria Mostrador",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "image_picker"
+        },
+        {
+          "type": "image_picker"
+        },
+        {
+          "type": "image_picker"
+        }
+      ]
+    }
+  ]
+    
+    
+    
+
+
+
+
+    
+}
+{% endschema %}
