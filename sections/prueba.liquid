@@ -7,17 +7,17 @@
     
     <div>
         <div class="foto1"> 
-            img1
+            <img src="sfaf.jpg" alt="img1">
         </div>
 
 
         <div class="foto2">
-            img2    
+            <img src="adfad.jpg" alt="img2">    
         </div>
 
 
         <div class="foto3">
-            img3
+            <img src="adadf.jpg" alt="img3">
         </div>
 
     </div>
@@ -53,6 +53,11 @@
     "class": "mostrador",
     "settings": 
     [
+        {  
+            "type": "text",
+            "id": "titulo",
+            "label": "Título de la sección"
+        },
         {
             "type": "image_picker",
             "id": "img1",
@@ -68,12 +73,13 @@
             "id": "img3",
             "label": "Tercera Foto"
         }
+        
     ],
     "blocks":
     [
         {
             "name": "Título",
-            "type": "text",
+            "type": "title",
             "settings":[
             {  
                 "type": "text",
@@ -94,7 +100,7 @@
         },
         {
             "name": "Imagen 2",
-            "type": "image_picker",
+            "type": "image_picker2",
             "settings":[{
                     
                 "type": "image_picker",
@@ -104,7 +110,7 @@
         },
         {
             "name": "Imagen 3",
-            "type": "image_picker",
+            "type": "image_picker3",
             "settings":[{
                     
                 "type": "image_picker",
@@ -113,27 +119,28 @@
             }]
             
         }
+        
     ],
     "presets": 
     [
         {
             "name": "Mostrador",
-            "category":"Subcategoria Seccion",
             "blocks": 
             [
                 {
-                "type": "heading"
+                    "type": "title"
                 },
                 {
-                "type": "image_picker"
+                    "type": "image_picker"
+                }, 
+                {
+                    "type": "image_picker2"
                 },
                 {
-                "type": "image_picker"
-                },
-                {
-                "type": "image_picker"
+                    "type": "image_picker3"
                 }
             ]
+            
         }
     ]
 }    
