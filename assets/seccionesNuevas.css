@@ -33,9 +33,10 @@
     width: 100%;
 }
 img { 
-    width: 100%; 
-    max-width: 368px; 
-    height: max-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: relative;
   }
   h1{
     font-size: 38px;
