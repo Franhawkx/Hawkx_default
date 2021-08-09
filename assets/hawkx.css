@@ -259,10 +259,5 @@ html {
 #shopify-section-header.sticky #container__header {
   position: fixed;
   top: 0px; }
-#shopify-section-header .sectionContainer {
-  border: 20px solid red; }
-  #shopify-section-header .sectionContainer .titulo {
-    display: flex;
-    justify-content: center; }
 
 /*# sourceMappingURL=hawkx.css.map */
