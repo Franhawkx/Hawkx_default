@@ -97,12 +97,41 @@
         "title": "SECCION CUSTOM",
         "title2": "Texto por defecto"
       }
+    },
+    "1628504704b3de786d": {
+      "type": "prueba",
+      "blocks": {
+        "1628504704b3de786d-0": {
+          "type": "image_picker",
+          "settings": {
+          }
+        },
+        "1628504704b3de786d-1": {
+          "type": "image_picker2",
+          "settings": {
+          }
+        },
+        "1628504704b3de786d-2": {
+          "type": "image_picker3",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "1628504704b3de786d-0",
+        "1628504704b3de786d-1",
+        "1628504704b3de786d-2"
+      ],
+      "settings": {
+        "titulo": ""
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_products",
     "image_text",
-    "1627303636c967b31b"
+    "1627303636c967b31b",
+    "1628504704b3de786d"
   ]
 }
