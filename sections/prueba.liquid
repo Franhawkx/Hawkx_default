@@ -1,8 +1,8 @@
-<!-- <H1>hola que tal</H1>
+<H1>hola que tal</H1>
 
 <div class="sectionContainer">
     <h1 class="titulo">
-        Hola Este es el titulo
+       {{section.settings.titulo}}
     </h1>
     
     <div>
@@ -24,23 +24,7 @@
     
 
     
-</div> -->
-{%if section.settings.title == blank %}
-    <h1>No has puesto ningun titulo aun</h1>
-{% elsif section.settings.title != blank %}
-    <h1>{{section.settings.title}}</h1>
-{% endif %}
-
-
-<!-- Bloques -->
-{%- for block in section.blocks -%}
-{% case block.type %}
-    {%- when 'heading' -%}
-        <h2 class="image-with-text__heading h1">
-            {{ block.settings.texto_bloque_id | escape }}
-        </h2>
-{%- endcase -%}
-{%- endfor -%}
+</div>
 
 
 
