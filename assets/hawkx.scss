@@ -16,16 +16,15 @@ html {
 	margin: 0px;
 
 	body {
+		font-family: $font-family-general;
+		font-size: $font-size-general;
+		margin: 0px;
+
 		@include media-max(797px) {
 			overflow: v(body-overflow);
 			overflow-x: hidden;
 			@include tap-highlight-none();
-			border: 10px red solid;
 		}
-	
-		font-family: Poppins;
-		font-size: 14px;
-		margin: 0px;
 
 		header,
 		div,
@@ -36,7 +35,7 @@ html {
 
 		a {
 			text-decoration: none;
-			color:black;
+			color: $text-color-primary;
 		}
 	}
 }
